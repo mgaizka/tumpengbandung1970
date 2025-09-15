@@ -11,22 +11,25 @@
 <body class="flex flex-col min-h-screen">
     {{-- Navbar --}}
     <header class="bg-black shadow fixed w-full z-50">
-        <div class="px-6 lg:px-16 flex items-center justify-between p-4 text-white">
+        <div class="px-8 lg:px-16 flex items-center justify-between p-4 text-white">
 
-            <!-- Logo -->
-            <a href="{{ url('/') }}" class="text-xl font-bold hover:text-blue-500">
-                Tumpeng Bandung 1970
-            </a>
+            <!-- Kiri: Logo + Nav (desktop) -->
+            <div class="flex items-center gap-10">
+                <!-- Logo -->
+                <a href="{{ url('/') }}" class="text-xl font-bold hover:text-blue-500">
+                    Tumpeng Bandung 1970
+                </a>
 
-            <!-- Desktop Menu -->
-            <nav class="hidden md:flex space-x-6 ml-10">
-                <a href="{{ url('/') }}" class="hover:text-blue-500">Beranda</a>
-                <a href="{{ url('/menu') }}" class="hover:text-blue-500">Menu</a>
-                <a href="{{ url('/about') }}" class="hover:text-blue-500">Tentang Kami</a>
-                <a href="{{ url('/testimoni') }}" class="hover:text-blue-500">Testimoni</a>
-            </nav>
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="{{ url('/') }}" class="hover:text-blue-500">Beranda</a>
+                    <a href="{{ url('/menu') }}" class="hover:text-blue-500">Menu</a>
+                    <a href="{{ url('/about') }}" class="hover:text-blue-500">Tentang Kami</a>
+                    <a href="{{ url('/testimoni') }}" class="hover:text-blue-500">Testimoni</a>
+                </nav>
+            </div>
 
-            <!-- Hamburger Button -->
+            <!-- Kanan: Hamburger Button (mobile only) -->
             <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
                 ☰
             </button>
@@ -50,14 +53,13 @@
 
 
     {{-- Content --}}
-    <main class="max-w-7xl mx-auto flex-1 p-6">
+    <main class="max-w-7xl mx-auto flex-1 p-6 pt-20">
         @yield('content')
     </main>
 
     {{-- Footer --}}
     <footer class="bg-black text-white mt-12">
-        <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
+        <div class="px-6 sm:px-8 lg:px-16 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Quick Links -->
             <div>
                 <h3 class="font-bold mb-4">Quick Links</h3>
@@ -112,10 +114,6 @@
             <div
                 class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
                 <p>© 2024 Tumpeng Bandung 1970. All rights reserved.</p>
-                <div class="space-x-4">
-                    <a href="#" class="hover:text-white">Terms</a>
-                    <a href="#" class="hover:text-white">Privacy</a>
-                </div>
             </div>
         </div>
     </footer>
