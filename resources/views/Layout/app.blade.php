@@ -12,7 +12,7 @@
     <!-- Navbar -->
     <nav
         class="relative bg-[#161616] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="px-[2cm]"> <!-- jarak kiri kanan 2cm -->
             <div class="relative flex h-16 items-center justify-between">
 
                 <!-- Mobile menu button -->
@@ -59,8 +59,9 @@
         </div>
 
         <!-- Mobile menu, toggle with JS -->
-        <div id="mobile-menu" class="hidden sm:hidden px-2 pt-2 pb-3 space-y-1">
-            <a href="#" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Beranda</a>
+        <div id="mobile-menu" class="hidden sm:hidden px-[2cm] pt-2 pb-3 space-y-1">
+            <a href="#"
+                class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Beranda</a>
             <a href="#"
                 class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Menu</a>
             <a href="#"
@@ -70,82 +71,70 @@
         </div>
     </nav>
 
-    {{-- <!-- Mobile Overlay Menu -->
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-95 text-white z-40">
-        <!-- Menu Items -->
-        <div class="flex flex-col items-center justify-center h-full space-y-6 text-xl">
-            <a href="{{ url('/') }}" class="font-bold hover:text-blue-500">Beranda</a>
-            <a href="{{ url('/about') }}" class="font-bold hover:text-blue-500">Tentang Kami</a>
-            <a href="{{ url('/menu') }}" class="font-bold hover:text-blue-500">Harga & Paket Menu</a>
-            <a href="#" class="font-bold hover:text-blue-500">Cara Order</a>
-            <a href="{{ url('/testimoni') }}" class="font-bold hover:text-blue-500">Testimoni</a>
-            <a href="#" class="font-bold hover:text-blue-500">Galeri</a>
-            <a href="#" class="font-bold hover:text-blue-500">Kontak Kami</a>
-        </div>
-    </div> --}}
-
-
-
     <main class="max-w">
         @yield('content')
     </main>
 
     {{-- Footer --}}
     <footer class="bg-black text-white mt-12">
-        <div class="px-6 sm:px-8 lg:px-16 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Quick Links -->
-            <div>
-                <h3 class="font-bold mb-4">Quick Links</h3>
-                <ul class="space-y-2">
-                    <li><a href="{{ url('/') }}" class="hover:text-blue-500">Home</a></li>
-                    <li><a href="{{ url('/about') }}" class="hover:text-blue-500">About</a></li>
-                    <li><a href="{{ url('/menu') }}" class="hover:text-blue-500">Service</a></li>
-                    <li><a href="#" class="hover:text-blue-500">Gallery</a></li>
-                    <li><a href="#" class="hover:text-blue-500">Contact Us</a></li>
-                </ul>
-            </div>
+        <div class="px-[2cm] py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-            <!-- Menu -->
+            <!-- Kolom 1: Logo + Deskripsi -->
             <div>
-                <h3 class="font-bold mb-4">Menu</h3>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-blue-500">Nasi Tumpeng</a></li>
-                    <li><a href="#" class="hover:text-blue-500">Paket Catering</a></li>
-                    <li><a href="#" class="hover:text-blue-500">Prasmanan</a></li>
-                    <li><a href="#" class="hover:text-blue-500">Snack Box</a></li>
-                </ul>
-            </div>
-
-            <!-- Support -->
-            <div>
-                <h3 class="font-bold mb-4">Support</h3>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-blue-500">FAQ</a></li>
-                    <li><a href="#" class="hover:text-blue-500">Help Center</a></li>
-                    <li><a href="#" class="hover:text-blue-500">Tracking</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact -->
-            <div>
-                <h3 class="font-bold mb-4">Contact</h3>
-                <ul class="space-y-2">
-                    <li>📍 Bandung, Indonesia</li>
-                    <li>📞 +62 812-3456-7890</li>
-                    <li>📧 info@tumpengbandung.com</li>
-                </ul>
+                <div class="flex items-center mb-4">
+                    <img src="logo.png" alt="Tumpeng Bandung" class="w-16 h-auto mr-3">
+                    <h3 class="font-bold text-lg">Tumpeng Bandung 1970</h3>
+                </div>
+                <p class="text-gray-300 text-sm mb-4">
+                    Kami menghadirkan tumpeng autentik khas Bandung dengan cita rasa terbaik.
+                    Lengkap dengan pilihan paket untuk setiap acara spesial Anda.
+                </p>
                 <div class="flex space-x-4 mt-4">
                     <a href="#"><i class="fab fa-facebook text-xl hover:text-blue-500"></i></a>
                     <a href="#"><i class="fab fa-instagram text-xl hover:text-pink-500"></i></a>
-                    <a href="#"><i class="fab fa-twitter text-xl hover:text-blue-400"></i></a>
+                    <a href="#"><i class="fab fa-tiktok text-xl hover:text-gray-200"></i></a>
+                    <a href="#"><i class="fas fa-envelope text-xl hover:text-blue-400"></i></a>
                 </div>
             </div>
+
+            <!-- Kolom 2: Kategori -->
+            <div>
+                <h3 class="font-bold mb-4">Kategori</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-blue-500">Tumpeng</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Nasi</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Menu Lainnya</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Tentang Kami -->
+            <div>
+                <h3 class="font-bold mb-4">Tentang Kami</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-blue-500">Visi & Misi</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Sejarah Singkat</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Cara Pemesanan</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 4: Informasi Tambahan -->
+            <div>
+                <h3 class="font-bold mb-4">Informasi Tambahan</h3>
+                <ul class="space-y-3 text-gray-300 text-sm">
+                    <li>📞 +62 112202117</li>
+                    <li>📍 Jl. Mataram No.2, Cihapit, Kec. Bandung Wetan, Kota Bandung, Jawa Barat 40114</li>
+                </ul>
+                <div class="mt-4">
+                    <h4 class="font-bold">Jam Operasional</h4>
+                    <p class="text-gray-300 text-sm">Senin – Minggu (08.00 – 19.00)</p>
+                </div>
+            </div>
+
         </div>
 
         <!-- Copyright -->
         <div class="border-t border-gray-700 mt-6">
-            <div
-                class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
+            <div class="px-[2cm] py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
                 <p>© 2024 Tumpeng Bandung 1970. All rights reserved.</p>
             </div>
         </div>
@@ -155,7 +144,6 @@
 <style>
     .bg-hero {
         background-image: url('bg 1.png');
-        /* path relatif dari public */
         background-size: cover;
         background-position: center;
     }
@@ -173,4 +161,5 @@
         iconClose.classList.toggle("hidden");
     });
 </script>
+
 </html>
