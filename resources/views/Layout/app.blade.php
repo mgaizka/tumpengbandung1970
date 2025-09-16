@@ -8,69 +8,35 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="flex flex-col min-h-screen bg-hero">
-    <!-- Navbar -->
-    <nav
-        class="relative bg-[#161616] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div class="relative flex h-16 items-center justify-between">
+<body class="flex flex-col min-h-screen">
+    {{-- Navbar --}}
+    <header class="bg-black shadow fixed w-full z-50">
+        <div class="px-8 lg:px-16 flex items-center justify-between p-4 text-white">
 
-                <!-- Mobile menu button -->
-                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                    <button id="menu-button" type="button"
-                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
-                        <span class="sr-only">Open main menu</span>
-                        <!-- Icon hamburger -->
-                        <svg id="icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <!-- Icon close -->
-                        <svg id="icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-
+            <!-- Kiri: Logo + Nav (desktop) -->
+            <div class="flex items-center gap-10">
                 <!-- Logo -->
-                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                    <div class="flex shrink-0 items-center">
-                        <img src="logo.png" alt="Tumpeng Bandung" class="w-[86px] h-[61px]" />
-                    </div>
-                    <!-- Desktop menu -->
-                    <div class="hidden sm:ml-6 sm:block pt-3">
-                        <div class="flex space-x-4">
-                            <a href="#"
-                                class="rounded-md bg-gray-950/50 px-3 py-2 text-md font-medium text-white">Beranda</a>
-                            <a href="#"
-                                class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-white/5 hover:text-white">Menu</a>
-                            <a href="#"
-                                class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-white/5 hover:text-white">Tentang
-                                Kami</a>
-                            <a href="#"
-                                class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-white/5 hover:text-white">Testimoni</a>
-                        </div>
-                    </div>
-                </div>
+                <a href="{{ url('/') }}" class="text-xl font-bold hover:text-blue-500">
+                    Tumpeng Bandung 1970
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="{{ url('/') }}" class="hover:text-blue-500">Beranda</a>
+                    <a href="{{ url('/menu') }}" class="hover:text-blue-500">Menu</a>
+                    <a href="{{ url('/about') }}" class="hover:text-blue-500">Tentang Kami</a>
+                    <a href="{{ url('/testimoni') }}" class="hover:text-blue-500">Testimoni</a>
+                </nav>
             </div>
-        </div>
 
-        <!-- Mobile menu, toggle with JS -->
-        <div id="mobile-menu" class="hidden sm:hidden px-2 pt-2 pb-3 space-y-1">
-            <a href="#" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Beranda</a>
-            <a href="#"
-                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Menu</a>
-            <a href="#"
-                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Tentang</a>
-            <a href="#"
-                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Testimoni</a>
+            <!-- Kanan: Hamburger Button (mobile only) -->
+            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                ☰
+            </button>
         </div>
-    </nav>
+    </header>
 
-    {{-- <!-- Mobile Overlay Menu -->
+    <!-- Mobile Overlay Menu -->
     <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-95 text-white z-40">
         <!-- Menu Items -->
         <div class="flex flex-col items-center justify-center h-full space-y-6 text-xl">
@@ -82,11 +48,12 @@
             <a href="#" class="font-bold hover:text-blue-500">Galeri</a>
             <a href="#" class="font-bold hover:text-blue-500">Kontak Kami</a>
         </div>
-    </div> --}}
+    </div>
 
 
 
-    <main class="max-w">
+    {{-- Content --}}
+    <main class="max-w-7xl mx-auto flex-1 p-6 pt-20">
         @yield('content')
     </main>
 
@@ -152,25 +119,13 @@
     </footer>
 </body>
 
-<style>
-    .bg-hero {
-        background-image: url('bg 1.png');
-        /* path relatif dari public */
-        background-size: cover;
-        background-position: center;
-    }
-</style>
-
 <script>
-    const menuButton = document.getElementById("menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const iconOpen = document.getElementById("icon-open");
-    const iconClose = document.getElementById("icon-close");
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    menuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-        iconOpen.classList.toggle("hidden");
-        iconClose.classList.toggle("hidden");
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
     });
 </script>
+
 </html>
