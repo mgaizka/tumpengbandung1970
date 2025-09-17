@@ -93,6 +93,12 @@
                 Kami menghadirkan tumpeng autentik khas <br> Bandung dengan cita rasa terbaik.
                 Lengkap <br> dengan pilihan paket untuk setiap acara spesial Anda.
             </p>
+            <div class="flex space-x-4 pt-2">
+                <a href="#"><i class="fab fa-facebook text-xl hover:text-blue-500"></i></a>
+                <a href="#"><i class="fab fa-instagram text-xl hover:text-pink-500"></i></a>
+                <a href="#"><i class="fab fa-tiktok text-xl hover:text-gray-200"></i></a>
+                <a href="#"><i class="fas fa-envelope text-xl hover:text-blue-400"></i></a>
+            </div>
         </div>
 
         <!-- Kolom 2: Kategori -->
@@ -136,12 +142,7 @@
         <p class="mb-4 sm:mb-0">© 2025 Tumpeng Bandung 1970. All rights reserved.</p>
 
         <!-- Ikon Sosmed -->
-        <div class="flex space-x-4">
-            <a href="#"><i class="fab fa-facebook text-xl hover:text-blue-500"></i></a>
-            <a href="#"><i class="fab fa-instagram text-xl hover:text-pink-500"></i></a>
-            <a href="#"><i class="fab fa-tiktok text-xl hover:text-gray-200"></i></a>
-            <a href="#"><i class="fas fa-envelope text-xl hover:text-blue-400"></i></a>
-        </div>
+        
     </div>
 </footer>
 </body>
