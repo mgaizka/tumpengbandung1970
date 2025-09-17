@@ -48,11 +48,11 @@
                     <!-- Desktop menu -->
                     <div class="hidden sm:ml-6 sm:block pt-3">
                         <div class="flex space-x-4">
-                            <a href="#"
+                            <a href="{{ route('home') }}"
                                 class="rounded-md bg-gray-950/50 px-3 py-2 text-md font-medium text-white">Beranda</a>
                             <a href="#"
                                 class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-white/5 hover:text-white">Menu</a>
-                            <a href="#"
+                            <a href="{{ route('tentang-kami') }}"
                                 class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-white/5 hover:text-white">Tentang
                                 Kami</a>
                             <a href="#"
