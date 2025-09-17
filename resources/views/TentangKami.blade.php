@@ -44,10 +44,14 @@
                     <div class="row-span-2">
                         <img src="foto2.jpeg" alt="Menu 2" class="rounded-lg w-full h-full object-cover">
                     </div>
-                    <div  data-aos="fade-up">
-                    </div>
+
                     <!-- Kiri bawah (quote box) -->
-                    
+                    <div class="bg-white text-gray-900 rounded-lg p-6 flex items-center">
+                        <p class="italic text-base sm:text-lg md:text-xl">
+                            “Tumpeng spesial hari ini selalu siap meriahkan harimu – pesan sekarang dan nikmati sensasi
+                            rasanya!”
+                        </p>
+                    </div>
                 </div>
 
                 <!-- VISI & MISI -->
