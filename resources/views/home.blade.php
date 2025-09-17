@@ -47,7 +47,7 @@
         </button>
     </div>
 
-    <div class="text-white pt-32 pb-25 px-[2cm]">
+    <div class="text-white py-16 px-[2cm]">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <!-- Grid Foto -->
             <div class="grid grid-cols-2 gap-4">
@@ -66,54 +66,29 @@
                     <img src="{{ asset('foto1.jpeg') }}" alt="Nasi"
                         class="rounded-lg shadow-lg w-full h-40 object-cover">
                 </div>
-
-                <!-- Tombol navigasi -->
-                <button type="button"
-                    class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                    data-carousel-prev>
-                    <span
-                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 focus:ring-4 focus:ring-white">
-                        <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M5 1 1 5l4 4" />
-                        </svg>
-                        <span class="sr-only">Previous</span>
-                    </span>
-                </button>
-                <button type="button"
-                    class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                    data-carousel-next>
-                    <span
-                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 focus:ring-4 focus:ring-white">
-                        <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 9 4-4-4-4" />
-                        </svg>
-                        <span class="sr-only">Next</span>
-                    </span>
-                </button>
             </div>
 
             <!-- Konten -->
             <div>
                 <p class="text-sm tracking-wider uppercase text-white">Tentang Kami</p>
-                <h2 class="text-4xl font-bold mt-2 mb-4 leading-snug">
+                <h2 class="text-3xl font-bold mt-2 mb-4 leading-snug">
                     Sajian Tumpeng Autentik Rasa <br class="hidden md:block" /> Nusantara
                 </h2>
 
-                <h3 class="text-2xl font-semibold mb-3">Visi Tumpeng Bandung 1970</h3>
+                <h3 class="text-lg font-semibold mb-3">Visi kami</h3>
 
-                <p class="text-gray-300 leading-relaxed mb-6 text-xl">
+                <p class="text-gray-300 leading-relaxed mb-6">
                     Visi kami adalah menyajikan hidangan yang berkualitas dengan pelayanan yang ramah
                     dan bersahabat, sehingga setiap pelanggan dapat merasakan pengalaman kuliner yang berkesan.
                 </p>
-                        <a href="#"
-                            class="inline-block bg-white text-black font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-200 transition">
-                            Selengkapnya
-                        </a>
-                    </div>
-                </div>
+
+                <a href="#"
+                    class="inline-block bg-white text-black font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-200 transition">
+                    Selengkapnya
+                </a>
             </div>
+        </div>
+    </div>
 
     <div class="py-10 px-[2cm] text-white">
 
@@ -149,8 +124,8 @@
                     <h3 class="font-semibold text-2xl mb-2">Tumpeng Mini</h3>
                     <a href="#" class="text-white text-xl hover:underline">Selengkapnya</a>
                 </div>
-            </div> 
-            
+            </div>
+
             <!-- Nasi Tumpeng Box -->
             <div class="rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
                 <img src="{{ asset('foto1.jpeg') }}" alt="Nasi Tumpeng Box" class="w-full h-56 object-cover">
@@ -251,7 +226,7 @@
         </h2>
 
         <!-- Grid Logo -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mx-auto">
 
             <!-- Card Logo -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
@@ -301,8 +276,11 @@
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
                 <img src="{{ asset('foto2.jpeg') }}" alt="UI" class="w-full h-full object-cover">
             </div>
+        </div>
+    </div>
 
-    <div class="px-[2cm]">
+
+    <div class="px-[2cm] pt-[30px]">
         <div class="w-full h-[300px] md:h-[490px] rounded-lg overflow-hidden shadow-lg">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.860730357939!2d107.61842537592155!3d-6.907251967601307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e73f2dc2d82d%3A0x5471b93bd20ac149!2sTumpeng%20Bandung%201970!5e0!3m2!1sid!2sid!4v1758100843739!5m2!1sid!2sid"
