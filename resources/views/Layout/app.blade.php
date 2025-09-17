@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Company Profile')</title>
     @vite('resources/css/app.css')
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body class="flex flex-col min-h-screen bg-hero">
@@ -76,11 +78,11 @@
     </main>
 
     {{-- Footer --}}
-    <footer class="bg-black text-white mt-12">
-        <div class="px-[2cm] py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-            <!-- Kolom 1: Logo + Deskripsi -->
-            <div>
+    <footer class="bg-[#161616] text-white">
+        <div class="px-[2cm] py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+    
+            <!-- Kolom 1: Logo (span 2 kolom biar lebar) -->
+            <div class="lg:col-span-2">
                 <div class="flex items-center mb-4">
                     <img src="logo.png" alt="Tumpeng Bandung" class="w-16 h-auto mr-3">
                     <h3 class="font-bold text-lg">Tumpeng Bandung 1970</h3>
@@ -96,7 +98,7 @@
                     <a href="#"><i class="fas fa-envelope text-xl hover:text-blue-400"></i></a>
                 </div>
             </div>
-
+    
             <!-- Kolom 2: Kategori -->
             <div>
                 <h3 class="font-bold mb-4">Kategori</h3>
@@ -106,7 +108,7 @@
                     <li><a href="#" class="hover:text-blue-500">Menu Lainnya</a></li>
                 </ul>
             </div>
-
+    
             <!-- Kolom 3: Tentang Kami -->
             <div>
                 <h3 class="font-bold mb-4">Tentang Kami</h3>
@@ -116,7 +118,7 @@
                     <li><a href="#" class="hover:text-blue-500">Cara Pemesanan</a></li>
                 </ul>
             </div>
-
+    
             <!-- Kolom 4: Informasi Tambahan -->
             <div>
                 <h3 class="font-bold mb-4">Informasi Tambahan</h3>
@@ -129,14 +131,11 @@
                     <p class="text-gray-300 text-sm">Senin – Minggu (08.00 – 19.00)</p>
                 </div>
             </div>
-
         </div>
-
-        <!-- Copyright -->
-        <div class="border-t border-gray-700 mt-6">
-            <div class="px-[2cm] py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
-                <p>© 2024 Tumpeng Bandung 1970. All rights reserved.</p>
-            </div>
+    
+        <!-- Footer bawah -->
+        <div class="border-t border-gray-700 mt-8 py-4 px-15 text-start text-gray-400 text-sm">
+            © 2025 Tumpeng Bandung 1970. All rights reserved.
         </div>
     </footer>
 </body>
@@ -160,6 +159,6 @@
         iconOpen.classList.toggle("hidden");
         iconClose.classList.toggle("hidden");
     });
+     AOS.init();
 </script>
-
 </html>
