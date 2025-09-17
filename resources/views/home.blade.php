@@ -66,6 +66,32 @@
                     <img src="{{ asset('foto1.jpeg') }}" alt="Nasi"
                         class="rounded-lg shadow-lg w-full h-40 object-cover">
                 </div>
+
+                <!-- Tombol navigasi -->
+                <button type="button"
+                    class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-prev>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 focus:ring-4 focus:ring-white">
+                        <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 1 1 5l4 4" />
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button"
+                    class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-next>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 focus:ring-4 focus:ring-white">
+                        <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 9 4-4-4-4" />
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
             </div>
 
             <!-- Konten -->
@@ -81,14 +107,13 @@
                     Visi kami adalah menyajikan hidangan yang berkualitas dengan pelayanan yang ramah
                     dan bersahabat, sehingga setiap pelanggan dapat merasakan pengalaman kuliner yang berkesan.
                 </p>
-
-                <a href="#"
-                    class="inline-block bg-white text-black font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-200 transition">
-                    Selengkapnya
-                </a>
+                        <a href="#"
+                            class="inline-block bg-white text-black font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-200 transition">
+                            Selengkapnya
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
     <div class="py-10 px-[2cm] text-white">
 
@@ -124,8 +149,8 @@
                     <h3 class="font-semibold text-2xl mb-2">Tumpeng Mini</h3>
                     <a href="#" class="text-white text-xl hover:underline">Selengkapnya</a>
                 </div>
-            </div>
-
+            </div> 
+            
             <!-- Nasi Tumpeng Box -->
             <div class="rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
                 <img src="{{ asset('foto1.jpeg') }}" alt="Nasi Tumpeng Box" class="w-full h-56 object-cover">
@@ -276,8 +301,6 @@
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
                 <img src="{{ asset('foto2.jpeg') }}" alt="UI" class="w-full h-full object-cover">
             </div>
-        </div>
-    </div>
 
     <div class="px-[2cm]">
         <div class="w-full h-[300px] md:h-[490px] rounded-lg overflow-hidden shadow-lg">
@@ -288,7 +311,5 @@
             </iframe>
         </div>
     </div>
-
-
 
 @endsection
