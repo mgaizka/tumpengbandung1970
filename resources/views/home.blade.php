@@ -344,7 +344,7 @@
 
     <!-- Floating WhatsApp -->
     <div class="fixed bottom-5 right-4 group">
-        <a href="https://wa.me/08981667485" target="_blank" class="w-14 h-14 bg-green-500/90 backdrop-blur-sm hover:bg-green-600/90 
+        <a href="https://wa.me/0112202117" target="_blank" class="w-14 h-14 bg-green-500/90 backdrop-blur-sm hover:bg-green-600/90 
                       rounded-full shadow-lg flex items-center justify-center 
                       hover:scale-110 transition relative border-2 border-white">
             <i class="fab fa-whatsapp text-3xl text-white"></i>
