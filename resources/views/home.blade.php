@@ -49,7 +49,7 @@
     </div>
 
     <!-- Tentang Kami -->
-    <div class="text-white px-[2cm] mt-[80px]">
+    <div class="text-white px-4 md:px-[1cm] lg:px-[2cm] mt-[80px]">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <!-- Grid Foto -->
             <div class="grid grid-cols-2 gap-4">
@@ -65,7 +65,8 @@
                 </div>
                 <!-- Foto kecil bawah -->
                 <div>
-                    <img src="{{ asset('foto1.jpeg') }}" alt="Nasi" class="rounded-lg shadow-lg w-full h-40 object-cover">
+                    <img src="{{ asset('foto1.jpeg') }}" alt="Nasi"
+                        class="rounded-lg shadow-lg w-full h-40 object-cover">
                 </div>
             </div>
 
@@ -89,7 +90,7 @@
     </div>
 
     <!-- Yang Membuat Kami Istimewa -->
-    <div class="py-10 px-6 md:px-16 mt-[60px]">
+    <div class="py-10 px-4 md:px-[1cm] lg:px-[2cm] md:px-16 mt-[60px]">
         <h2 class="text-[32px] sm:text-3xl font-bold mb-10 text-center text-white">
             Yang Membuat Kami Istimewa
         </h2>
@@ -101,7 +102,7 @@
                     <div class="text-2xl">👍</div>
                 </div>
                 <h3 class="font-bold text-[20px] sm:text-[22px] mb-2">Sudah Bersertifikasi <br> Halal</h3>
-                <p class="text-gray-800 text-[16px] sm:text-[18px]">
+                <p class="text-[16px] sm:text-[18px]">
                     Sajian yang kami hadirkan tidak hanya lezat dan berkualitas, tetapi juga terjamin kehalalannya.
                 </p>
             </div>
@@ -113,7 +114,7 @@
                     <div class="text-2xl">🥗</div>
                 </div>
                 <h3 class="font-bold text-[20px] sm:text-[22px] mb-2">Bahan Pilihan <br> Berkualitas</h3>
-                <p class="text-gray-800 text-[16px] sm:text-[18px]">
+                <p class="text-[16px] sm:text-[18px]">
                     Kami hanya menggunakan beras terbaik, bumbu segar, dan lauk pilihan agar cita rasa tumpeng selalu
                     istimewa.
                 </p>
@@ -126,8 +127,9 @@
                     <div class="text-2xl">🍽️</div>
                 </div>
                 <h3 class="font-bold text-[20px] sm:text-[22px] mb-2">Tampilan Estetis dan Rapi</h3>
-                <p class="text-gray-800 text-[16px] sm:text-[18px]">
-                    Disusun dengan penuh ketelitian sehingga tumpeng tidak hanya lezat, tetapi juga indah dipandang dalam
+                <p class="text-[16px] sm:text-[18px]">
+                    Disusun dengan penuh ketelitian sehingga tumpeng tidak hanya lezat, tetapi juga indah dipandang
+                    dalam
                     setiap acara.
                 </p>
             </div>
@@ -139,7 +141,7 @@
                     <div class="text-2xl">👥</div>
                 </div>
                 <h3 class="font-bold text-[20px] sm:text-[22px] mb-2">Penuh Makna dan Kebersamaan</h3>
-                <p class="text-gray-800 text-[16px] sm:text-[18px]">
+                <p class="text-[16px] sm:text-[18px]">
                     Tumpeng kami menghadirkan filosofi syukur serta kebersamaan, menjadikan momen lebih berkesan dan
                     bermakna.
                 </p>
@@ -148,7 +150,7 @@
     </div>
 
     <!-- Rayakan Momen -->
-    <div class="py-14 px-[2cm] text-white">
+    <div class="py-14 px-4 md:px-[1cm] lg:px-[2cm] text-white">
         <h2 class="text-center text-[32px] font-bold mb-4">
             Rayakan Momen Spesialmu dengan Tumpeng Bandung 1970
         </h2>
@@ -214,7 +216,7 @@
     </div>
 
     <!-- Testimoni -->
-    <div class="bg-gray-200/10 py-14 pb-10 px-[2cm] text-center mt-[60px]">
+    <div class="bg-gray-200/10 py-14 pb-10 px-4 md:px-[1cm] lg:px-[2cm] text-center mt-[60px]">
         <!-- Judul -->
         <h2 class="text-[32px] md:text-3xl font-bold mb-10 text-white">
             Apa Kata Mereka Tentang Tumpeng Bandung 1970
@@ -273,7 +275,7 @@
     </div>
 
     <!-- Logo -->
-    <div class="py-14 pb-[50px] px-[2cm] text-center mt-[60px]">
+    <div class="py-14 pb-[50px] px-4 md:px-[1cm] lg:px-[2cm] text-center mt-[60px]">
         <h2 class="text-2xl md:text-3xl font-bold mb-10 text-white">
             Mereka yang Pernah Bekerja Sama dengan Kami
         </h2>
@@ -319,7 +321,7 @@
     </div>
 
     <!-- Maps -->
-    <div class="px-[2cm] pt-[30px]">
+    <div class="px-4 md:px-[1cm] lg:px-[2cm] pt-[30px]">
         <div class="w-full h-[300px] md:h-[490px] rounded-lg overflow-hidden shadow-lg">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.860730357939!2d107.61842537592155!3d-6.907251967601307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e73f2dc2d82d%3A0x5471b93bd20ac149!2sTumpeng%20Bandung%201970!5e0!3m2!1sid!2sid!4v1758100843739!5m2!1sid!2sid"
@@ -344,8 +346,9 @@
 
     <!-- Floating WhatsApp -->
     <div class="fixed bottom-5 right-4 group">
-        <a href="https://wa.me/0112202117" target="_blank" class="w-14 h-14 bg-green-500/90 backdrop-blur-sm hover:bg-green-600/90 
-                      rounded-full shadow-lg flex items-center justify-center 
+        <a href="https://wa.me/0112202117" target="_blank"
+            class="w-14 h-14 bg-green-500/90 backdrop-blur-sm hover:bg-green-600/90
+                      rounded-full shadow-lg flex items-center justify-center
                       hover:scale-110 transition relative border-2 border-white">
             <i class="fab fa-whatsapp text-3xl text-white"></i>
             <!-- Tooltip -->
