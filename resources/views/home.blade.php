@@ -56,16 +56,16 @@
                 <!-- Foto besar -->
                 <div class="row-span-2">
                     <img src="{{ asset('foto1.jpeg') }}" alt="Ruangan"
-                        class="rounded-lg shadow-lg w-full h-full object-cover">
+                        class="rounded-lg shadow-lg w-full h-[371px] object-cover">
                 </div>
                 <!-- Foto kecil atas -->
                 <div>
                     <img src="{{ asset('foto2.jpeg') }}" alt="Tumpeng"
-                        class="rounded-lg shadow-lg w-full h-40 object-cover">
+                        class="rounded-lg shadow-lg w-[329px] h-[242px] object-cover">
                 </div>
                 <!-- Foto kecil bawah -->
                 <div>
-                    <img src="{{ asset('foto1.jpeg') }}" alt="Nasi" class="rounded-lg shadow-lg w-full h-40 object-cover">
+                    <img src="{{ asset('foto1.jpeg') }}" alt="Nasi" class="rounded-lg shadow-lg w-[329px] h-[115px] object-cover">
                 </div>
             </div>
 
@@ -81,7 +81,7 @@
                     dan bersahabat, sehingga setiap pelanggan dapat merasakan pengalaman kuliner yang berkesan.
                 </p>
                 <a href="#"
-                    class="inline-block bg-white text-black font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-200 transition">
+                    class="inline-block bg-white text-black font-semibold px-6 py-2 rounded-lg shadow hover:bg-gray-200 transition text-[20px]">
                     Selengkapnya
                 </a>
             </div>
@@ -229,7 +229,7 @@
                     </div>
                     <h3 class="font-semibold text-lg">Ibu Rina</h3>
                 </div>
-                <p class="text-sm leading-relaxed">
+                <p class="text-sm leading-relaxed text-justify">
                     Tumpeng Premium dari Tumpeng Bandung benar-benar luar biasa.
                     Tampilan dekorasinya elegan dan rasanya enak sekali.
                     Tamu undangan di acara syukuran kami sangat puas.
@@ -244,7 +244,7 @@
                     </div>
                     <h3 class="font-semibold text-lg">Bapak Arif</h3>
                 </div>
-                <p class="text-sm leading-relaxed">
+                <p class="text-sm leading-relaxed text-justify">
                     Kami pesan Tumpeng Tampah untuk arisan keluarga,
                     hasilnya sangat memuaskan. Sajian lengkap, porsinya cukup,
                     dan tampilannya cantik.
@@ -259,7 +259,7 @@
                     </div>
                     <h3 class="font-semibold text-lg">Mbak Sari</h3>
                 </div>
-                <p class="text-sm leading-relaxed">
+                <p class="text-sm leading-relaxed text-justify">
                     Nasi Box dari Tumpeng Bandung selalu jadi pilihan di kantor kami.
                     Rasanya enak, isinya pas, dan pengirimannya selalu tepat waktu.
                 </p>
@@ -319,7 +319,7 @@
     </div>
 
     <!-- Maps -->
-    <div class="px-[2cm] pt-[30px]">
+    <div class="px-[2cm] pt-[30px] py-20">
         <div class="w-full h-[300px] md:h-[490px] rounded-lg overflow-hidden shadow-lg">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.860730357939!2d107.61842537592155!3d-6.907251967601307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e73f2dc2d82d%3A0x5471b93bd20ac149!2sTumpeng%20Bandung%201970!5e0!3m2!1sid!2sid!4v1758100843739!5m2!1sid!2sid"
@@ -332,8 +332,8 @@
     <!-- Floating Halal -->
     <div class="fixed bottom-24 right-4 group">
         <a href="#"
-            class="w-14 h-14 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition relative">
-            <img src="{{ asset('halal.png') }}" alt="Halal Logo" class="w-14 h-14 object-contain">
+            class="w-14 h-14 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition relative">
+            <img src="{{ asset('halallogo.png') }}" alt="Halal Logo" class="w-14 h-14 object-contain">
         </a>
         <!-- Tooltip -->
         <span
@@ -344,9 +344,9 @@
 
     <!-- Floating WhatsApp -->
     <div class="fixed bottom-5 right-4 group">
-        <a href="https://wa.me/0112202117" target="_blank" class="w-14 h-14 bg-green-500/90 backdrop-blur-sm hover:bg-green-600/90 
+        <a href="https://wa.me/0112202117" target="_blank" class="w-13 h-13 bg-green-500/90 backdrop-blur-sm hover:bg-green-600/90 
                       rounded-full shadow-lg flex items-center justify-center 
-                      hover:scale-110 transition relative border-2 border-white">
+                      hover:scale-110 transition relative">
             <i class="fab fa-whatsapp text-3xl text-white"></i>
             <!-- Tooltip -->
             <span
