@@ -8,7 +8,7 @@
         <!-- PROFIL USAHA -->
         <div class="px-4 sm:px-8 md:px-16 grid grid-cols-1 lg:grid-cols-2 gap-10">
             <!-- Kiri: Profil Usaha -->
-            <div>
+            <div  data-aos="fade-up">
                 <span class="inline-block bg-white text-black font-bold text-sm sm:text-md px-4 py-1 rounded-full mb-4">
                     PROFIL USAHA
                 </span>
@@ -33,7 +33,7 @@
             </div>
 
             <!-- Kanan: Gambar + Quote -->
-            <div class="grid grid-cols-1 sm:grid-cols-[240px_1fr] gap-6">
+            <div  data-aos="fade-left" class="grid grid-cols-1 sm:grid-cols-[240px_1fr] gap-6">
                 <!-- Kiri atas -->
                 <div>
                     <img src="foto1.jpeg" alt="Menu 1" class="rounded-lg w-full h-[400px] object-cover mb-6 sm:mb-0">
@@ -54,14 +54,14 @@
             </div>
 
             <!-- VISI & MISI -->
-            <div>
+            <div  data-aos="fade-up">
                 <span class="inline-block bg-white text-black font-bold text-sm sm:text-md px-4 py-1 rounded-full mb-6">
                     VISI & MISI
                 </span>
                 <img src="foto1.jpeg" alt="Visi Misi" class="rounded-lg w-full max-w-3xl h-auto object-cover mx-auto">
             </div>
 
-            <div>
+            <div  data-aos="fade-up">
                 <h2 class="text-2xl sm:text-3xl font-bold mb-6">Visi & Misi</h2>
                 <p class="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed mb-4 text-justify">
                     Visi kami adalah menyajikan hidangan yang berkualitas dengan pelayanan yang ramah dan bersahabat,
@@ -77,7 +77,7 @@
         </div>
 
         <!-- SEJARAH SINGKAT -->
-        <div class="px-4 sm:px-8 md:px-16 text-white pt-10">
+        <div  data-aos="fade-up" class="px-4 sm:px-8 md:px-16 text-white pt-10">
             <span class="inline-block bg-white text-black font-bold text-sm sm:text-md px-4 py-1 rounded-full mb-6">
                 SEJARAH SINGKAT
             </span>
@@ -149,7 +149,7 @@
         </div>
 
         <!-- CARA PEMESANAN -->
-        <div class="px-4 sm:px-8 md:px-16 pt-4">
+        <div  data-aos="fade-up" class="px-4 sm:px-8 md:px-16 pt-4">
             <!-- Tag -->
             <span class="inline-block bg-white text-black font-bold text-sm sm:text-md px-4 py-1 rounded-full mb-6">
                 CARA PEMESANAN
