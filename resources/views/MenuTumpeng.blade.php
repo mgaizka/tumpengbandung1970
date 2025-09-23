@@ -3,20 +3,21 @@
 @section('title', 'Tumpeng')
 
 @section('content')
-    <div class="text-white px-4 px-4 md:px-[1cm] lg:px-[2cm] pt-[140px]">
+
+    <div class="text-white px-4 px-4 md:px-[1cm] lg:px-[2cm] pt-[120px]">
         <!-- Tag kecil di atas -->
-        <span class="block mx-auto text-xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">
+        <span class="block mx-auto text-[18px] font-bold mb-4 text-center">
             PAKET TUMPENG
         </span>
 
         <!-- Judul -->
-        <h2 class="text-xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">
+        <h2 class="text-[18px] sm:text-3xl md:text-4xl font-bold mb-4 text-center">
             Rayakan Momen Istimewa Dengan <br>
             <span class="text-white-300">Tumpeng Bandung 1970</span>
         </h2>
 
         <!-- Tab / Filter Kategori -->
-        <div class="flex flex-wrap justify-center gap-4 mt-8 mb-[120px]">
+        <div class="flex flex-wrap justify-center gap-4 pt-8 mb-10">
             <button class="px-5 py-2 rounded-full bg-white text-black font-semibold hover:bg-slate-200 transition">
                 Nasi Tumpeng Box
             </button>
@@ -56,7 +57,7 @@
                 </div>
 
                 <!-- Modal -->
-                <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
+                <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-[#313131]/70 backdrop-blur-sm"
                     style="display:none">
                     <div class="bg-[#111] text-white w-full max-w-lg rounded-xl shadow-lg p-6 relative">
                         <!-- Tombol Close -->

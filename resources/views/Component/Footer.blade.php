@@ -1,33 +1,44 @@
 {{-- Footer --}}
 <footer class="bg-[#161616] text-white">
-    <div class="px-4 md:px-[1cm] lg:px-[2cm] py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+    <div class="px-4 md:px-[1cm] lg:px-[2cm] py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-[18px]">
         <!-- Kolom 1: Logo (span 2 kolom biar lebar) -->
         <div class="lg:col-span-2 pt-8">
             <div class="flex items-center mb-4">
                 <img src="{{ asset('logo.png') }}" alt="Tumpeng Bandung" class="w-16 h-auto mr-3">
                 <h3 class="font-bold text-lg">Tumpeng Bandung 1970</h3>
             </div>
-            <p class="text-gray-300 text-sm mb-4">
+            <p class="text-gray-300 mb-4 text-[18px]">
                 Kami menghadirkan tumpeng autentik khas <br> Bandung dengan cita rasa terbaik.
                 Lengkap <br> dengan pilihan paket untuk setiap acara spesial Anda.
             </p>
-            <div class="flex space-x-4 pt-2">
-                <a href="#"><i class="fab fa-facebook text-xl hover:text-blue-500"></i></a>
-                <a href="#"><i class="fab fa-instagram text-xl hover:text-pink-500"></i></a>
-                <a href="#"><i class="fab fa-tiktok text-xl hover:text-gray-200"></i></a>
-                <a href="#"><i class="fas fa-envelope text-xl hover:text-blue-400"></i></a>
-            </div>
+        <div class="flex space-x-4 pt-2">
+            <a href="#"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-blue-500 hover:text-white transition">
+                <i class="fab fa-facebook-f text-lg"></i>
+            </a>
+            <a href="#"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-pink-500 hover:text-white transition">
+                <i class="fab fa-instagram text-lg"></i>
+            </a>
+            <a href="#"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-gray-800 hover:text-white transition">
+                <i class="fab fa-tiktok text-lg"></i>
+            </a>
+            <a href="#"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-red-400 hover:text-white transition">
+                <i class="fas fa-envelope text-lg"></i>
+            </a>
+        </div>
+
         </div>
 
         <!-- Kolom 2: Kategori -->
         <div class="pt-8">
             <h3 class="font-bold mb-4">Kategori</h3>
             <ul class="space-y-2">
-                <li><a href="#" class="hover:text-blue-500">Tumpeng Tampah</a></li>
-                <li><a href="#" class="hover:text-blue-500">Tumpeng Lomba</a></li>
-                <li><a href="#" class="hover:text-blue-500">Tumpeng Mini</a></li>
-                <li><a href="#" class="hover:text-blue-500">Tumpeng Party</a></li>
-                <li><a href="#" class="hover:text-blue-500">Nasi Tutug Oncom</a></li>
+                <li><a href="#" class="hover:text-blue-500">Tumpeng</a></li>
+                <li><a href="#" class="hover:text-blue-500">Paket Nasi</a></li>
+                <li><a href="#" class="hover:text-blue-500">Menu Lainnya</a></li>
             </ul>
         </div>
 

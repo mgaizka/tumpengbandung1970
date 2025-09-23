@@ -3,20 +3,20 @@
 @section('title', 'Tumpeng')
 
 @section('content')
-    <div class="text-white px-4 px-4 md:px-[1cm] lg:px-[2cm] pt-[140px]">
+    <div class="text-white px-4 px-4 md:px-[1cm] lg:px-[2cm] pt-[120px]">
         <!-- Tag kecil di atas -->
-        <span class="block mx-auto text-xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">
+        <span class="block mx-auto text-[18px] font-bold mb-4 text-center">
             PAKET NASI
         </span>
 
         <!-- Judul -->
         <h2 class="text-xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">
-            Rayakan Momen Istimewa Dengan <br>
-            <span class="text-white-300">Tumpeng Bandung 1970</span>
+            Hidangan Nasi Kotak Spesial Yang Siap <br>
+            <span class="text-white-300">Membuat Momen Anda Semakin Berkesan</span>
         </h2>
 
         <!-- Tab / Filter Kategori -->
-        <div class="flex flex-wrap justify-center gap-4 mt-8 mb-[120px]">
+        <div class="flex flex-wrap justify-center gap-4 pt-8 mb-10">
             <button class="px-5 py-2 rounded-full bg-white text-black font-semibold hover:bg-slate-200 transition">
                 Nasi Bakar
             </button>
@@ -26,15 +26,11 @@
             </button>
             <button
                 class="px-5 py-2 rounded-full border border-white text-white font-semibold hover:bg-white hover:text-black transition">
-                Tumpeng Tampah
-            </button>
-            <button
-                class="px-5 py-2 rounded-full border border-white text-white font-semibold hover:bg-white hover:text-black transition">
                 Nasi Box
             </button>
             <button
                 class="px-5 py-2 rounded-full border border-white text-white font-semibold hover:bg-white hover:text-black transition">
-                Premuim Lunch Box
+                Premium Lunch Box 
             </button>
             <button
                 class="px-5 py-2 rounded-full border border-white text-white font-semibold hover:bg-white hover:text-black transition">
