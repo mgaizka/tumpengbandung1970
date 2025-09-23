@@ -56,8 +56,14 @@
         <div class="pt-6">
             <h3 class="font-bold mb-4">Informasi Tambahan</h3>
             <ul class="space-y-3 text-gray-300 text-sm">
-                <li>📞 +62 112202117</li>
-                <li>📍 Jl. Mataram No.2, Cihapit, Kec. Bandung Wetan, Kota Bandung, Jawa Barat 40114</li>
+                <li class="flex items-center">
+                    <i class="fa-solid fa-phone px-2"></i>
+                    +62 8112202117
+                </li>
+                <li class="flex items-center">
+                    <i class="fa-solid fa-location-dot px-2"></i>
+                    Jl. Mataram No.2, Cihapit, Kec. Bandung Wetan, Kota Bandung, Jawa Barat 40114
+                </li>
             </ul>
             <div class="mt-4">
                 <h4 class="font-bold">Jam Operasional</h4>
@@ -70,7 +76,9 @@
     <div
         class="border-t border-gray-700 mt-8 py-4 px-[2cm] flex flex-col sm:flex-row justify-between items-center text-gray-400 text-sm">
         <!-- Copyright -->
-        <p class="mb-4 sm:mb-0">© 2025 Tumpeng Bandung 1970. All rights reserved.</p>
+        <p class="mb-4 sm:mb-0">
+            © 2025 Tumpeng Bandung 1970. All rights reserved. — Created by Fauzan Gaizka & Monalisa
+        </p>
 
         <!-- Ikon Sosmed -->
 
