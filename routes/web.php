@@ -21,3 +21,7 @@ Route::get('/menu/nasi', function () {
 Route::get('/menu/lainnya', function () {
     return view('MenuLainnya');
 })->name('menu-lainnya');
+
+Route::get('/testimoni', function () {
+    return view('Testimoni');
+})->name('testimoni');

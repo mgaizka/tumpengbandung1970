@@ -48,41 +48,39 @@
                                 Menu
                             </button>
                             <!-- Isi Dropdown -->
-                            <div
-                                class="absolute left-0 top-full hidden w-72 bg-[#161616] rounded-lg shadow-lg group-hover:block overflow-hidden">
-                                <!-- Tumpeng -->
-                                <a href="{{ route('menu-tumpeng') }}"
-                                    class="flex items-start gap-3 px-4 py-3 border-b border-white/10
-                    {{ request()->routeIs('menu-tumpeng') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
-                                    <span class="w-6 h-6">🍱</span>
-                                    <div>
-                                        <p class="font-medium">Tumpeng</p>
-                                        <p class="text-sm text-gray-400">Tersedia tumpeng mini & besar</p>
-                                    </div>
-                                </a>
+                        <div
+                            class="absolute left-0 top-full hidden w-72 bg-[#161616] rounded-lg shadow-lg group-hover:block overflow-hidden border border-white">
+                            <!-- Tumpeng -->
+                            <a href="{{ route('menu-tumpeng') }}" class="flex items-start gap-3 px-4 py-3 border-b border-white
+                                {{ request()->routeIs('menu-tumpeng') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
+                                <span class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-md">🍱</span>
+                                <div>
+                                    <p class="font-medium">Tumpeng</p>
+                                    <p class="text-sm text-white">Tersedia tumpeng mini & besar untuk momen spesial</p>
+                                </div>
+                            </a>
+                        
+                            <!-- Paket Nasi -->
+                            <a href="{{ route('menu-nasi') }}" class="flex items-start gap-3 px-4 py-3 border-b border-white
+                                {{ request()->routeIs('menu-nasi') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
+                                <span class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-md">🥡</span>
+                                <div>
+                                    <p class="font-medium">Paket Nasi</p>
+                                    <p class="text-sm text-white">Nasi kotak praktis dengan lauk lengkap</p>
+                                </div>
+                            </a>
+                        
+                            <!-- Menu Lain -->
+                            <a href="{{ route('menu-lainnya') }}" class="flex items-start gap-3 px-4 py-3 border-b border-white/10
+                                {{ request()->routeIs('menu-lainnya') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
+                                <span class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-md">➕</span>
+                                <div>
+                                    <p class="font-medium">Menu Lain</p>
+                                    <p class="text-sm text-white">Pilihan menu tambahan untuk melengkapi santapan</p>
+                                </div>
+                            </a>
+                        </div>
 
-                                <!-- Paket Nasi -->
-                                <a href="{{ route('menu-nasi') }}"
-                                    class="flex items-start gap-3 px-4 py-3 border-b border-white/10
-                    {{ request()->routeIs('menu-nasi') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
-                                    <span class="w-6 h-6">🥡</span>
-                                    <div>
-                                        <p class="font-medium">Paket Nasi</p>
-                                        <p class="text-sm text-gray-400">Nasi kotak praktis dengan lauk lengkap</p>
-                                    </div>
-                                </a>
-
-                                <!-- Menu Lain -->
-                                <a href="{{ route('menu-lainnya') }}"
-                                    class="flex items-start gap-3 px-4 py-3 border-b border-white/10
-                    {{ request()->routeIs('menu-lainnya') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
-                                    <span class="w-6 h-6">➕</span>
-                                    <div>
-                                        <p class="font-medium">Menu Lain</p>
-                                        <p class="text-sm text-gray-400">Pilihan menu tambahan</p>
-                                    </div>
-                                </a>
-                            </div>
                         </div>
 
                         <!-- Tentang -->
@@ -93,7 +91,7 @@
                         </a>
 
                         <!-- Testimoni -->
-                        <a href="#"
+                        <a href="{{ route('testimoni') }}"
                             class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-white/5 hover:text-white">
                             Testimoni
                         </a>

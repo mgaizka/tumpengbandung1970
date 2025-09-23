@@ -320,7 +320,7 @@
     </div>
 
     <!-- Maps -->
-    <div class="px-4 md:px-[1cm] lg:px-[2cm] pt-[30px]">
+    <div class="px-4 md:px-[1cm] lg:px-[2cm] pt-[30px] py-8">
         <div class="w-full h-[300px] md:h-[490px] rounded-lg overflow-hidden shadow-lg">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.860730357939!2d107.61842537592155!3d-6.907251967601307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e73f2dc2d82d%3A0x5471b93bd20ac149!2sTumpeng%20Bandung%201970!5e0!3m2!1sid!2sid!4v1758100843739!5m2!1sid!2sid"
