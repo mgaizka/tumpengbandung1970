@@ -48,59 +48,70 @@
                                 Menu
                             </button>
                             <!-- Isi Dropdown -->
-                        <div
-                            class="absolute left-0 top-full hidden w-72 bg-[#161616] rounded-lg shadow-lg group-hover:block overflow-hidden border border-white">
-                            <!-- Tumpeng -->
-                        <a href="{{ route('menu-tumpeng') }}" class="flex items-center gap-3 px-4 py-3 border-b border-white 
+                            <div
+                                class="absolute left-0 top-full hidden w-72 bg-[#161616] rounded-lg shadow-lg group-hover:block overflow-hidden border border-white">
+                                <!-- Tumpeng -->
+                                <a href="{{ route('menu-tumpeng') }}"
+                                    class="flex items-center gap-3 px-4 py-3 border-b border-white
                                   {{ request()->routeIs('menu-tumpeng') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
-                        
-                            <!-- Kotak ikon -->
-                            <span class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-md shrink-0">
-                                <img class="w-7 h-7" src="https://img.icons8.com/material-rounded/24/dashboard-layout.png"
-                                    alt="dashboard-layout" />
-                            </span>
-                            <!-- Teks -->
-                            <div>
-                                <p class="font-medium">Tumpeng</p>
-                                <p class="text-sm text-white">Tersedia tumpeng mini & besar untuk momen spesial</p>
-                            </div>
-                        </a>
 
-                        
-                            <!-- Paket Nasi -->
-                            <a href="{{ route('menu-nasi') }}" class="flex items-center gap-3 px-4 py-3 border-b border-white
+                                    <!-- Kotak ikon -->
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-md shrink-0">
+                                        <img class="w-7 h-7"
+                                            src="https://img.icons8.com/material-rounded/24/dashboard-layout.png"
+                                            alt="dashboard-layout" />
+                                    </span>
+                                    <!-- Teks -->
+                                    <div>
+                                        <p class="font-medium">Tumpeng</p>
+                                        <p class="text-sm text-white">Tersedia tumpeng mini & besar untuk momen spesial
+                                        </p>
+                                    </div>
+                                </a>
+
+
+                                <!-- Paket Nasi -->
+                                <a href="{{ route('menu-nasi') }}"
+                                    class="flex items-center gap-3 px-4 py-3 border-b border-white
                                       {{ request()->routeIs('menu-nasi') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
-                            
-                                <!-- Kotak ikon -->
-                                <span class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-md shrink-0">
-                                    <img class="w-7 h-7" src="https://img.icons8.com/fluency-systems-filled/48/spoon-and-fork.png"
-                                        alt="spoon-and-fork" />
-                                </span>
-                            
-                                <!-- Teks -->
-                                <div>
-                                    <p class="font-medium">Paket Nasi</p>
-                                    <p class="text-sm text-white">Nasi kotak praktis dengan lauk lengkap</p>
-                                </div>
-                            </a>
 
-                            <!-- Menu Lain -->
-                            <a href="{{ route('menu-lainnya') }}" class="flex items-center gap-3 px-4 py-3 border-b border-white/10
+                                    <!-- Kotak ikon -->
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-md shrink-0">
+                                        <img class="w-7 h-7"
+                                            src="https://img.icons8.com/fluency-systems-filled/48/spoon-and-fork.png"
+                                            alt="spoon-and-fork" />
+                                    </span>
+
+                                    <!-- Teks -->
+                                    <div>
+                                        <p class="font-medium">Paket Nasi</p>
+                                        <p class="text-sm text-white">Nasi kotak praktis dengan lauk lengkap</p>
+                                    </div>
+                                </a>
+
+                                <!-- Menu Lain -->
+                                <a href="{{ route('menu-lainnya') }}"
+                                    class="flex items-center gap-3 px-4 py-3 border-b border-white/10
                                       {{ request()->routeIs('menu-lainnya') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
-                            
-                                <!-- Kotak ikon -->
-                                <span class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-md shrink-0">
-                                    <img class="w-7 h-7" src="https://img.icons8.com/sf-black-filled/64/layers.png" alt="layers" />
-                                </span>
-                            
-                                <!-- Teks -->
-                                <div>
-                                    <p class="font-medium">Menu Lain</p>
-                                    <p class="text-sm text-white">Pilihan menu tambahan untuk melengkapi santapan</p>
-                                </div>
-                            </a>
 
-                        </div>
+                                    <!-- Kotak ikon -->
+                                    <span
+                                        class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-md shrink-0">
+                                        <img class="w-7 h-7" src="https://img.icons8.com/sf-black-filled/64/layers.png"
+                                            alt="layers" />
+                                    </span>
+
+                                    <!-- Teks -->
+                                    <div>
+                                        <p class="font-medium">Menu Lain</p>
+                                        <p class="text-sm text-white">Pilihan menu tambahan untuk melengkapi santapan
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
 
                         </div>
 
@@ -113,7 +124,8 @@
 
                         <!-- Testimoni -->
                         <a href="{{ route('testimoni') }}"
-                            class="rounded-md px-3 py-2 text-md font-medium text-gray-300 hover:bg-white/5 hover:text-white">
+                            class="rounded-md px-3 py-2 text-md font-medium
+            {{ request()->routeIs('testimoni') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
                             Testimoni
                         </a>
                     </div>
@@ -179,32 +191,6 @@
         </a>
     </div>
 </nav>
-
-{{-- <script>
-    const menuButton = document.getElementById("menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const iconOpen = document.getElementById("icon-open");
-    const iconClose = document.getElementById("icon-close");
-    const navbar = document.getElementById("navbar");
-    AOS.init();
-
-    menuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-        iconOpen.classList.toggle("hidden");
-        iconClose.classList.toggle("hidden");
-    });
-
-
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add("bg-black/70", "backdrop-blur-sm");
-            navbar.classList.remove("bg-[#161616]");
-        } else {
-            navbar.classList.add("bg-[#161616]");
-            navbar.classList.remove("bg-black/70", "backdrop-blur-sm");
-        }
-    });
-</script> --}}
 
 <script>
     const menuBtn = document.getElementById("menu-button");
