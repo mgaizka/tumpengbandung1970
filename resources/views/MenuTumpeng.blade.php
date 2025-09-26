@@ -67,7 +67,7 @@
 
                     <!-- Modal -->
                     <div x-show="open" x-transition
-                        class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+                        class="fixed inset-0 z-50 flex items-center justify-center bg-gray/60 backdrop-blur-sm"
                         style="display:none">
                         <div class="bg-[#111] text-white w-full max-w-md rounded-2xl shadow-lg p-6 relative">
                             <!-- Tombol Close -->
@@ -77,13 +77,17 @@
                             </button>
 
                             <!-- Judul dan Harga -->
-                            <h2 class="text-lg font-bold text-center">
+                            <h2 class="text-lg font-bold text-center mb-2">
                                 Nasi Tumpeng Box
                                 {{ $menu->jenis_paket }} – Rp {{ number_format($menu->harga, 0, ',', '.') }}
                             </h2>
-                            <p class="text-center text-sm text-gray-300 mb-4">
+                        <div class="flex items-center justify-center space-x-2 mb-4">
+                            <div class="flex-1 border-t border-white"></div>
+                            <p class="text-sm text-gray-300 whitespace-nowrap text-center">
                                 {{ $menu->desc }}
                             </p>
+                            <div class="flex-1 border-t border-white"></div>
+                        </div>
 
                             <!-- Gambar -->
                             <div
@@ -100,18 +104,22 @@
                             <!-- Pilihan Menu -->
                             <div class="space-y-5 text-sm">
                                 <div>
-                                    <h3 class="font-semibold mb-1 border-b border-gray-600 pb-1">Pilihan Menu</h3>
+                                    <div class="flex items-center justify-center space-x-4 my-4">
+                                        <div class="flex-1 border-t border-white"></div>
+                                        <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
+                                        <div class="flex-1 border-t border-white"></div>
+                                    </div>
                                 </div>
 
                                 {{-- Nasi --}}
                                 <div>
-                                    <h4 class="font-bold">Nasi</h4>
+                                    <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">Nasi</h4>
                                     <p class="text-gray-300">Kuning | Hijau | Ungu | Uduk | Tutug Oncom</p>
                                 </div>
 
                                 {{-- Menu Utama --}}
                                 <div>
-                                    <h4 class="font-bold">Menu Utama</h4>
+                                    <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">Menu Utama</h4>
                                     <p class="text-gray-300">
                                         @if ($menu->jenis_paket == 'Paket A')
                                             Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy | Ayam Opor Kuning
@@ -126,7 +134,7 @@
 
                                 {{-- Lauk Tambahan --}}
                                 <div>
-                                    <h4 class="font-bold">Lauk Tambahan</h4>
+                                    <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">Lauk Tambahan</h4>
                                     <p class="text-gray-300">
                                         Telur Balado | Telur Dadar | Telur Pindang | Telur Kecap | Teri Kacang |
                                         Mustofa | Capcay | Acar Kuning | Urab | Mie Goreng |
@@ -137,14 +145,11 @@
                             </div>
 
                             <!-- Tombol Pesan -->
-                            <button
-                                class="w-full mt-6 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M16.7 14.1c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1c-.2.3-.7.9-.8 1.1-.1.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.8-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.4.1-.1.2-.3.3-.4.1-.1.1-.2.2-.4.1-.2 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.6 2.4 3.9 3.4 2.3 1 2.3.7 2.7.6.4-.1 1.3-.5 1.5-1 .2-.5.2-.9.2-1-.1-.1-.3-.2-.6-.3z" />
-                                </svg>
-                                Pesan Sekarang
-                            </button>
+                            <a href="https://wa.me/+628112202117" target="_blank"
+                                class="bg-[#075E54] w-full max-w-sm py-2 rounded-xl flex items-center justify-center gap-2 hover:bg-[#0a6e63] transition mt-4">
+                                <i class="fab fa-whatsapp text-xl text-white"></i>
+                                <span class="text-white font-medium text-lg">Pesan Sekarang</span>
+                            </a>
                         </div>
                     </div>
                 </div>
