@@ -1,5 +1,12 @@
 <?php
 
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\MenuLainnyaController;
+use App\Http\Controllers\MenuNasiController;
+use App\Http\Controllers\TestimoniController;
+use App\Models\MenuLainnya;
+use App\Models\MenuNasi;
+use App\Models\MenuTumpeng;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -10,18 +17,14 @@ Route::get('/tentang-kami', function () {
     return view('TentangKami');
 })->name('tentang-kami');
 
-Route::get('/menu/tumpeng', function () {
-    return view('MenuTumpeng');
-})->name('menu-tumpeng');
+Route::get('/menu/tumpeng', [MenuController::class, 'index'])
+    ->name('menu-tumpeng');
 
-Route::get('/menu/nasi', function () {
-    return view('MenuNasi');
-})->name('menu-nasi');
+Route::get('/menu/nasi', [MenuNasiController::class, 'index'])
+    ->name('menu-nasi');
 
-Route::get('/menu/lainnya', function () {
-    return view('MenuLainnya');
-})->name('menu-lainnya');
+Route::get('/menu/lainnya', [MenuLainnyaController::class, 'index'])
+    ->name('menu-lainnya');
 
-Route::get('/testimoni', function () {
-    return view('Testimoni');
-})->name('testimoni');
+Route::get('/testimoni', [TestimoniController::class, 'index'])
+    ->name('testimoni');
