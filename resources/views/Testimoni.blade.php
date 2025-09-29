@@ -12,7 +12,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 justify-between py-8">
             @foreach ($events as $event)
                 <div class="bg-white rounded-xl shadow-md overflow-hidden w-full h-[440px] flex flex-col ">
-                    <img src="{{ asset('storage/' . $event->image) }}" alt="Kopassus" class="w-full h-2/3 object-cover">
+                    <img src="{{ asset($event->image) }}" alt="Kopassus" class="w-full h-2/3 object-cover">
                     <div class="p-4 flex-1 flex flex-col justify-between">
                         <div>
                             <h3 class="text-black text-lg font-bold">{{ $event->judul }}</h3>
@@ -43,11 +43,10 @@
                         <p class="text-center text-white mb-4" x-text="selectedEvent.sub_judul"></p>
 
                         <div class="mb-6 grid gap-3" :class="selectedEvent.image_alt ? 'grid-cols-2' : 'grid-cols-1'">
-                            <img :src="'/storage/' + selectedEvent.image" class="rounded-lg object-cover w-full h-40"
-                                alt="paket">
+                            <img :src="selectedEvent.image" class="rounded-lg object-cover w-full h-40" alt="paket">
                             <template x-if="selectedEvent.image_alt">
-                                <img :src="'/storage/' + selectedEvent.image_alt"
-                                    class="rounded-lg object-cover w-full h-40" alt="paket">
+                                <img :src="selectedEvent.image_alt" class="rounded-lg object-cover w-full h-40"
+                                    alt="paket">
                             </template>
                         </div>
 

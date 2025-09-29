@@ -56,7 +56,7 @@
                 <div x-data="{ open: false }" class="relative">
                     <!-- Kartu Produk -->
                     <div class="bg-white rounded-xl overflow-hidden shadow">
-                        <img src="{{ asset('storage/' . $menu->image) }}" alt="{{ $menu->jenis_paket }}"
+                        <img src="{{ asset($menu->image) }}" alt="{{ $menu->jenis_paket }}"
                             class="w-full h-56 object-cover">
                         <div class="p-4 text-black">
                             <h3 class="text-xl font-bold mb-1">{{ $menu->jenis_paket }}</h3>
@@ -93,12 +93,12 @@
                             <!-- Gambar -->
                             <div
                                 class="mb-6 @if ($menu->image_alt) grid grid-cols-2 gap-3 @else grid grid-cols-1 @endif">
-                                <img src="{{ asset('storage/' . $menu->image) }}"
-                                    class="rounded-lg object-cover w-full h-40" alt="paket">
+                                <img src="{{ asset($menu->image) }}" class="rounded-lg object-cover w-full h-40"
+                                    alt="paket">
 
                                 @if ($menu->image_alt)
-                                    <img src="{{ asset('storage/' . $menu->image_alt) }}"
-                                        class="rounded-lg object-cover w-full h-40" alt="paket">
+                                    <img src="{{ asset($menu->image_alt) }}" class="rounded-lg object-cover w-full h-40"
+                                        alt="paket">
                                 @endif
                             </div>
 
@@ -108,38 +108,309 @@
                                     <h3 class="font-semibold mb-1 border-b border-gray-600 pb-1">Pilihan Menu</h3>
                                 </div>
 
-                                {{-- Nasi --}}
-                                <div>
-                                    <h4 class="font-bold">Nasi</h4>
-                                    <p class="text-gray-300">Kuning | Hijau | Ungu | Uduk | Tutug Oncom</p>
-                                </div>
+                                @php
+                                    $paket = null;
+                                    if (\Illuminate\Support\Str::contains($menu->jenis_paket, 'Paket A')) {
+                                        $paket = 'Paket A';
+                                    } elseif (\Illuminate\Support\Str::contains($menu->jenis_paket, 'Paket B')) {
+                                        $paket = 'Paket B';
+                                    } elseif (\Illuminate\Support\Str::contains($menu->jenis_paket, 'Paket C')) {
+                                        $paket = 'Paket C';
+                                    }
+                                @endphp
 
-                                {{-- Menu Utama --}}
-                                <div>
-                                    <h4 class="font-bold">Menu Utama</h4>
-                                    <p class="text-gray-300">
-                                        @if ($menu->jenis_paket == 'Paket A')
-                                            Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy | Ayam Opor Kuning
-                                        @elseif ($menu->jenis_paket == 'Paket B')
-                                            Gepuk | Rendang | Semur Daging
-                                        @elseif ($menu->jenis_paket == 'Paket C')
-                                            Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap |
-                                            Ayam Crispy | Ayam Opor Kuning | Gepuk | Rendang | Semur Daging
-                                        @endif
-                                    </p>
-                                </div>
+                                {{-- Nasi Bakar --}}
+                                @if ($menu->jenis_paket == 'Nasi Bakar')
+                                    <div>
+                                        <h4 class="font-bold">Pilihan Nasi</h4>
+                                        <p class="text-gray-300">
+                                            Nasi Bakar Ayam Suwir Kemangi | Nasi Bakar Tongkol Pedas |
+                                            Nasi Bakar Teri | Nasi Bakar Telur Asin | Nasi Bakar Jambal Cabe
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Tambahan</h4>
+                                        <p class="text-gray-300">
+                                            Telur (Rp 2000) | Tempe Goreng (Rp 3000) | Kerupuk (Rp 2000)
+                                        </p>
+                                    </div>
+                                @elseif ($menu->kategori == 'nasi-bakar')
+                                    <div>
+                                        <h4 class="font-bold">Pilihan Nasi</h4>
+                                        <p class="text-gray-300">
+                                            Nasi Bakar Ayam Suwir Kemangi | Nasi Bakar Tongkol Pedas |
+                                            Nasi Bakar Teri | Nasi Bakar Telur Asin | Nasi Bakar Jambal Cabe |
+                                            Nasi Bakar Sambal Cumi
+                                        </p>
+                                    </div>
 
-                                {{-- Lauk Tambahan --}}
-                                <div>
-                                    <h4 class="font-bold">Lauk Tambahan</h4>
-                                    <p class="text-gray-300">
-                                        Telur Balado | Telur Dadar | Telur Pindang | Telur Kecap | Teri Kacang |
-                                        Mustofa | Capcay | Acar Kuning | Urab | Mie Goreng |
-                                        Soun Goreng | Asin Balado | Sambel Goreng Kentang | Kerang |
-                                        Perkedel Jagung | Perkedel Kentang | Rempeyek
-                                    </p>
-                                </div>
+                                    <div>
+                                        <h4 class="font-bold">
+                                            @if ($paket == 'Paket A')
+                                                Menu Utama
+                                            @elseif ($paket == 'Paket B')
+                                                Menu Daging
+                                            @elseif ($paket == 'Paket C')
+                                                Menu Utama
+                                            @endif
+                                        </h4>
+                                        <p class="text-gray-300">
+                                            @if ($paket == 'Paket A')
+                                                Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy |
+                                                Ayam Opor Kuning
+                                            @elseif ($paket == 'Paket B')
+                                                Gepuk | Rendang | Semur Daging
+                                            @elseif ($paket == 'Paket C')
+                                                Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy |
+                                                Ayam Opor Kuning | Gepuk | Rendang | Semur Daging
+                                            @endif
+                                        </p>
+                                    </div>
+
+                                    {{-- Tumisan --}}
+                                    <div>
+                                        <h4 class="font-bold">Pilihan Tumisan</h4>
+                                        <p class="text-gray-300">
+                                            Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang |
+                                            Tumis Tempe | Tumis Jambal + Cabe Gendot | Cumi Balado | Urab | Cah Jagung |
+                                            Ase Tahu Cabe | Buncis Jagung | Acar Ketimun dll.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-bold">Keringan</h4>
+                                        <p class="text-gray-300">
+                                            Tahu Goreng | Tempe Goreng | Perkedel Jagung | Pekedel Kentang | Mustofa |
+                                            Kering Tempe | Asin Balado
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-bold">Tambahan</h4>
+                                        <p class="text-gray-300">
+                                            Telur (Rp 2000) | Tempe Goreng (Rp 3000) | Kerupuk (Rp 2000)
+                                        </p>
+                                    </div>
+
+                                    {{-- Tumisan --}}
+                                @elseif ($menu->kategori == 'nasi-besek')
+                                    <div>
+                                        <h4 class="font-bold">Pilihan Nasi</h4>
+                                        <p class="text-gray-300">
+                                            Putih | Merah | Liwet | Tutug Oncom
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-bold">
+                                            @if ($paket == 'Paket A')
+                                                Menu Utama
+                                            @elseif ($paket == 'Paket B')
+                                                Menu Daging
+                                            @elseif ($paket == 'Paket C')
+                                                Menu Utama
+                                            @endif
+                                        </h4>
+                                        <p class="text-gray-300">
+                                            @if ($paket == 'Paket A')
+                                                Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy |
+                                                Ayam Opor Kuning
+                                            @elseif ($paket == 'Paket B')
+                                                Gepuk | Rendang | Semur Daging
+                                            @elseif ($paket == 'Paket C')
+                                                Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy |
+                                                Ayam Opor Kuning | Gepuk | Rendang | Semur Daging
+                                            @endif
+                                        </p>
+                                    </div>
+
+                                    {{-- Tumisan --}}
+                                    <div>
+                                        <h4 class="font-bold">Pilihan Tumisan</h4>
+                                        <p class="text-gray-300">
+                                            Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang |
+                                            Tumis Tempe | Tumis Jambal + Cabe Gendot | Cumi Balado | Urab | Cah Jagung |
+                                            Ase Tahu Cabe | Buncis Jagung | Acar Ketimun dll.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-bold">Keringan</h4>
+                                        <p class="text-gray-300">
+                                            Tahu Goreng | Tempe Goreng | Perkedel Jagung | Pekedel Kentang | Mustofa |
+                                            Kering Tempe | Asin Balado
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-bold">Tambahan</h4>
+                                        <p class="text-gray-300">
+                                            Telur (Rp 2000) | Tempe Goreng (Rp 3000) | Kerupuk (Rp 2000)
+                                        </p>
+                                    </div>
+
+                                    {{-- Nasi Box --}}
+                                @elseif ($menu->kategori == 'paket-nasi-box')
+                                    <div>
+                                        <h4 class="font-bold">Pilihan Nasi</h4>
+                                        <p class="text-gray-300">
+                                            Putih | Merah | Liwet | Tutug Oncom
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-bold">
+                                            @if ($paket == 'Paket A')
+                                                Menu Utama
+                                            @elseif ($paket == 'Paket B')
+                                                Menu Daging
+                                            @elseif ($paket == 'Paket C')
+                                                Menu Utama
+                                            @endif
+                                        </h4>
+                                        <p class="text-gray-300">
+                                            @if ($paket == 'Paket A')
+                                                Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy |
+                                                Ayam Opor Kuning
+                                            @elseif ($paket == 'Paket B')
+                                                Gepuk | Rendang | Semur Daging
+                                            @elseif ($paket == 'Paket C')
+                                                Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy |
+                                                Ayam Opor Kuning | Gepuk | Rendang | Semur Daging
+                                            @endif
+                                        </p>
+                                    </div>
+
+                                    {{-- Tumisan --}}
+                                    <div>
+                                        <h4 class="font-bold">Pilihan Tumisan</h4>
+                                        <p class="text-gray-300">
+                                            Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang |
+                                            Tumis Tempe | Tumis Jambal + Cabe Gendot | Cumi Balado | Urab | Cah Jagung |
+                                            Ase Tahu Cabe | Buncis Jagung | Acar Ketimun dll.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-bold">Keringan</h4>
+                                        <p class="text-gray-300">
+                                            Tahu Goreng | Tempe Goreng | Perkedel Jagung | Pekedel Kentang | Mustofa |
+                                            Kering Tempe | Asin Balado
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-bold">Tambahan</h4>
+                                        <p class="text-gray-300">
+                                            Telur (Rp 2000) | Tempe Goreng (Rp 3000) | Kerupuk (Rp 2000)
+                                        </p>
+                                    </div>
+                                @elseif ($menu->kategori == 'nasi-bento')
+                                    <div>
+                                        <h4 class="font-bold">Nasi</h4>
+                                        <p class="text-gray-300">
+                                            Putih | Kuning | Uduk
+                                        </p>
+                                    </div>
+
+                                    {{-- Menu Utama / Daging --}}
+                                    <div>
+                                        <h4 class="font-bold">
+                                            @if ($paket == 'Paket A')
+                                                Menu Utama
+                                            @elseif ($paket == 'Paket B')
+                                                Menu Daging
+                                            @elseif ($paket == 'Paket C')
+                                                Menu Utama
+                                            @endif
+                                        </h4>
+                                        <p class="text-gray-300">
+                                            @if ($paket == 'Paket A')
+                                                Chicken Katsu | Ayam Bakar | Ayam Goreng | Ayam Teriyaki
+                                            @elseif ($paket == 'Paket B')
+                                                Daging Teriyaki | Gepuk | Semur Daging
+                                            @elseif ($paket == 'Paket C')
+                                                Chicken Katsu | Ayam Bakar | Ayam Goreng | Ayam Teriyaki |
+                                                Daging Teriyaki | Gepuk | Semur Daging
+                                            @endif
+                                        </p>
+                                    </div>
+
+                                    {{-- Keringan --}}
+                                    <div>
+                                        <h4 class="font-bold">Keringan</h4>
+                                        <p class="text-gray-300">
+                                            Tahu Goreng | Tempe Goreng | Perkedel Jagung | Pekedel Kentang | Mustofa |
+                                            Kering Tempe | Asin Balado
+                                        </p>
+                                    </div>
+
+                                    {{-- Ricebowl --}}
+                                @elseif ($menu->kategori == 'ricebowl')
+                                    {{-- Menu Utama / Daging --}}
+                                    <div>
+                                        <h4 class="font-bold">
+                                            @if ($paket == 'Paket A')
+                                                Menu Utama
+                                            @elseif ($paket == 'Paket B')
+                                                Menu Daging
+                                            @elseif ($paket == 'Paket C')
+                                                Menu Utama
+                                            @endif
+                                        </h4>
+                                        <p class="text-gray-300">
+                                            @if ($paket == 'Paket A')
+                                                Chicken Karage | Chicken Katsu | Ayam Goreng | Ayam Teriyaki
+                                            @elseif ($paket == 'Paket B')
+                                                Dori Karage | Beef |
+                                            @elseif ($paket == 'Paket C')
+                                                Chicken Karage | Chicken Katsu | Dori Karage | Beef |
+                                            @endif
+                                        </p>
+                                    </div>
+
+                                    {{-- Bumbu --}}
+                                    <div>
+                                        <h4 class="font-bold">Pilihan Bumbu</h4>
+                                        <p class="text-gray-300">
+                                            Lada Hitam | Lada Garam | Chili Oil | Sambal Korek | Sambal Matah |
+                                        </p>
+                                    </div>
+
+                                    {{-- Tambahan --}}
+                                    <div>
+                                        <h4 class="font-bold">Tambahan</h4>
+                                        <p class="text-gray-300">
+                                            Telur (Rp 5000) | Aneka Sauce (Rp 5000) |
+                                        </p>
+                                    </div>
+                                @elseif ($menu->jenis_paket == 'Nasi Berkat')
+                                    <div>
+                                        <p class="text-gray-300">
+                                            Sambal Goreng Daging | Sate Lilit | Telur Pindang |
+                                            Ase Buncis Cabe | Perkedel Jagung | Sambal |
+                                            Kerupuk | Air Mineral Botol | Buah/Puding
+                                        </p>
+                                    </div>
+                                @elseif ($menu->jenis_paket == 'Nasi Bali')
+                                    <div>
+                                        <p class="text-gray-300">
+                                            Sambal Goreng Daging | Sate Lilit | Telur Pindang |
+                                            Ase Buncis Bali | Sambal | Kerupuk | Air Mineral
+                                            Botol | Buah/Puding
+                                        </p>
+                                    </div>
+                                @elseif ($menu->jenis_paket == 'Nasi Nyunda')
+                                    <div>
+                                        <p class="text-gray-300">
+                                            Nasi Timbel | Gepuk | Ayam Goreng/Bakar | Tumis
+                                            Jamur | Asin Balado/Jambal | Lalab Sambal | Air
+                                            Mineral Botol | Buah/Puding
+                                        </p>
+                                    </div>
+                                @endif
                             </div>
+
 
                             <!-- Tombol Pesan -->
                             <button

@@ -3,6 +3,7 @@
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\MenuLainnyaController;
 use App\Http\Controllers\MenuNasiController;
+use App\Http\Controllers\MenuTumpengController;
 use App\Http\Controllers\TestimoniController;
 use App\Models\MenuLainnya;
 use App\Models\MenuNasi;
@@ -17,7 +18,7 @@ Route::get('/tentang-kami', function () {
     return view('TentangKami');
 })->name('tentang-kami');
 
-Route::get('/menu/tumpeng', [MenuController::class, 'index'])
+Route::get('/menu/nasi-tumpeng', [MenuController::class, 'index'])
     ->name('menu-tumpeng');
 
 Route::get('/menu/nasi', [MenuNasiController::class, 'index'])
