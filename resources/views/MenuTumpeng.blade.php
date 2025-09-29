@@ -50,7 +50,7 @@
                 <div x-data="{ open: false }" class="relative">
                     <!-- Kartu Produk -->
                     <div class="bg-white rounded-xl overflow-hidden shadow">
-                        <img src="{{ asset('storage/' . $menu->image) }}" alt="{{ $menu->jenis_paket }}"
+                        <img src="{{ asset($menu->image) }}" alt="{{ $menu->jenis_paket }}"
                             class="w-full h-56 object-cover">
                         <div class="p-4 text-black">
                             <h3 class="text-xl font-bold mb-1">{{ $menu->jenis_paket }}</h3>
@@ -81,23 +81,23 @@
                                 Nasi Tumpeng Box
                                 {{ $menu->jenis_paket }} – Rp {{ number_format($menu->harga, 0, ',', '.') }}
                             </h2>
-                        <div class="flex items-center justify-center space-x-2 mb-4">
-                            <div class="flex-1 border-t border-white"></div>
-                            <p class="text-sm text-gray-300 whitespace-nowrap text-center">
-                                {{ $menu->desc }}
-                            </p>
-                            <div class="flex-1 border-t border-white"></div>
-                        </div>
+                            <div class="flex items-center justify-center space-x-2 mb-4">
+                                <div class="flex-1 border-t border-white"></div>
+                                <p class="text-sm text-gray-300 whitespace-nowrap text-center">
+                                    {{ $menu->desc }}
+                                </p>
+                                <div class="flex-1 border-t border-white"></div>
+                            </div>
 
                             <!-- Gambar -->
                             <div
                                 class="mb-6 @if ($menu->image_alt) grid grid-cols-2 gap-3 @else grid grid-cols-1 @endif">
-                                <img src="{{ asset('storage/' . $menu->image) }}"
-                                    class="rounded-lg object-cover w-full h-40" alt="paket">
+                                <img src="{{ asset($menu->image) }}" class="rounded-lg object-cover w-full h-40"
+                                    alt="paket">
 
                                 @if ($menu->image_alt)
-                                    <img src="{{ asset('storage/' . $menu->image_alt) }}"
-                                        class="rounded-lg object-cover w-full h-40" alt="paket">
+                                    <img src="{{ asset($menu->image_alt) }}" class="rounded-lg object-cover w-full h-40"
+                                        alt="paket">
                                 @endif
                             </div>
 
@@ -113,13 +113,15 @@
 
                                 {{-- Nasi --}}
                                 <div>
-                                    <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">Nasi</h4>
+                                    <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">Nasi
+                                    </h4>
                                     <p class="text-gray-300">Kuning | Hijau | Ungu | Uduk | Tutug Oncom</p>
                                 </div>
 
                                 {{-- Menu Utama --}}
                                 <div>
-                                    <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">Menu Utama</h4>
+                                    <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">Menu
+                                        Utama</h4>
                                     <p class="text-gray-300">
                                         @if ($menu->jenis_paket == 'Paket A')
                                             Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy | Ayam Opor Kuning
@@ -134,7 +136,8 @@
 
                                 {{-- Lauk Tambahan --}}
                                 <div>
-                                    <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">Lauk Tambahan</h4>
+                                    <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">Lauk
+                                        Tambahan</h4>
                                     <p class="text-gray-300">
                                         Telur Balado | Telur Dadar | Telur Pindang | Telur Kecap | Teri Kacang |
                                         Mustofa | Capcay | Acar Kuning | Urab | Mie Goreng |
