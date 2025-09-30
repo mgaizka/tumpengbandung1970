@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\MenuLainnya;
 use App\Models\MenuNasi;
 use App\Models\MenuTumpeng;
 use App\Models\Testimoni;
@@ -20,6 +21,7 @@ class DatabaseSeeder extends Seeder
 
         $menus = config('menutumpeng');
         $nasis = config('menunasi');
+        $lainnyas = config('menulainnya');
         $testimonis = config('testimoni');
 
         foreach ($menus as $menu) {
@@ -28,6 +30,10 @@ class DatabaseSeeder extends Seeder
 
         foreach ($nasis as $nasi) {
             MenuNasi::create($nasi);
+        }
+
+        foreach ($lainnyas as $lainnya) {
+            MenuLainnya::create($lainnya);
         }
 
         foreach ($testimonis as $testimoni) {
