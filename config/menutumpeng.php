@@ -8,8 +8,8 @@ return [
         'desc' => '1 Menu Utama Ayam dan 4 Lauk Tambahan',
         'harga' => 38000,
         'kategori' => 'nasi-box',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-box-1.jpg',
-        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-box-2.jpg'
+        'image' => 'asset\menupict\tumpengpict\tumpeng-box-1.webp',
+        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-box-2.webp'
     ],
     [
         'jenis_paket' => 'Paket B',
@@ -17,8 +17,8 @@ return [
         'desc' => '1 Menu Utama Daging dan 4 Lauk Tambahan',
         'harga' => 40000,
         'kategori' => 'nasi-box',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-box-1.jpg',
-        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-box-2.jpg'
+        'image' => 'asset\menupict\tumpengpict\tumpeng-box-1.webp',
+        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-box-2.webp'
     ],
     [
         'jenis_paket' => 'Paket C',
@@ -26,8 +26,8 @@ return [
         'desc' => '2 Menu Ayam dan Daging + 4 Lauk Tambahan',
         'harga' => 55000,
         'kategori' => 'nasi-box',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-box-1.jpg',
-        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-box-2.jpg'
+        'image' => 'asset\menupict\tumpengpict\tumpeng-box-1.webp',
+        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-box-2.webp'
     ],
 
     //Tumpeng Mini
