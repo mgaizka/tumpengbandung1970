@@ -95,11 +95,11 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
                 <!-- Card -->
                 <div data-aos="flip-up"
-                    class="bg-[#F4E1A6] w-full max-w-[321px] h-auto min-h-[280px] p-6 rounded-xl shadow-md flex flex-col items-start mx-auto">
+                    class="bg-[#F4E1A6] w-full max-w-[400px] h-auto min-h-[280px] p-6 rounded-xl shadow-md flex flex-col items-start mx-auto">
                 <div class="bg-white w-[47px] h-[47px] flex items-center justify-center rounded-lg shadow-md mb-4">
                     <img src="https://img.icons8.com/windows/32/thumb-up.png" alt="thumb-up" class="w-7 h-7" />
                 </div>
-                    <h3 class="font-bold text-[20px] sm:text-[22px] mb-2">Sudah Bersertifikasi <br> Halal</h3>
+                    <h3 class="font-bold text-[20px] sm:text-[22px] mb-5">Sudah Bersertifikasi Halal</h3>
                     <p class="text-[16px] sm:text-[18px]">
                         Sajian yang kami hadirkan tidak hanya lezat dan berkualitas, tetapi juga terjamin kehalalannya.
                     </p>
@@ -107,11 +107,11 @@
 
                 <!-- Card 2 -->
                 <div data-aos="flip-up"
-                    class="bg-[#F4E1A6] w-full max-w-[321px] h-auto min-h-[280px] p-6 rounded-xl shadow-md flex flex-col items-start mx-auto">
+                    class="bg-[#F4E1A6] w-full max-w-[400px] h-auto min-h-[280px] p-6 rounded-xl shadow-md flex flex-col items-start mx-auto">
                     <div class="bg-white w-[47px] h-[47px] flex items-center justify-center rounded-lg shadow-md mb-4">
                         <img src="https://img.icons8.com/ios/50/natural-food.png" alt="leaf" class="w-7 h-7" />
                     </div>
-                    <h3 class="font-bold text-[20px] sm:text-[22px] mb-2">Bahan Pilihan <br> Berkualitas</h3>
+                    <h3 class="font-bold text-[20px] sm:text-[22px] mb-5">Bahan Pilihan Berkualitas</h3>
                     <p class="text-[16px] sm:text-[18px]">
                         Kami hanya menggunakan beras terbaik, bumbu segar, dan lauk pilihan agar cita rasa tumpeng selalu
                         istimewa.
@@ -120,11 +120,11 @@
 
                 <!-- Card 3 -->
                 <div data-aos="flip-up"
-                    class="bg-[#F4E1A6] w-full max-w-[321px] h-auto min-h-[280px] p-6 rounded-xl shadow-md flex flex-col items-start mx-auto">
+                    class="bg-[#F4E1A6] w-full max-w-[400px] h-auto min-h-[280px] p-6 rounded-xl shadow-md flex flex-col items-start mx-auto">
                     <div class="bg-white w-[47px] h-[47px] flex items-center justify-center rounded-lg shadow-md mb-4">
                         <img src="https://img.icons8.com/wired/64/meal.png" alt="meal" class="w-8 h-8" />
                     </div>
-                    <h3 class="font-bold text-[20px] sm:text-[22px] mb-2">Tampilan Estetis dan <br> Rapi</h3>
+                    <h3 class="font-bold text-[20px] sm:text-[22px] mb-5">Tampilan Estetis dan Rapi</h3>
                     <p class="text-[16px] sm:text-[18px]">
                         Disusun dengan penuh ketelitian sehingga tumpeng tidak hanya lezat, tetapi juga indah dipandang
                         dalam
@@ -134,11 +134,11 @@
 
                 <!-- Card 4 -->
                 <div data-aos="flip-up"
-                    class="bg-[#F4E1A6] w-full max-w-[321px] h-auto min-h-[280px] p-6 rounded-xl shadow-md flex flex-col items-start mx-auto">
+                    class="bg-[#F4E1A6] w-full max-w-[400px] h-auto min-h-[280px] p-6 rounded-xl shadow-md flex flex-col items-start mx-auto">
                     <div class="bg-white w-[47px] h-[47px] flex items-center justify-center rounded-lg shadow-md mb-4">
                     <img src="https://img.icons8.com/ios/50/queue.png" alt="queue" class="w-7 h-7" />
                     </div>
-                    <h3 class="font-bold text-[20px] sm:text-[22px] mb-2">Penuh Makna dan Kebersamaan</h3>
+                    <h3 class="font-bold text-[20px] sm:text-[22px] mb-5">Penuh Makna dan Kebersamaan</h3>
                     <p class="text-[16px] sm:text-[18px]">
                         Tumpeng kami menghadirkan filosofi syukur serta kebersamaan, menjadikan momen lebih berkesan dan
                         bermakna.
