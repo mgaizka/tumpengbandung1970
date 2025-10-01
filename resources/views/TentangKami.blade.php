@@ -8,7 +8,7 @@
         <!-- PROFIL USAHA -->
         <div class="px-4 sm:px-8 md:px-16 grid grid-cols-1 lg:grid-cols-2 gap-10">
             <!-- Kiri: Profil Usaha -->
-            <div  data-aos="fade-up">
+            <div  data-aos="fade-up mb-6">
                 <span class="inline-block bg-white text-black font-bold text-sm sm:text-md px-4 py-1 rounded-full mb-4">
                     PROFIL USAHA
                 </span>
@@ -28,7 +28,7 @@
 
                 <!-- Gambar bawah teks -->
                 <div>
-                    <img src="foto1.jpeg" alt="Menu 3" class="rounded-lg w-full h-48 sm:h-60 object-cover">
+                    <img src="foto1.jpeg" alt="Menu 3" class="rounded-lg w-full sm:h-60 object-cover mt-10">
                 </div>
             </div>
 
@@ -52,18 +52,24 @@
                     </p>
                 </div>
             </div>
+        </div>
+        <!-- VISI & MISI -->
+    <div data-aos="fade-up" class="px-4 sm:px-8 md:px-16 text-white pt-10">
+        <span class="inline-block bg-white text-black font-bold text-sm sm:text-md px-4 py-1 rounded-full mb-6">
+            VISI & MISI
+        </span>
 
-            <!-- VISI & MISI -->
-            <div  data-aos="fade-up">
-                <span class="inline-block bg-white text-black font-bold text-sm sm:text-md px-4 py-1 rounded-full mb-6">
-                    VISI & MISI
-                </span>
-                <img src="foto1.jpeg" alt="Visi Misi" class="rounded-lg w-full max-w-3xl h-auto object-cover mx-auto">
+        <!-- Grid foto kiri - teks kanan -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+            <!-- FOTO KIRI -->
+            <div class="flex justify-center md:justify-start">
+                <img src="foto1.jpeg" alt="Visi Misi" class="rounded-2xl w-full h-[340px] object-cover shadow-lg">
             </div>
 
-            <div  data-aos="fade-up">
-                <h2 class="text-2xl sm:text-3xl font-bold mb-6">Visi & Misi</h2>
-                <p class="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed mb-4 text-justify">
+            <!-- TEKS KANAN -->
+            <div class="flex flex-col justify-start mt-4"> 
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4">Visi & Misi</h2>
+                <p class="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed mb-8 text-justify">
                     Visi kami adalah menyajikan hidangan yang berkualitas dengan pelayanan yang ramah dan bersahabat,
                     sehingga setiap pelanggan dapat merasakan pengalaman kuliner yang berkesan.
                 </p>
@@ -75,6 +81,8 @@
                 </p>
             </div>
         </div>
+    </div>
+
 
         <!-- SEJARAH SINGKAT -->
         <div  data-aos="fade-up" class="px-4 sm:px-8 md:px-16 text-white pt-10">
@@ -195,32 +203,32 @@
                 </div>
 
                 <!-- Step 5-6-7 dibungkus biar center -->
-                <div
-                    class="col-span-1 sm:col-span-2 lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:flex lg:justify-center gap-8">
-                    <!-- Step 5 -->
-                    <div class="flex flex-col items-center text-center max-w-xs">
-                        <h3 class="text-2xl md:text-3xl font-bold mb-2">05</h3>
-                        <p class="text-white text-base sm:text-lg leading-relaxed">
-                            Tunggu balasan & <br> konfirmasi ketersediaan dari admin.
-                        </p>
-                    </div>
+    <div class="col-span-1 sm:col-span-2 lg:col-span-4 flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-20 lg:gap-28">
+        <!-- Step 5 -->
+        <div class="flex flex-col items-center text-center max-w-[260px]">
+            <h3 class="text-2xl md:text-3xl font-bold mb-2">05</h3>
+            <p class="text-white text-base sm:text-lg leading-relaxed">
+                Tunggu balasan & <br> konfirmasi ketersediaan dari admin.
+            </p>
+        </div>
 
-                    <!-- Step 6 -->
-                    <div class="flex flex-col items-center text-center max-w-xs">
-                        <h3 class="text-2xl md:text-3xl font-bold mb-2">06</h3>
-                        <p class="text-white text-base sm:text-lg leading-relaxed">
-                            Lakukan pembayaran <br> sesuai instruksi dari admin.
-                        </p>
-                    </div>
+        <!-- Step 6 -->
+        <div class="flex flex-col items-center text-center max-w-[260px]">
+            <h3 class="text-2xl md:text-3xl font-bold mb-2">06</h3>
+            <p class="text-white text-base sm:text-lg leading-relaxed">
+                Lakukan pembayaran <br> sesuai instruksi dari admin.
+            </p>
+        </div>
 
-                    <!-- Step 7 -->
-                    <div class="flex flex-col items-center text-center max-w-xs">
-                        <h3 class="text-2xl md:text-3xl font-bold mb-2">07</h3>
-                        <p class="text-white text-base sm:text-lg leading-relaxed">
-                            Pesanan diproses & <br> siap dikirim sesuai waktu yang disepakati.
-                        </p>
-                    </div>
-                </div>
+        <!-- Step 7 -->
+        <div class="flex flex-col items-center text-center max-w-[260px]">
+            <h3 class="text-2xl md:text-3xl font-bold mb-2">07</h3>
+            <p class="text-white text-base sm:text-lg leading-relaxed">
+                Pesanan diproses & <br> siap dikirim sesuai waktu yang disepakati.
+            </p>
+        </div>
+    </div>
+
             </div>
         </div>
 
