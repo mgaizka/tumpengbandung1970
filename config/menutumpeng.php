@@ -37,8 +37,8 @@ return [
         'desc' => '1 Menu Utama Ayam dan 4 Lauk Tambahan',
         'harga' => 38000,
         'kategori' => 'mini',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-mini-1.jpg',
-        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-mini-2.jpg'
+        'image' => 'asset\menupict\tumpengpict\tumpeng-mini-1.webp',
+        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-mini-2.webp'
     ],
     [
         'jenis_paket' => 'Paket B',
@@ -46,8 +46,8 @@ return [
         'desc' => '1 Menu Utama Daging dan 4 Lauk Tambahan',
         'harga' => 40000,
         'kategori' => 'mini',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-mini-1.jpg',
-        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-mini-2.jpg'
+        'image' => 'asset\menupict\tumpengpict\tumpeng-mini-1.webp',
+        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-mini-2.webp'
     ],
     [
         'jenis_paket' => 'Paket C',
@@ -55,8 +55,8 @@ return [
         'desc' => '2 Menu Ayam dan Daging + 4 Lauk Tambahan',
         'harga' => 55000,
         'kategori' => 'mini',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-mini-1.jpg',
-        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-mini-2.jpg'
+        'image' => 'asset\menupict\tumpengpict\tumpeng-mini-1.webp',
+        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-mini-2.webp'
     ],
 
     //Tumpeng Tampah
@@ -66,7 +66,7 @@ return [
         'desc' => '1 Menu Utama Ayam dan 4 Lauk Tambahan',
         'harga' => 38000,
         'kategori' => 'tampah',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-tampah-paket-a.jpg',
+        'image' => 'asset\menupict\tumpengpict\tumpeng-tampah-paket-a.webp',
     ],
     [
         'jenis_paket' => 'Paket B',
@@ -74,7 +74,7 @@ return [
         'desc' => '1 Menu Utama Daging dan 4 Lauk Tambahan',
         'harga' => 40000,
         'kategori' => 'tampah',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-tampah-paket-b.jpg',
+        'image' => 'asset\menupict\tumpengpict\tumpeng-tampah-paket-b.webp',
     ],
     [
         'jenis_paket' => 'Paket C',
@@ -82,7 +82,7 @@ return [
         'desc' => '2 Menu Ayam dan Daging + 4 Lauk Tambahan',
         'harga' => 55000,
         'kategori' => 'tampah',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-tampah-paket-c.jpg',
+        'image' => 'asset\menupict\tumpengpict\tumpeng-tampah-paket-c.webp',
     ],
 
     //Tumpeng Premium
@@ -92,8 +92,8 @@ return [
         'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 250.000)',
         'harga' => 1625000,
         'kategori' => 'premium',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.jpg',
-        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-premium-2.jpg'
+        'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.webp',
+        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-premium-2.webp'
     ],
     [
         'jenis_paket' => '30 Porsi',
@@ -101,8 +101,8 @@ return [
         'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 250.000)',
         'harga' => 1950000,
         'kategori' => 'premium',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.jpg',
-        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-premium-2.jpg'
+        'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.webp',
+        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-premium-2.webp'
     ],
     [
         'jenis_paket' => '40 Porsi',
@@ -110,8 +110,8 @@ return [
         'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 250.000)',
         'harga' => 2600000,
         'kategori' => 'premium',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.jpg',
-        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-premium-2.jpg'
+        'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.webp',
+        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-premium-2.webp'
     ],
     [
         'jenis_paket' => '50 Porsi',
@@ -119,8 +119,8 @@ return [
         'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 250.000)',
         'harga' => 3250000,
         'kategori' => 'premium',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.jpg',
-        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-premium-2.jpg'
+        'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.webp',
+        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-premium-2.webp'
     ],
     [
         'jenis_paket' => '75 Porsi',
@@ -128,8 +128,8 @@ return [
         'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 250.000)',
         'harga' => 4875000,
         'kategori' => 'premium',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.jpg',
-        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-premium-2.jpg'
+        'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.webp',
+        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-premium-2.webp'
     ],
     [
         'jenis_paket' => '100 Porsi',
@@ -137,7 +137,7 @@ return [
         'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 250.000)',
         'harga' => 6500000,
         'kategori' => 'premium',
-        'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.jpg',
-        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-premium-2.jpg'
+        'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.webp',
+        'image_alt' => 'asset\menupict\tumpengpict\tumpeng-premium-2.webp'
     ],
 ];
