@@ -8,8 +8,8 @@ return [
         'desc' => 'Liwet Kastrol Paket A (Ayam Bakar / Goreng + 1 Tumisan + Tempe / Tahu Bacem + 1 Ikan Asin + Jengkol + Lalap & Sambel)',
         'harga' => 40000,
         'kategori' => 'liwet-kastrol',
-        'image' => 'asset\menupict\lainnyapict\liwet-kastrol-1.jpg',
-        'image_alt' => 'asset\menupict\lainnyapict\liwet-kastrol-2.jpg'
+        'image' => 'asset\menupict\lainnyapict\liwet-kastrol-1.webp',
+        'image_alt' => 'asset\menupict\lainnyapict\liwet-kastrol-2.webp'
     ],
     [
         'jenis_paket' => 'Paket B',
@@ -17,8 +17,8 @@ return [
         'desc' => 'Liwet Kastrol Paket A (Daging Gepuk + 1 Tumisan + Tempe / Tahu Bacem + 1 Ikan Asin + Jengkol + Lalap & Sambel)',
         'harga' => 45000,
         'kategori' => 'liwet-kastrol',
-        'image' => 'asset\menupict\lainnyapict\liwet-kastrol-1.jpg',
-        'image_alt' => 'asset\menupict\lainnyapict\liwet-kastrol-2.jpg'
+        'image' => 'asset\menupict\lainnyapict\liwet-kastrol-1.webp',
+        'image_alt' => 'asset\menupict\lainnyapict\liwet-kastrol-2.webp'
     ],
     [
         'jenis_paket' => 'Paket C',
@@ -26,8 +26,8 @@ return [
         'desc' => 'Daging Gepuk + Ayam Bakar / Goreng + 1 Tumisan + Tempe / Tahu Bacem + 1 Ikan Asin + Jengkol + Lalap & Sambel',
         'harga' => 55000,
         'kategori' => 'liwet-kastrol',
-        'image' => 'asset\menupict\lainnyapict\liwet-kastrol-1.jpg',
-        'image_alt' => 'asset\menupict\lainnyapict\liwet-kastrol-2.jpg'
+        'image' => 'asset\menupict\lainnyapict\liwet-kastrol-1.webp',
+        'image_alt' => 'asset\menupict\lainnyapict\liwet-kastrol-2.webp'
     ],
 
     // Prasmanan
@@ -37,8 +37,8 @@ return [
         'desc' => '1 Menu Ayam + 1 Menu Ikan + 1 Menu Sop/Soto + 1 Menu Sayuran + Buah/Puding + Kerupuk + Air Mineral',
         'harga' => 65000,
         'kategori' => 'prasmanan',
-        'image' => 'asset\menupict\lainnyapict\prasmanan.png',
-        'image_alt' => 'asset\menupict\lainnyapict\prasmanan-2.png'
+        'image' => 'asset\menupict\lainnyapict\prasmanan.webp',
+        'image_alt' => 'asset\menupict\lainnyapict\prasmanan-2.webp'
     ],
     [
         'jenis_paket' => 'Paket B',
@@ -46,8 +46,8 @@ return [
         'desc' => '1 Menu Ayam + 1 Menu Ikan + 1 Menu Sop/Soto + 1 Menu Sayuran + 1 Menu Stal + Buah/Puding + Kerupuk + Air Mineral',
         'harga' => 85000,
         'kategori' => 'prasmanan',
-        'image' => 'asset\menupict\lainnyapict\prasmanan.png',
-        'image_alt' => 'asset\menupict\lainnyapict\prasmanan-2.png'
+        'image' => 'asset\menupict\lainnyapict\prasmanan.webp',
+        'image_alt' => 'asset\menupict\lainnyapict\prasmanan-2.webp'
     ],
     [
         'jenis_paket' => 'Paket C',
@@ -55,8 +55,8 @@ return [
         'desc' => '1 Menu Ayam + 1 Menu Ikan + 1 Menu Sop/Soto + 1 Menu Sayuran + 3 Menu Stal + Buah/Puding + Kerupuk + Air Mineral',
         'harga' => 85000,
         'kategori' => 'prasmanan',
-        'image' => 'asset\menupict\lainnyapict\prasmanan.png',
-        'image_alt' => 'asset\menupict\lainnyapict\prasmanan-2.png'
+        'image' => 'asset\menupict\lainnyapict\prasmanan.webp',
+        'image_alt' => 'asset\menupict\lainnyapict\prasmanan-2.webp'
     ],
 
     // Rujak
@@ -66,7 +66,7 @@ return [
         'desc' => '10 - 15 Porsi dengan 6 Macam Buah',
         'harga' => 300000,
         'kategori' => 'Rujak',
-        'image' => 'asset\menupict\lainnyapict\rujak.jpg',
+        'image' => 'asset\menupict\lainnyapict\rujak.webp',
     ],
     [
         'jenis_paket' => 'Rujak Nampan Besar',
@@ -74,7 +74,7 @@ return [
         'desc' => '20 - 30 Porsi dengan 6 Macam Buah',
         'harga' => 400000,
         'kategori' => 'Rujak',
-        'image' => 'asset\menupict\lainnyapict\rujak.jpg',
+        'image' => 'asset\menupict\lainnyapict\rujak.webp',
     ],
     [
         'jenis_paket' => 'Rujak Hias',
@@ -82,7 +82,7 @@ return [
         'desc' => '20 Porsi + Semangka Ukir',
         'harga' => 600000,
         'kategori' => 'Rujak',
-        'image' => 'asset\menupict\lainnyapict\rujak-hias.jpg',
+        'image' => 'asset\menupict\lainnyapict\rujak-hias.webp',
     ],
 
     // Rebusan
@@ -92,7 +92,7 @@ return [
         'desc' => '10 - 15 Porsi',
         'harga' => 300000,
         'kategori' => 'beubeutian-rebusan',
-        'image' => 'asset\menupict\lainnyapict\beubeutian.jpg',
+        'image' => 'asset\menupict\lainnyapict\beubeutian.webp',
     ],
     [
         'jenis_paket' => 'Beubeutian / Rebusan Besar',
@@ -100,7 +100,7 @@ return [
         'desc' => '20 - 30 Porsi',
         'harga' => 400000,
         'kategori' => 'beubeutian-rebusan',
-        'image' => 'asset\menupict\lainnyapict\beubeutian.jpg',
+        'image' => 'asset\menupict\lainnyapict\beubeutian.webp',
     ],
 
     // Snack Box
@@ -110,8 +110,8 @@ return [
         'desc' => '2 Kue Asin + 1 Kue Manis + Air Mineral',
         'harga' => 15000,
         'kategori' => 'snack-box',
-        'image' => 'asset\menupict\lainnyapict\snack-box-a-1.jpg',
-        'image_alt' => 'asset\menupict\lainnyapict\snack-box-a-2.jpg'
+        'image' => 'asset\menupict\lainnyapict\snack-box-a-1.webp',
+        'image_alt' => 'asset\menupict\lainnyapict\snack-box-a-2.webp'
     ],
     [
         'jenis_paket' => 'Paket B',
@@ -119,8 +119,8 @@ return [
         'desc' => '2 Kue Asin + 2 Kue Manis + Air Mineral',
         'harga' => 20000,
         'kategori' => 'snack-box',
-        'image' => 'asset\menupict\lainnyapict\snack-box-b-1.jpg',
-        'image_alt' => 'asset\menupict\lainnyapict\snack-box-b-2.jpg'
+        'image' => 'asset\menupict\lainnyapict\snack-box-b-1.webp',
+        'image_alt' => 'asset\menupict\lainnyapict\snack-box-b-2.webp'
     ],
     [
         'jenis_paket' => 'Paket C',
@@ -128,8 +128,8 @@ return [
         'desc' => '2 Kue Asin + 2 Kue Manis + Minuman Kemasan',
         'harga' => 30000,
         'kategori' => 'snack-box',
-        'image' => 'asset\menupict\lainnyapict\snack-box-c-1.jpg',
-        'image_alt' => 'asset\menupict\lainnyapict\snack-box-c-2.jpg'
+        'image' => 'asset\menupict\lainnyapict\snack-box-c-1.webp',
+        'image_alt' => 'asset\menupict\lainnyapict\snack-box-c-2.webp'
     ],
 
     // Hampers
@@ -139,7 +139,7 @@ return [
         'desc' => 'Ini Hampers',
         'harga' => 15000,
         'kategori' => 'hampers',
-        'image' => 'asset\menupict\lainnyapict\gurame-bakar.png',
+        'image' => 'asset\menupict\lainnyapict\gurame-bakar.webp',
     ],
     [
         'jenis_paket' => 'Ayam Kodok',
@@ -147,6 +147,6 @@ return [
         'desc' => 'Ini Hampers',
         'harga' => 20000,
         'kategori' => 'hampers',
-        'image' => 'asset\menupict\lainnyapict\ayam-kodok.png',
+        'image' => 'asset\menupict\lainnyapict\ayam-kodok.webp',
     ],
 ];
