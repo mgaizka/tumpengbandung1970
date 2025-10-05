@@ -8,17 +8,33 @@ use Illuminate\Http\Request;
 class MenuNasiController extends Controller
 {
     //
+    // public function index(Request $request)
+    // {
+    //     $kategori = $request->query('kategori');
+    //     $menus = $kategori
+    //         ? MenuNasi::where('kategori', $kategori)->get()
+    //         : MenuNasi::all();
+    //     return view('MenuNasi', compact('menus', 'kategori'));
+    // }
+
     public function index(Request $request)
     {
-        // Ambil query string ?kategori=xxx
         $kategori = $request->query('kategori');
 
-        // Filter jika kategori ada, kalau tidak ambil semua
-        $menus = $kategori
-            ? MenuNasi::where('kategori', $kategori)->get()
-            : MenuNasi::all();
+        if ($kategori == 'nasi-besek') {
+            $menus = MenuNasi::where(function ($query) {
+                $query->where('kategori', 'nasi-besek')
+                    ->orWhere(function ($q) {
+                        $q->where('kategori', 'nasi-bakar')
+                            ->where('jenis_paket', '!=', 'Nasi Bakar');
+                    });
+            })->get();
+        } elseif ($kategori) {
+            $menus = MenuNasi::where('kategori', $kategori)->get();
+        } else {
+            $menus = MenuNasi::all();
+        }
 
-        // Kirim data ke view
         return view('MenuNasi', compact('menus', 'kategori'));
     }
 }

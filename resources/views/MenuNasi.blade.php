@@ -10,7 +10,7 @@
         </span>
 
         <!-- Judul -->
-        <h2 class="text-xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">
+        <h2 class="mb-4 text-xl font-bold text-center sm:text-3xl md:text-4xl">
             Hidangan Nasi Kotak Spesial Yang Siap <br>
             <span class="text-white-300">Membuat Momen Anda Semakin Berkesan</span>
         </h2>
@@ -55,13 +55,13 @@
             @foreach ($menus as $menu)
                 <div x-data="{ open: false }" class="relative">
                     <!-- Kartu Produk -->
-                    <div class="bg-white rounded-xl overflow-hidden shadow">
+                    <div class="overflow-hidden bg-white shadow rounded-xl">
                         <img src="{{ asset($menu->image) }}" alt="{{ $menu->jenis_paket }}"
-                            class="w-full h-56 object-cover">
+                            class="object-cover w-full h-56">
                         <div class="p-4 text-black">
-                            <h3 class="text-xl font-bold mb-1">{{ $menu->jenis_paket }}</h3>
+                            <h3 class="mb-1 text-xl font-bold">{{ $menu->jenis_paket }}</h3>
                             <p class="mb-3 text-sm">{{ $menu->card_desc }}</p>
-                            <button @click="open = true" class="font-semibold inline-flex items-center hover:underline">
+                            <button @click="open = true" class="inline-flex items-center font-semibold hover:underline">
                                 Selengkapnya
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"
                                     viewBox="0 0 24 24">
@@ -78,7 +78,7 @@
                         <div class="bg-[#111] text-white w-full max-w-md rounded-2xl shadow-lg p-6 relative">
                             <!-- Tombol Close -->
                             <button @click="open = false"
-                                class="absolute top-3 right-3 text-gray-300 hover:text-white text-2xl font-bold">
+                                class="absolute text-2xl font-bold text-gray-300 top-3 right-3 hover:text-white">
                                 ✕
                             </button>
 
@@ -86,18 +86,18 @@
                             <h2 class="text-lg font-bold text-center">
                                 {{ $menu->jenis_paket }} – Rp {{ number_format($menu->harga, 0, ',', '.') }}
                             </h2>
-                            <p class="text-center text-sm text-gray-300 mb-4">
+                            <p class="mb-4 text-sm text-center text-gray-300">
                                 {{ $menu->desc }}
                             </p>
 
                             <!-- Gambar -->
                             <div
                                 class="mb-6 @if ($menu->image_alt) grid grid-cols-2 gap-3 @else grid grid-cols-1 @endif">
-                                <img src="{{ asset($menu->image) }}" class="rounded-lg object-cover w-full h-40"
+                                <img src="{{ asset($menu->image) }}" class="object-cover w-full h-40 rounded-lg"
                                     alt="paket">
 
                                 @if ($menu->image_alt)
-                                    <img src="{{ asset($menu->image_alt) }}" class="rounded-lg object-cover w-full h-40"
+                                    <img src="{{ asset($menu->image_alt) }}" class="object-cover w-full h-40 rounded-lg"
                                         alt="paket">
                                 @endif
                             </div>
@@ -105,7 +105,7 @@
                             <!-- Pilihan Menu -->
                             <div class="space-y-5 text-sm">
                                 <div>
-                                    <h3 class="font-semibold mb-1 border-b border-gray-600 pb-1">Pilihan Menu</h3>
+                                    <h3 class="pb-1 mb-1 font-semibold border-b border-gray-600">Pilihan Menu</h3>
                                 </div>
 
                                 @php
@@ -125,7 +125,8 @@
                                         <h4 class="font-bold">Pilihan Nasi</h4>
                                         <p class="text-gray-300">
                                             Nasi Bakar Ayam Suwir Kemangi | Nasi Bakar Tongkol Pedas |
-                                            Nasi Bakar Teri | Nasi Bakar Telur Asin | Nasi Bakar Jambal Cabe
+                                            Nasi Bakar Teri | Nasi Bakar Telur Asin | Nasi Bakar Jambal Cabe | Nasi Bakar
+                                            Sambal Cumi
                                         </p>
                                     </div>
                                     <div>
@@ -414,7 +415,7 @@
 
                             <!-- Tombol Pesan -->
                             <button
-                                class="w-full mt-6 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2">
+                                class="flex items-center justify-center w-full gap-2 py-3 mt-6 font-semibold text-white rounded-lg bg-emerald-600 hover:bg-emerald-700">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M16.7 14.1c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1c-.2.3-.7.9-.8 1.1-.1.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.8-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.4.1-.1.2-.3.3-.4.1-.1.1-.2.2-.4.1-.2 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.6 2.4 3.9 3.4 2.3 1 2.3.7 2.7.6.4-.1 1.3-.5 1.5-1 .2-.5.2-.9.2-1-.1-.1-.3-.2-.6-.3z" />

@@ -35,25 +35,25 @@ return [
         'jenis_paket' => 'Paket A',
         'card_desc' => '1 Menu Ayam + 1 Menu Ikan + 1 Menu Sop/Soto + 1 Menu Sayuran + Buah/Puding + Kerupuk + Air Mineral',
         'desc' => '1 Menu Ayam + 1 Menu Ikan + 1 Menu Sop/Soto + 1 Menu Sayuran + Buah/Puding + Kerupuk + Air Mineral',
-        'harga' => 65000,
+        'harga' => 75000,
         'kategori' => 'prasmanan',
         'image' => 'asset\menupict\lainnyapict\prasmanan.webp',
         'image_alt' => 'asset\menupict\lainnyapict\prasmanan-2.webp'
     ],
     [
         'jenis_paket' => 'Paket B',
-        'card_desc' => '1 Menu Ayam + 1 Menu Ikan + 1 Menu Sop/Soto + 1 Menu Sayuran + 1 Menu Stal + Buah/Puding + Kerupuk + Air Mineral',
-        'desc' => '1 Menu Ayam + 1 Menu Ikan + 1 Menu Sop/Soto + 1 Menu Sayuran + 1 Menu Stal + Buah/Puding + Kerupuk + Air Mineral',
-        'harga' => 85000,
+        'card_desc' => '1 Menu Ayam + 1 Menu Daging + 1 Menu Sop/Soto + 1 Menu Sayuran + 2 Menu Stal + Buah/Puding + Kerupuk + Air Mineral',
+        'desc' => '1 Menu Ayam + 1 Menu Daging + 1 Menu Sop/Soto + 1 Menu Sayuran + 2 Menu Stal + Buah/Puding + Kerupuk + Air Mineral',
+        'harga' => 95000,
         'kategori' => 'prasmanan',
         'image' => 'asset\menupict\lainnyapict\prasmanan.webp',
         'image_alt' => 'asset\menupict\lainnyapict\prasmanan-2.webp'
     ],
     [
         'jenis_paket' => 'Paket C',
-        'card_desc' => '1 Menu Ayam + 1 Menu Ikan + 1 Menu Sop/Soto + 1 Menu Sayuran + 3 Menu Stal + Buah/Puding + Kerupuk + Air Mineral',
-        'desc' => '1 Menu Ayam + 1 Menu Ikan + 1 Menu Sop/Soto + 1 Menu Sayuran + 3 Menu Stal + Buah/Puding + Kerupuk + Air Mineral',
-        'harga' => 85000,
+        'card_desc' => '1 Menu Ayam + 1 Menu Daging + 1 Menu Sop/Soto + 1 Menu Sayuran + 3 Menu Stal + Buah/Puding + Kerupuk + Air Mineral',
+        'desc' => '1 Menu Ayam + 1 Menu Daging + 1 Menu Sop/Soto + 1 Menu Sayuran + 3 Menu Stal + Buah/Puding + Kerupuk + Air Mineral',
+        'harga' => 110000,
         'kategori' => 'prasmanan',
         'image' => 'asset\menupict\lainnyapict\prasmanan.webp',
         'image_alt' => 'asset\menupict\lainnyapict\prasmanan-2.webp'
