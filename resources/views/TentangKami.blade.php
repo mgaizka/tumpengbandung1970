@@ -28,7 +28,7 @@
 
                 <!-- Gambar bawah teks -->
                 <div>
-                    <img src="foto1.jpeg" alt="Menu 3" class="rounded-lg w-full sm:h-60 object-cover mt-10">
+                    <img src="asset/menupict/lainnyapict/liwet-kastrol-1.webp" alt="Menu 3" class="rounded-lg w-full h-64 sm:h-60 object-cover mt-10 object-[center_75%]">
                 </div>
             </div>
 
@@ -36,12 +36,12 @@
             <div  data-aos="fade-left" class="grid grid-cols-1 sm:grid-cols-[240px_1fr] gap-6">
                 <!-- Kiri atas -->
                 <div>
-                    <img src="foto1.jpeg" alt="Menu 1" class="rounded-lg w-full h-[400px] object-cover mb-6 sm:mb-0">
+                    <img src="asset/tentangkami/profil-usaha2.webp" alt="Menu 1" class="rounded-lg w-full h-90 object-cover mb-6 sm:mb-0">
                 </div>
 
                 <!-- Kanan (foto panjang) -->
                 <div class="row-span-2">
-                    <img src="foto2.jpeg" alt="Menu 2" class="rounded-lg w-full h-full object-cover">
+                    <img src="asset/tentangkami/profil-usaha.webp" alt="Menu 2" class="rounded-lg w-full h-150 object-cover">
                 </div>
 
                 <!-- Kiri bawah (quote box) -->
@@ -63,7 +63,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
             <!-- FOTO KIRI -->
             <div class="flex justify-center md:justify-start">
-                <img src="foto1.jpeg" alt="Visi Misi" class="rounded-2xl w-full h-[340px] object-cover shadow-lg">
+                <img src="asset/menupict/tumpengpict/tumpeng-premium-1.webp" alt="Visi Misi" class="rounded-2xl w-full h-[350px] object-cover shadow-lg">
             </div>
 
             <!-- TEKS KANAN -->
