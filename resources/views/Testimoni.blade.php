@@ -1,6 +1,6 @@
 @extends('Layout.app')
 
-@section('title', 'Tentang Kami')
+@section('title', 'Testimoni')
 
 @section('content')
     <div class="text-white px-4 md:px-[1cm] lg:px-[2cm] pt-[120px] mb-[1.5cm]" x-data="{ open: false, selectedEvent: null }">

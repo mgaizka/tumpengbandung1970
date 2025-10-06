@@ -91,6 +91,7 @@
                     dan bersahabat, sehingga setiap pelanggan dapat merasakan pengalaman kuliner yang berkesan.
                 </p>
                 <a href="{{ route('tentang-kami') }}"
+                    onclick="gtag('event', 'home_click', { location: 'home', link_text: 'Tentang Kami'})"
                     class="inline-block bg-white text-black font-semibold px-6 py-2 rounded-lg shadow hover:bg-gray-200 transition text-[20px]">
                     Selengkapnya
                 </a>
@@ -221,9 +222,13 @@
                 <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl">
                     <img loading="lazy" src="{{ asset($item['img']) }}" alt="{{ $item['alt'] }}"
                         class="w-full h-70 object-cover {{ $item['pos'] }} transition-transform duration-300 hover:scale-105">
+
                     <div class="p-4 mb-8 text-center">
                         <h3 class="mb-2 text-2xl font-semibold">{{ $item['title'] }}</h3>
-                        <a href="{{ $item['link'] }}" class="text-xl text-white hover:underline">Selengkapnya</a>
+                        <a href="{{ $item['link'] }}" class="text-xl text-white hover:underline"
+                            onclick="gtag('event', 'home_click', { menu_name: '{{ $item['title'] }}', location: 'home'})">
+                            Selengkapnya
+                        </a>
                     </div>
                 </div>
             @endforeach
@@ -287,7 +292,8 @@
             </div>
         </div>
         <!-- Tombol -->
-        <a href="/testimoni"
+        <a href="{{ route('testimoni') }}"
+            onclick="gtag('event', 'home_click', { location: 'navbar', link_text: 'home'})"
             class="inline-block px-5 py-2 text-white transition bg-transparent border border-white rounded-md hover:bg-white hover:text-gray-900">
             Lihat Testimoni
         </a>

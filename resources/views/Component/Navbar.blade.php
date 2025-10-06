@@ -35,16 +35,15 @@
                     <div class="flex space-x-4">
                         <!-- Beranda -->
                         <a href="{{ route('home') }}"
-                            class="rounded-md px-3 py-2 text-md font-medium
-            {{ request()->routeIs('home') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
+                            onclick="gtag('event', 'navbar_click', { location: 'navbar', link_text: 'Beranda'})"
+                            class="rounded-md px-3 py-2 text-md font-medium {{ request()->routeIs('home') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
                             Beranda
                         </a>
 
                         <!-- Dropdown Desktop -->
                         <div class="relative group">
                             <button
-                                class="rounded-md px-3 py-2 text-md font-medium
-                {{ request()->routeIs('menu-tumpeng') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
+                                class="rounded-md px-3 py-2 text-md font-medium {{ request()->routeIs('menu-tumpeng') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
                                 Menu
                             </button>
                             <!-- Isi Dropdown -->
@@ -52,10 +51,9 @@
                                 class="absolute left-0 top-full hidden w-72 bg-[#161616] rounded-lg shadow-lg group-hover:block overflow-hidden border border-white">
                                 <!-- Tumpeng -->
                                 <a href="{{ route('menu-tumpeng') }}"
+                                    onclick="gtag('event', 'navbar_click', { location: 'navbar', link_text: 'Menu Tumpeng'})"
                                     class="flex items-center gap-3 px-4 py-3 border-b border-white
                                   {{ request()->routeIs('menu-tumpeng') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
-
-                                    <!-- Kotak ikon -->
                                     <span
                                         class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-md shrink-0">
                                         <img class="w-7 h-7"
@@ -73,6 +71,7 @@
 
                                 <!-- Paket Nasi -->
                                 <a href="{{ route('menu-nasi') }}"
+                                    onclick="gtag('event', 'navbar_click', { location: 'navbar', link_text: 'Paket Nasi'})"
                                     class="flex items-center gap-3 px-4 py-3 border-b border-white
                                       {{ request()->routeIs('menu-nasi') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
 
@@ -93,6 +92,7 @@
 
                                 <!-- Menu Lain -->
                                 <a href="{{ route('menu-lainnya') }}"
+                                    onclick="gtag('event', 'navbar_click', { location: 'navbar', link_text: 'Menu Lainnya'})"
                                     class="flex items-center gap-3 px-4 py-3 border-b border-white/10
                                       {{ request()->routeIs('menu-lainnya') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
 
@@ -117,15 +117,20 @@
 
                         <!-- Tentang -->
                         <a href="{{ route('tentang-kami') }}"
-                            class="rounded-md px-3 py-2 text-md font-medium
-            {{ request()->routeIs('tentang-kami') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
+                            onclick="gtag('event', 'navbar_click', { location: 'navbar', link_text: 'Tentang Kami'})"
+                            class="rounded-md px-3 py-2 text-md font-medium {{ request()->routeIs('tentang-kami') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
                             Tentang Kami
                         </a>
 
                         <!-- Testimoni -->
+                        {{-- <a href="{{ route('testimoni') }}"
+                            class="rounded-md px-3 py-2 text-md font-medium {{ request()->routeIs('testimoni') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
+                            Testimoni
+                        </a> --}}
+
                         <a href="{{ route('testimoni') }}"
-                            class="rounded-md px-3 py-2 text-md font-medium
-            {{ request()->routeIs('testimoni') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
+                            onclick="gtag('event', 'navbar_click', { location: 'navbar', link_text: 'Testimoni'})"
+                            class="rounded-md px-3 py-2 text-md font-medium {{ request()->routeIs('testimoni') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
                             Testimoni
                         </a>
                     </div>
