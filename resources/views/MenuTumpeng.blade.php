@@ -44,6 +44,7 @@
         </div>
 
         <!-- Grid produk -->
+        {{-- <div class="grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-[100px]"> --}}
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-[100px]">
             <!-- Contoh Kartu Produk -->
             @foreach ($menus as $menu)

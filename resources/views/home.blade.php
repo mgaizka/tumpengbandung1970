@@ -212,7 +212,7 @@
                         'img' => 'asset/menupict/lainnyapict/liwet-kastrol-1.webp',
                         'alt' => 'Liwet Kastrol',
                         'title' => 'Liwet Kastrol',
-                        'pos' => 'object-[center_74%]',
+                        'pos' => 'object-[center_70%]',
                         'link' => route('menu-lainnya', ['kategori' => 'liwet-kastrol']),
                     ],
                 ];
@@ -321,6 +321,15 @@
                     ['img' => '10.webp', 'alt' => 'TNI'],
                     ['img' => '11.webp', 'alt' => 'UNPAD'],
                     ['img' => '12.webp', 'alt' => 'UI'],
+                    ['img' => '13.webp', 'alt' => 'UI'],
+                    ['img' => '14.webp', 'alt' => 'UI'],
+                    ['img' => '15.webp', 'alt' => 'UI'],
+                    ['img' => '16.webp', 'alt' => 'UI'],
+                    ['img' => '17.webp', 'alt' => 'UI'],
+                    ['img' => '18.webp', 'alt' => 'UI'],
+                    ['img' => '19.webp', 'alt' => 'UI'],
+                    ['img' => '20.webp', 'alt' => 'UI'],
+                      
                 ];
             @endphp
 
@@ -345,33 +354,6 @@
             </iframe>
         </div>
     </div>
-
-    <!-- Floating Halal -->
-    <div class="fixed bottom-24 right-4 group">
-        <a href="#"
-            class="relative flex items-center justify-center transition rounded-full shadow-lg w-14 h-14 backdrop-blur-sm hover:scale-110">
-            <img src="{{ asset('halallogo.png') }}" alt="Halal Logo" class="object-contain w-14 h-14">
-        </a>
-        <!-- Tooltip -->
-        <span
-            class="absolute px-2 py-1 text-xs text-white transition -translate-y-1/2 bg-black rounded opacity-0 right-20 top-1/2 group-hover:opacity-100">
-            Halal Certified
-        </span>
-    </div>
-
-    <!-- Floating WhatsApp -->
-    <div class="fixed bottom-5 right-4 group">
-        <a href="https://wa.me/+628112202117" target="_blank"
-            class="relative flex items-center justify-center transition rounded-full shadow-lg w-13 h-13 bg-green-500/90 backdrop-blur-sm hover:bg-green-600/90 hover:scale-110">
-            <i class="text-3xl text-white fab fa-whatsapp"></i>
-            <!-- Tooltip -->
-            <span
-                class="absolute px-2 py-1 text-xs text-white transition -translate-y-1/2 bg-black rounded opacity-0 right-20 top-1/2 group-hover:opacity-100">
-                Pesan Sekarang!
-            </span>
-        </a>
-    </div>
-
     <!-- Font Awesome (untuk icon WhatsApp) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 @endsection
