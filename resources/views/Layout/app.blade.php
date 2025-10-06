@@ -5,16 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Company Profile')</title>
-    <link rel="icon" type="image/png" href="{{ asset('logo.png') }}">
     @vite('resources/css/app.css')
+
+    <link rel="icon" type="image/png" href="{{ asset('logo.png') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preload" as="image" href="{{ asset('asset\main\main-bg.webp') }}">
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <link rel="preload" as="image" href="{{ asset('asset\main\main-bg.webp') }}">
-    {{-- <link rel="preload" as="image" href="{{ asset('bg 1.png') }}"> --}}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2LBQZBZ8R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q2LBQZBZ8R');
+    </script>
 </head>
 
 <body class="flex flex-col min-h-screen bg-black">
