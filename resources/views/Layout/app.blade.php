@@ -61,14 +61,19 @@
         </span>
     </a>
 </div>
-
+</body>
 <script>
-    document.getElementById("waButton").addEventListener("click", function (e) {
-        const pesan = encodeURIComponent("Halo, saya tertarik untuk melakukan pemesanan dan ingin tahu informasi lebih lanjut. Apakah bisa dibantu?");
-        this.href = `https://wa.me/628112202117?text=${pesan}`;
+    document.addEventListener("DOMContentLoaded", function () {
+        const waButton = document.getElementById("waButton");
+        if (waButton) {
+            waButton.addEventListener("click", function (e) {
+                e.preventDefault(); // biar gak reload halaman
+                const pesan = encodeURIComponent("Halo, saya tertarik untuk melakukan pemesanan dan ingin tahu informasi lebih lanjut. Apakah bisa dibantu?");
+                window.open(`https://wa.me/628112202117?text=${pesan}`, "_blank");
+            });
+        }
     });
 </script>
-</body>
 
 <style>
     .bg-hero-lazy {
