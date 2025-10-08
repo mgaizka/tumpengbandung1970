@@ -90,7 +90,7 @@
                             </h2>
                             <div class="flex items-center justify-center space-x-2 mb-4">
                                 <div class="flex-1 border-t border-white"></div>
-                                <p class="text-sm text-gray-300 whitespace-nowrap text-center">
+                                <p class="text-sm text-gray-300 text-center ">
                                     {{ $menu->desc }}
                                 </p>
                                 <div class="flex-1 border-t border-white"></div>
@@ -134,7 +134,7 @@
                                             Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy | Ayam Opor Kuning
                                         @elseif ($menu->jenis_paket == 'Paket B')
                                             Gepuk | Rendang | Semur Daging
-                                        @elseif ($menu->jenis_paket == 'Paket C')
+                                        @elseif ($menu->jenis_paket == 'Paket C' || $menu->kategori == 'premium')
                                             Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap |
                                             Ayam Crispy | Ayam Opor Kuning | Gepuk | Rendang | Semur Daging
                                         @endif
@@ -155,12 +155,12 @@
                             </div>
 
                             <!-- Tombol Pesan -->
-                        <a id="waButton" href="#"
-                            class="flex items-center justify-center w-full gap-2 py-3 mt-6 font-semibold text-white rounded-lg bg-emerald-600 hover:bg-emerald-700 transition">
-                            onclick="gtag('event', 'whatsapp_click', { item_name: '{{ $menu['kategori'] }} - {{ $menu['jenis_paket'] }}' });"
-                            <i class="fab fa-whatsapp text-xl text-white"></i>
-                            Pesan Sekarang
-                        </a>
+                            <a id="waButton" href="#"
+                                class="flex items-center justify-center w-full gap-2 py-3 mt-6 font-semibold text-white rounded-lg bg-emerald-600 hover:bg-emerald-700 transition"
+                                onclick="gtag('event', 'whatsapp_click', { item_name: '{{ $menu['kategori'] }} - {{ $menu['jenis_paket'] }}' });">
+                                <i class="fab fa-whatsapp text-xl text-white"></i>
+                                Pesan Sekarang
+                            </a>
                         </div>
                     </div>
                 </div>
