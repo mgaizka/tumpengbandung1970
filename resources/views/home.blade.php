@@ -7,24 +7,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Carousel -->
-    <div id="default-carousel" class="relative w-full overflow-hidden shadow-b-md" data-carousel="slide">
+    <div id="default-carousel" class="relative w-full overflow-hidden" data-carousel="slide">
         <!-- Carousel wrapper -->
         <div class="relative h-56 sm:h-72 md:h-[500px] lg:h-screen">
             <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('asset/banner/1.webp') }}" class="absolute inset-0 object-cover w-full h-full"
+            <div class="hidden duration-20000 ease-in-out" data-carousel-item>
+                <img src="{{ asset('asset/banner/lewihmirah.webp') }}" class="absolute inset-0 object-cover w-full h-full"
                     alt="Foto 1">
             </div>
             <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="hidden duration-20000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('asset/banner/2.webp') }}" class="absolute inset-0 object-cover w-full h-full"
                     alt="Foto 2">
             </div>
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="hidden duration-20000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('asset/banner/3.webp') }}" class="absolute inset-0 object-cover w-full h-full"
                     alt="Foto 2">
             </div>
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="hidden duration-20000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('asset/banner/4.webp') }}" class="absolute inset-0 object-cover w-full h-full"
                     alt="Foto 2">
             </div>
@@ -219,7 +219,7 @@
             @endphp
 
             @foreach ($produk as $item)
-                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl">
+                <div class="overflow-hidden rounded-lg shadow-lg">
                     <img loading="lazy" src="{{ asset($item['img']) }}" alt="{{ $item['alt'] }}"
                         class="w-full h-70 object-cover {{ $item['pos'] }} transition-transform duration-300 hover:scale-105">
 
