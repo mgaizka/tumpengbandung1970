@@ -38,37 +38,40 @@
     </main>
 
     @include('Component.Footer')
-<div class="fixed bottom-24 right-2 group">
-    <a href="#"
-        class="relative flex items-center justify-center transition rounded-full shadow-lg w-14 h-14 backdrop-blur-sm hover:scale-110">
-        <img src="{{ asset('halallogo.png') }}" alt="Halal Logo" class="object-contain w-14 h-14">
-    </a>
-    <!-- Tooltip -->
-    <span
-        class="absolute px-2 py-1 text-xs text-white transition -translate-y-1/2 bg-black rounded opacity-0 right-20 top-1/2 group-hover:opacity-100">
-        Halal Certified
-    </span>
-</div>
-
-<!-- Floating WhatsApp -->
-<div class="fixed bottom-5 right-2 group">
-    <a id="waButton" href="#" target="_blank"
-        class="relative flex items-center justify-center transition rounded-full shadow-lg w-13 h-13 bg-green-500/90 backdrop-blur-sm hover:bg-green-600/90 hover:scale-110">
-        <i class="text-3xl text-white fab fa-whatsapp"></i>
+    <div class="fixed bottom-24 right-2 group">
+        <a href="{{ asset('Sertif Halal.webp') }}" target="_blank"
+            class="relative flex items-center justify-center transition rounded-full shadow-lg w-14 h-14 backdrop-blur-sm hover:scale-110">
+            <img src="{{ asset('halallogo.png') }}" alt="Halal Logo" class="object-contain w-14 h-14">
+        </a>
+        <!-- Tooltip -->
         <span
             class="absolute px-2 py-1 text-xs text-white transition -translate-y-1/2 bg-black rounded opacity-0 right-20 top-1/2 group-hover:opacity-100">
-            Pesan Sekarang!
+            Halal Certified
         </span>
-    </a>
-</div>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <div class="fixed bottom-5 right-2 group">
+        <a id="waButton" href="#" target="_blank"
+            onclick="gtag('event', 'direct_whatsapp', {location: 'Floating Icon', page_title: document.title});"
+            class="relative flex items-center justify-center transition rounded-full shadow-lg w-13 h-13 bg-green-500/90 backdrop-blur-sm hover:bg-green-600/90 hover:scale-110">
+            <i class="text-3xl text-white fab fa-whatsapp"></i>
+            <span
+                class="absolute px-2 py-1 text-xs text-white transition -translate-y-1/2 bg-black rounded opacity-0 right-20 top-1/2 group-hover:opacity-100">
+                Pesan Sekarang!
+            </span>
+        </a>
+    </div>
 </body>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
         const waButton = document.getElementById("waButton");
         if (waButton) {
-            waButton.addEventListener("click", function (e) {
+            waButton.addEventListener("click", function(e) {
                 e.preventDefault(); // biar gak reload halaman
-                const pesan = encodeURIComponent("Halo, saya tertarik untuk melakukan pemesanan dan ingin tahu informasi lebih lanjut. Apakah bisa dibantu?");
+                const pesan = encodeURIComponent(
+                    "Halo, saya tertarik untuk melakukan pemesanan dan ingin tahu informasi lebih lanjut. Apakah bisa dibantu?"
+                );
                 window.open(`https://wa.me/628112202117?text=${pesan}`, "_blank");
             });
         }

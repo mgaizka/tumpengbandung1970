@@ -23,8 +23,8 @@ return [
     [
         'jenis_paket' => 'Nasi Bakar Besek Paket B',
         'card_desc' => 'Nasi + 1 Menu Utama Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
-        'desc' => 'Nasi + 1 Menu Utama Ayam + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
-        'harga' => 45000,
+        'desc' => 'Nasi + 1 Menu Utama Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
+        'harga' => 44000,
         'kategori' => 'nasi-bakar',
         'image' => 'asset\menupict\nasipict\nasi-bakar-besek-1.webp',
         'image_alt' => 'asset\menupict\nasipict\nasi-bakar-besek-2.webp'
@@ -32,7 +32,7 @@ return [
     [
         'jenis_paket' => 'Nasi Bakar Besek Paket C',
         'card_desc' => 'Nasi + 1 Menu Utama Ayam & Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
-        'desc' => 'Nasi + 1 Menu Utama Ayam + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
+        'desc' => 'Nasi + 1 Menu Utama Ayam & Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
         'harga' => 57000,
         'kategori' => 'nasi-bakar',
         'image' => 'asset\menupict\nasipict\nasi-bakar-besek-1.webp',
@@ -52,8 +52,8 @@ return [
     [
         'jenis_paket' => 'Nasi Besek Paket B',
         'card_desc' => 'Nasi + 1 Menu Utama Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
-        'desc' => 'Nasi + 1 Menu Utama Ayam + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
-        'harga' => 53000,
+        'desc' => 'Nasi + 1 Menu Utama Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
+        'harga' => 40000,
         'kategori' => 'nasi-besek',
         'image' => 'asset\menupict\nasipict\nasi-besek.webp',
         'image_alt' => 'asset\menupict\nasipict\nasi-besek-2.webp'
@@ -61,8 +61,8 @@ return [
     [
         'jenis_paket' => 'Nasi Besek Paket C',
         'card_desc' => 'Nasi + 1 Menu Utama Ayam & Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
-        'desc' => 'Nasi + 1 Menu Utama Ayam + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
-        'harga' => 50000,
+        'desc' => 'Nasi + 1 Menu Utama Ayam & Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
+        'harga' => 53000,
         'kategori' => 'nasi-besek',
         'image' => 'asset\menupict\nasipict\nasi-besek.webp',
         'image_alt' => 'asset\menupict\nasipict\nasi-besek-2.webp'
@@ -81,7 +81,7 @@ return [
     [
         'jenis_paket' => 'Nasi Box Paket B',
         'card_desc' => 'Nasi + 1 Menu Utama Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
-        'desc' => 'Nasi + 1 Menu Utama Ayam + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
+        'desc' => 'Nasi + 1 Menu Utama Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
         'harga' => 38000,
         'kategori' => 'paket-nasi-box',
         'image' => 'asset\menupict\nasipict\nasi-box.webp',
@@ -90,7 +90,7 @@ return [
     [
         'jenis_paket' => 'Nasi Box Paket C',
         'card_desc' => 'Nasi + 1 Menu Utama Ayam & Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
-        'desc' => 'Nasi + 1 Menu Utama Ayam + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
+        'desc' => 'Nasi + 1 Menu Utama Ayam & Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
         'harga' => 50000,
         'kategori' => 'paket-nasi-box',
         'image' => 'asset\menupict\nasipict\nasi-box.webp',
@@ -110,7 +110,7 @@ return [
     [
         'jenis_paket' => 'Nasi Bento Paket B',
         'card_desc' => 'Nasi + 1 Menu Utama Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
-        'desc' => 'Nasi + 1 Menu Utama Ayam + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
+        'desc' => 'Nasi + 1 Menu Utama Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
         'harga' => 38000,
         'kategori' => 'nasi-bento',
         'image' => 'asset\menupict\nasipict\nasi-bento.webp',
@@ -119,7 +119,7 @@ return [
     [
         'jenis_paket' => 'Nasi Bento Paket C',
         'card_desc' => 'Nasi + 1 Menu Utama Ayam & Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
-        'desc' => 'Nasi + 1 Menu Utama Ayam + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
+        'desc' => 'Nasi + 1 Menu Utama Ayam & Daging + 1 Tumisan + 1 Keringan + Lalapan & Sambal + Kerupuk + Air + Sendok + Tissue',
         'harga' => 50000,
         'kategori' => 'nasi-bento',
         'image' => 'asset\menupict\nasipict\nasi-bento.webp',
@@ -138,8 +138,8 @@ return [
     ],
     [
         'jenis_paket' => 'Ricebowl Paket B',
-        'card_desc' => 'Nasi + 1 Menu Utama Ayam + 1 Bumbu + Lalap',
-        'desc' => 'Nasi + 1 Menu Utama Ayam + 1 Bumbu + Lalap',
+        'card_desc' => 'Nasi + 1 Menu Utama Dori/Beef + 1 Bumbu + Lalap',
+        'desc' => 'Nasi + 1 Menu Utama Dori/Beef + 1 Bumbu + Lalap',
         'harga' => 30000,
         'kategori' => 'ricebowl',
         'image' => 'asset\menupict\nasipict\ricebowl-b.webp',
@@ -147,8 +147,8 @@ return [
     ],
     [
         'jenis_paket' => 'Ricebowl Paket C',
-        'card_desc' => 'Nasi + 1 Menu Utama Ayam + 1 Bumbu + Lalap',
-        'desc' => 'Nasi + 1 Menu Utama Ayam + 1 Bumbu + Lalap',
+        'card_desc' => 'Nasi + 1 Menu Utama Dori/Beef + 1 Bumbu + Telur + Lalap',
+        'desc' => 'Nasi + 1 Menu Utama Dori/Beef + 1 Bumbu + Telur + Lalap',
         'harga' => 35000,
         'kategori' => 'ricebowl',
         'image' => 'asset\menupict\nasipict\ricebowl-c.webp',
@@ -162,8 +162,8 @@ return [
         'desc' => '',
         'harga' => 70000,
         'kategori' => 'lunch-box',
-        'image' => 'asset\menupict\nasipict\nasi-bali.webp',
-        'image_alt' => 'asset\menupict\nasipict\nasi-bali-2.webp'
+        'image' => 'asset\menupict\nasipict\nasi-berkat.webp',
+        'image_alt' => 'asset\menupict\nasipict\nasi-berkat-2.webp'
     ],
     [
         'jenis_paket' => 'Nasi Bali',
@@ -171,8 +171,8 @@ return [
         'desc' => '',
         'harga' => 70000,
         'kategori' => 'lunch-box',
-        'image' => 'asset\menupict\nasipict\nasi-berkat.webp',
-        'image_alt' => 'asset\menupict\nasipict\nasi-berkat-2.webp'
+        'image' => 'asset\menupict\nasipict\nasi-bali.webp',
+        'image_alt' => 'asset\menupict\nasipict\nasi-bali-2.webp'
     ],
     [
         'jenis_paket' => 'Nasi Nyunda',

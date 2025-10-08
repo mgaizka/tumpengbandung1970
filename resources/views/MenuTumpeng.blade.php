@@ -59,7 +59,13 @@
                         <img src="{{ asset($menu->image) }}" alt="{{ $menu->jenis_paket }}"
                             class="w-full h-56 object-cover">
                         <div class="p-4 text-black">
-                            <h3 class="text-xl font-bold mb-1">{{ $menu->jenis_paket }}</h3>
+                            <h3 class="text-xl font-bold mb-1">
+                                @if ($menu->kategori == 'premium')
+                                    Tumpeng Premium {{ $menu->jenis_paket }}
+                                @else
+                                    {{ $menu->jenis_paket }}
+                                @endif
+                            </h3>
                             <p class="mb-3 text-sm">{{ $menu->card_desc }}</p>
                             <button @click="open = true" class="font-semibold inline-flex items-center hover:underline"
                                 onclick="gtag('event', 'select_menu', { menu_name: '{{ $menu['kategori'] }} - {{ $menu['jenis_paket'] }}' });">
@@ -84,9 +90,19 @@
                             </button>
 
                             <!-- Judul dan Harga -->
-                            <h2 class="text-lg font-bold text-center mb-2">
-                                Nasi Tumpeng Box
-                                {{ $menu->jenis_paket }} – Rp {{ number_format($menu->harga, 0, ',', '.') }}
+                            <h2 class="mb-2 text-lg font-bold text-center">
+                                @if ($menu->kategori == 'nasi-box')
+                                    Nasi Tumpeng Box {{ $menu->jenis_paket }}
+                                @elseif ($menu->kategori == 'mini')
+                                    Tumpeng Mini {{ $menu->jenis_paket }}
+                                @elseif ($menu->kategori == 'tampah')
+                                    Tumpeng Tampah {{ $menu->jenis_paket }}
+                                @elseif ($menu->kategori == 'premium')
+                                    Tumpeng Premium {{ $menu->jenis_paket }}
+                                @else
+                                    {{ $menu->nama }} {{ $menu->jenis_paket }}
+                                @endif
+                                – Rp {{ number_format($menu->harga, 0, ',', '.') }}
                             </h2>
                             <div class="flex items-center justify-center space-x-2 mb-4">
                                 <div class="flex-1 border-t border-white"></div>
@@ -148,7 +164,7 @@
                                     <p class="text-gray-300">
                                         Telur Balado | Telur Dadar | Telur Pindang | Telur Kecap | Teri Kacang |
                                         Mustofa | Capcay | Acar Kuning | Urab | Mie Goreng |
-                                        Soun Goreng | Asin Balado | Sambel Goreng Kentang | Kerang |
+                                        Soun Goreng | Asin Balado | Sambel Goreng Kentang | Kering Tempe |
                                         Perkedel Jagung | Perkedel Kentang | Rempeyek
                                     </p>
                                 </div>

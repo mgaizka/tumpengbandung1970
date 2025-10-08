@@ -11,15 +11,16 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 justify-between py-8">
             @foreach ($events as $event)
-                <div class="bg-white rounded-xl shadow-md overflow-hidden w-full h-[440px] flex flex-col ">
-                    <img src="{{ asset($event->image) }}" alt="Kopassus" class="w-full h-2/3 object-cover">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden w-full h-[440px] flex flex-col menu-card"
+                    data-judul="{{ $event->judul }}">
+                    <img src="{{ asset($event->image) }}" alt="img" class="w-full h-2/3 object-cover">
                     <div class="p-4 flex-1 flex flex-col justify-between">
                         <div>
                             <h3 class="text-black text-lg font-bold">{{ $event->judul }}</h3>
                             <p class="text-gray-600">{{ $event->sub_judul }}</p>
                         </div>
                         <button @click="open = true; selectedEvent = {{ $event->toJson() }}"
-                            onclick="gtag('event', 'select_testimoni', { testimoni_name: '{{ $event['judul'] }}' });"
+                            onclick="gtag('event', 'select_testimoni', { testimoni_name: '{{ $event->sub_judul }}' });"
                             class="py-2 text-start text-black text-md hover:underline transition">
                             Selengkapnya &rarr;
                         </button>
@@ -58,4 +59,29 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuCards = document.querySelectorAll(".menu-card");
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const card = entry.target;
+                        const judul = card.dataset.judul;
+
+                        gtag('event', 'view_testimoni', {
+                            testimoni_name: judul,
+                        });
+
+                        observer.unobserve(card);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            }); // minimal 50% dari card kelihatan
+
+            menuCards.forEach(card => observer.observe(card));
+        });
+    </script>
 @endsection

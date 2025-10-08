@@ -61,7 +61,6 @@
             @foreach ($menus as $menu)
                 <div x-data="{ open: false }" class="relative">
                     <!-- Kartu Produk -->
-                    {{-- <div class="overflow-hidden bg-white shadow rounded-xl"> --}}
                     <div class="overflow-hidden bg-white shadow rounded-xl menu-card" data-menu="{{ $menu->jenis_paket }}"
                         data-category="{{ $menu->kategori }}">
                         <img src="{{ asset($menu->image) }}" alt="{{ $menu->jenis_paket }}"
@@ -113,9 +112,9 @@
 
                             <!-- Pilihan Menu -->
                             <div class="space-y-5 text-sm">
-                                <div>
+                                {{-- <div>
                                     <h3 class="pb-1 mb-1 font-semibold border-b border-gray-600">Pilihan Menu</h3>
-                                </div>
+                                </div> --}}
 
                                 @php
                                     $paket = null;
@@ -131,7 +130,15 @@
                                 {{-- Nasi Bakar --}}
                                 @if ($menu->jenis_paket == 'Nasi Bakar')
                                     <div>
-                                        <h4 class="font-bold">Pilihan Nasi</h4>
+                                        {{-- <h4 class="pb-1 mb-1 font-semibold border-b border-gray-600">Pilihan Nasi</h4> --}}
+                                        <div class="flex items-center justify-center space-x-4 my-4">
+                                            <div class="flex-1 border-t border-white"></div>
+                                            <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
+                                            <div class="flex-1 border-t border-white"></div>
+                                        </div>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Pilihan Nasi
+                                        </h4>
                                         <p class="text-gray-300">
                                             Nasi Bakar Ayam Suwir Kemangi | Nasi Bakar Tongkol Pedas |
                                             Nasi Bakar Teri | Nasi Bakar Telur Asin | Nasi Bakar Jambal Cabe | Nasi
@@ -140,14 +147,23 @@
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold">Tambahan</h4>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Tambahan
+                                        </h4>
                                         <p class="text-gray-300">
-                                            Telur (Rp 2000) | Tempe Goreng (Rp 3000) | Kerupuk (Rp 2000)
+                                            Tahu Goreng (Rp 2000) | Tempe Goreng (Rp 3000) | Kerupuk (Rp 2000)
                                         </p>
                                     </div>
                                 @elseif ($menu->kategori == 'nasi-bakar')
                                     <div>
-                                        <h4 class="font-bold">Pilihan Nasi</h4>
+                                        <div class="flex items-center justify-center space-x-4 my-4">
+                                            <div class="flex-1 border-t border-white"></div>
+                                            <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
+                                            <div class="flex-1 border-t border-white"></div>
+                                        </div>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Pilihan Nasi
+                                        </h4>
                                         <p class="text-gray-300">
                                             Nasi Bakar Ayam Suwir Kemangi | Nasi Bakar Tongkol Pedas |
                                             Nasi Bakar Teri | Nasi Bakar Telur Asin | Nasi Bakar Jambal Cabe |
@@ -156,7 +172,7 @@
                                     </div>
 
                                     <div>
-                                        <h4 class="font-bold">
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
                                             @if ($paket == 'Paket A')
                                                 Menu Utama
                                             @elseif ($paket == 'Paket B')
@@ -180,17 +196,18 @@
 
                                     {{-- Tumisan --}}
                                     <div>
-                                        <h4 class="font-bold">Pilihan Tumisan</h4>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Pilihan Tumisan</h4>
                                         <p class="text-gray-300">
                                             Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang
-                                            |
-                                            Tumis Tempe | Tumis Jambal + Cabe Gendot | Cumi Balado | Urab | Cah Jagung |
-                                            Ase Tahu Cabe | Buncis Jagung | Acar Ketimun dll.
+                                            | Tumis Tempe | Tumis Jambal Cabe Gendot | Cumi Balado | Urab | Cah Jagung |
+                                            Ase Tahu Cabe | Buncis Jagung | Acar Ketimun.
                                         </p>
                                     </div>
 
                                     <div>
-                                        <h4 class="font-bold">Keringan</h4>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Keringan</h4>
                                         <p class="text-gray-300">
                                             Tahu Goreng | Tempe Goreng | Perkedel Jagung | Pekedel Kentang | Mustofa |
                                             Kering Tempe | Asin Balado
@@ -198,23 +215,30 @@
                                     </div>
 
                                     <div>
-                                        <h4 class="font-bold">Tambahan</h4>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Tambahan</h4>
                                         <p class="text-gray-300">
-                                            Telur (Rp 2000) | Tempe Goreng (Rp 3000) | Kerupuk (Rp 2000)
+                                            Jeruk (Rp 3000) | Pisang (Rp 2000) | Pudding (Rp 4000)
                                         </p>
                                     </div>
 
                                     {{-- Tumisan --}}
                                 @elseif ($menu->kategori == 'nasi-besek')
                                     <div>
-                                        <h4 class="font-bold">Pilihan Nasi</h4>
+                                        <div class="flex items-center justify-center space-x-4 my-4">
+                                            <div class="flex-1 border-t border-white"></div>
+                                            <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
+                                            <div class="flex-1 border-t border-white"></div>
+                                        </div>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Pilihan Nasi</h4>
                                         <p class="text-gray-300">
                                             Putih | Merah | Liwet | Tutug Oncom
                                         </p>
                                     </div>
 
                                     <div>
-                                        <h4 class="font-bold">
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
                                             @if ($paket == 'Paket A')
                                                 Menu Utama
                                             @elseif ($paket == 'Paket B')
@@ -238,7 +262,8 @@
 
                                     {{-- Tumisan --}}
                                     <div>
-                                        <h4 class="font-bold">Pilihan Tumisan</h4>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Pilihan Tumisan</h4>
                                         <p class="text-gray-300">
                                             Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang
                                             |
@@ -248,7 +273,8 @@
                                     </div>
 
                                     <div>
-                                        <h4 class="font-bold">Keringan</h4>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Keringan</h4>
                                         <p class="text-gray-300">
                                             Tahu Goreng | Tempe Goreng | Perkedel Jagung | Pekedel Kentang | Mustofa |
                                             Kering Tempe | Asin Balado
@@ -256,23 +282,30 @@
                                     </div>
 
                                     <div>
-                                        <h4 class="font-bold">Tambahan</h4>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Tambahan</h4>
                                         <p class="text-gray-300">
-                                            Telur (Rp 2000) | Tempe Goreng (Rp 3000) | Kerupuk (Rp 2000)
+                                            Jeruk (Rp 3000) | Pisang (Rp 2000) | Pudding (Rp 4000)
                                         </p>
                                     </div>
 
                                     {{-- Nasi Box --}}
                                 @elseif ($menu->kategori == 'paket-nasi-box')
                                     <div>
-                                        <h4 class="font-bold">Pilihan Nasi</h4>
+                                        <div class="flex items-center justify-center space-x-4 my-4">
+                                            <div class="flex-1 border-t border-white"></div>
+                                            <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
+                                            <div class="flex-1 border-t border-white"></div>
+                                        </div>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Pilihan Nasi</h4>
                                         <p class="text-gray-300">
                                             Putih | Merah | Liwet | Tutug Oncom
                                         </p>
                                     </div>
 
                                     <div>
-                                        <h4 class="font-bold">
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
                                             @if ($paket == 'Paket A')
                                                 Menu Utama
                                             @elseif ($paket == 'Paket B')
@@ -284,29 +317,31 @@
                                         <p class="text-gray-300">
                                             @if ($paket == 'Paket A')
                                                 Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy |
-                                                Ayam Opor Kuning
+                                                Ayam Opor Kuning | Ayam Saus Asam Manis | Ayam Goreng Mentega
                                             @elseif ($paket == 'Paket B')
-                                                Gepuk | Rendang | Semur Daging
+                                                Gepuk | Rendang | Semur Daging | Sapi Lada Hitam | Daging Teriyaki
                                             @elseif ($paket == 'Paket C')
                                                 Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy |
-                                                Ayam Opor Kuning | Gepuk | Rendang | Semur Daging
+                                                Ayam Opor Kuning | Ayam Saus Asam Manis | Ayam Goreng Mentega | Gepuk |
+                                                Rendang | Semur Daging | Sapi Lada Hitam | Daging Teriyaki
                                             @endif
                                         </p>
                                     </div>
 
                                     {{-- Tumisan --}}
                                     <div>
-                                        <h4 class="font-bold">Pilihan Tumisan</h4>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Pilihan Tumisan</h4>
                                         <p class="text-gray-300">
                                             Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang
-                                            |
-                                            Tumis Tempe | Tumis Jambal + Cabe Gendot | Cumi Balado | Urab | Cah Jagung |
-                                            Ase Tahu Cabe | Buncis Jagung | Acar Ketimun dll.
+                                            | Tumis Tempe | Tumis Jambal Cabe Gendot | Cumi Balado | Urab | Cah Jagung |
+                                            Ase Tahu Cabe | Buncis Jagung | Acar Ketimun.
                                         </p>
                                     </div>
 
                                     <div>
-                                        <h4 class="font-bold">Keringan</h4>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Keringan</h4>
                                         <p class="text-gray-300">
                                             Tahu Goreng | Tempe Goreng | Perkedel Jagung | Pekedel Kentang | Mustofa |
                                             Kering Tempe | Asin Balado
@@ -314,14 +349,21 @@
                                     </div>
 
                                     <div>
-                                        <h4 class="font-bold">Tambahan</h4>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Tambahan</h4>
                                         <p class="text-gray-300">
-                                            Telur (Rp 2000) | Tempe Goreng (Rp 3000) | Kerupuk (Rp 2000)
+                                            Jeruk (Rp 3000) | Pisang (Rp 2000) | Pudding (Rp 4000)
                                         </p>
                                     </div>
                                 @elseif ($menu->kategori == 'nasi-bento')
                                     <div>
-                                        <h4 class="font-bold">Nasi</h4>
+                                        <div class="flex items-center justify-center space-x-4 my-4">
+                                            <div class="flex-1 border-t border-white"></div>
+                                            <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
+                                            <div class="flex-1 border-t border-white"></div>
+                                        </div>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Nasi</h4>
                                         <p class="text-gray-300">
                                             Putih | Kuning | Uduk
                                         </p>
@@ -329,7 +371,7 @@
 
                                     {{-- Menu Utama / Daging --}}
                                     <div>
-                                        <h4 class="font-bold">
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
                                             @if ($paket == 'Paket A')
                                                 Menu Utama
                                             @elseif ($paket == 'Paket B')
@@ -352,10 +394,11 @@
 
                                     {{-- Keringan --}}
                                     <div>
-                                        <h4 class="font-bold">Keringan</h4>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Keringan</h4>
                                         <p class="text-gray-300">
                                             Tahu Goreng | Tempe Goreng | Perkedel Jagung | Pekedel Kentang | Mustofa |
-                                            Kering Tempe | Asin Balado
+                                            Kering Tempe | Mie Goreng
                                         </p>
                                     </div>
 
@@ -363,7 +406,12 @@
                                 @elseif ($menu->kategori == 'ricebowl')
                                     {{-- Menu Utama / Daging --}}
                                     <div>
-                                        <h4 class="font-bold">
+                                        <div class="flex items-center justify-center space-x-4 my-4">
+                                            <div class="flex-1 border-t border-white"></div>
+                                            <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
+                                            <div class="flex-1 border-t border-white"></div>
+                                        </div>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
                                             @if ($paket == 'Paket A')
                                                 Menu Utama
                                             @elseif ($paket == 'Paket B')
@@ -374,48 +422,63 @@
                                         </h4>
                                         <p class="text-gray-300">
                                             @if ($paket == 'Paket A')
-                                                Chicken Karage | Chicken Katsu | Ayam Goreng | Ayam Teriyaki
-                                            @elseif ($paket == 'Paket B')
-                                                Dori Karage | Beef |
-                                            @elseif ($paket == 'Paket C')
-                                                Chicken Karage | Chicken Katsu | Dori Karage | Beef |
+                                                Chicken Karage | Chicken Katsu
+                                            @else
+                                                Dori Karage | Beef
                                             @endif
                                         </p>
                                     </div>
 
                                     {{-- Bumbu --}}
                                     <div>
-                                        <h4 class="font-bold">Pilihan Bumbu</h4>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Pilihan Bumbu</h4>
                                         <p class="text-gray-300">
-                                            Lada Hitam | Lada Garam | Chili Oil | Sambal Korek | Sambal Matah |
+                                            Lada Hitam | Lada Garam | Chili Oil | Sambal Korek | Sambal Matah
                                         </p>
                                     </div>
 
                                     {{-- Tambahan --}}
                                     <div>
-                                        <h4 class="font-bold">Tambahan</h4>
+                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
+                                            Tambahan</h4>
                                         <p class="text-gray-300">
-                                            Telur (Rp 5000) | Aneka Sauce (Rp 5000) |
+                                            Telur (Rp 5000) | Aneka Sauce (Rp 5000)
                                         </p>
                                     </div>
                                 @elseif ($menu->jenis_paket == 'Nasi Berkat')
                                     <div>
+                                        <div class="flex items-center justify-center space-x-4 my-4">
+                                            <div class="flex-1 border-t border-white"></div>
+                                            <h3 class="font-semibold text-white whitespace-nowrap">Detail Isian</h3>
+                                            <div class="flex-1 border-t border-white"></div>
+                                        </div>
                                         <p class="text-gray-300">
-                                            Sambal Goreng Daging | Sate Lilit | Telur Pindang |
-                                            Ase Buncis Cabe | Perkedel Jagung | Sambal |
-                                            Kerupuk | Air Mineral Botol | Buah/Puding
+                                            Semur Daging | Ayam Goreng | Telur Pindang |
+                                            Ase Buncis Cabe | Perkedel Jagung | Sambal | Kerupuk
+                                            | Air Mineral Botol | Buah/Pudding
                                         </p>
                                     </div>
                                 @elseif ($menu->jenis_paket == 'Nasi Bali')
                                     <div>
+                                        <div class="flex items-center justify-center space-x-4 my-4">
+                                            <div class="flex-1 border-t border-white"></div>
+                                            <h3 class="font-semibold text-white whitespace-nowrap">Detail Isian</h3>
+                                            <div class="flex-1 border-t border-white"></div>
+                                        </div>
                                         <p class="text-gray-300">
                                             Sambal Goreng Daging | Sate Lilit | Telur Pindang |
-                                            Ase Buncis Bali | Sambal | Kerupuk | Air Mineral
+                                            Buncis Bumbu Bali | Sambal | Kerupuk | Air Mineral
                                             Botol | Buah/Puding
                                         </p>
                                     </div>
                                 @elseif ($menu->jenis_paket == 'Nasi Nyunda')
                                     <div>
+                                        <div class="flex items-center justify-center space-x-4 my-4">
+                                            <div class="flex-1 border-t border-white"></div>
+                                            <h3 class="font-semibold text-white whitespace-nowrap">Detail Isian</h3>
+                                            <div class="flex-1 border-t border-white"></div>
+                                        </div>
                                         <p class="text-gray-300">
                                             Nasi Timbel | Gepuk | Ayam Goreng/Bakar | Tumis
                                             Jamur | Asin Balado/Jambal | Lalab Sambal | Air

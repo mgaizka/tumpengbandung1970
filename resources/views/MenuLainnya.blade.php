@@ -106,13 +106,6 @@
                                 @endif
                                 – Rp {{ number_format($menu->harga, 0, ',', '.') }}
                             </h2>
-                            {{-- <div class="flex items-center justify-center mb-4 space-x-2">
-                                <div class="flex-1 border-t border-white"></div>
-                                <p class="text-sm text-center text-gray-300 whitespace-nowrap">
-                                    {{ $menu->desc }}
-                                </p>
-                                <div class="flex-1 border-t border-white"></div>
-                            </div> --}}
                             <p class="mb-4 text-sm text-center text-gray-300">
                                 {{ $menu->desc }}
                             </p>
@@ -131,11 +124,26 @@
                             <!-- Pilihan Menu -->
                             <div class="space-y-5 text-sm">
 
-                                <div class="flex items-center justify-center my-4 space-x-4">
+                                {{-- <div class="flex items-center justify-center my-4 space-x-4">
                                     <div class="flex-1 border-t border-white"></div>
                                     <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
                                     <div class="flex-1 border-t border-white"></div>
-                                </div>
+                                </div> --}}
+
+                                @if ($menu->kategori == 'rujak' || $menu->kategori == 'beubeutian-rebusan')
+                                    <div class="flex items-center justify-center my-4 space-x-4">
+                                        <div class="flex-1 border-t border-white"></div>
+                                        <h3 class="font-semibold text-white whitespace-nowrap">Detail Isian</h3>
+                                        <div class="flex-1 border-t border-white"></div>
+                                    </div>
+                                @elseif($menu->kategori == 'hampers')
+                                @else
+                                    <div class="flex items-center justify-center my-4 space-x-4">
+                                        <div class="flex-1 border-t border-white"></div>
+                                        <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
+                                        <div class="flex-1 border-t border-white"></div>
+                                    </div>
+                                @endif
 
                                 {{-- Liwet Castrol --}}
                                 @if ($menu->kategori == 'liwet-kastrol')
@@ -188,11 +196,21 @@
                                                 Goreng Saus Mentega | Bumbu Rempah</p>
                                         </div>
                                     @endif
-
+                                    @if (in_array($menu->jenis_paket, ['Paket B', 'Paket C']))
+                                        <div>
+                                            <h4
+                                                class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
+                                                Menu Pilihan Stal
+                                            </h4>
+                                            <p class="text-gray-300">Baso Tahu | Mie Kocok | Tom Yam | Sate Lontong |
+                                                Pempek | Aneka Jus/Sop Buah | Kentang-Sosis | Es Krim</p>
+                                        </div>
+                                    @endif
                                     <div>
                                         <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
                                             Pilihan Sop/Soto</h4>
-                                        <p class="text-gray-300">Sop Baso/Sosis | Sop Jamur | Kimio Kuah | Soto Ayam</p>
+                                        <p class="text-gray-300">Sop Baso/Sosis | Sop Jamur | Kimio Kuah | Soto Ayam | Soto
+                                            Bandung</p>
                                     </div>
                                     <div>
                                         <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
@@ -201,44 +219,19 @@
                                             Cuka
                                             | Asinan Bogor | Capcay | Cah Brokoli | Cah Jamur | Buncis Jagung</p>
                                     </div>
-                                    @if (in_array($menu->jenis_paket, ['Paket B', 'Paket C']))
-                                        <div>
-                                            <h4
-                                                class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
-                                                Stal
-                                            </h4>
-                                            <p class="text-gray-300">Baso Tahu | Mie Kocok | Tom Yam | Sate Lontong |
-                                                Pempek | Aneka Jus/Sop Buah | Kentang-Sosis | Es Krim</p>
-                                        </div>
-                                    @endif
                                 @endif
 
                                 {{-- Rujak --}}
                                 @if ($menu->kategori == 'rujak')
                                     <div>
-                                        <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
-                                            Pilihan Rujak</h4>
-                                        <p class="text-gray-300">Nampan Kecil | Nampan Besar | Rujak Hias</p>
-                                    </div>
-                                    <div>
-                                        <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
-                                            Pilihan Buah</h4>
                                         <p class="text-gray-300">Nanas | Belimbing | Kedongdong | Bengkuang | Mangga |
-                                            Jambu
-                                            Air | Pepaya | Jambu Kristal</p>
+                                            Jambu Air | Pepaya | Jambu Kristal</p>
                                     </div>
                                 @endif
 
                                 {{-- Beubeutian / Rebusan --}}
                                 @if ($menu->kategori == 'beubeutian-rebusan')
                                     <div>
-                                        <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
-                                            Pilihan Ukuran</h4>
-                                        <p class="text-gray-300">Kecil | Besar</p>
-                                    </div>
-                                    <div>
-                                        <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
-                                            Detail Isian</h4>
                                         <p class="text-gray-300">Pisang | Ubi | Kacang | Jagung | Singkong</p>
                                     </div>
                                 @endif
@@ -250,18 +243,15 @@
                                             Kue
                                             Manis</h4>
                                         <p class="text-gray-300">Sus Fla Susu | Pisang Bolen | Puding Banana Roll |
-                                            Nagasari
-                                            | Bugis | Dadar Gulung | Pie Buah | Bolu Ketan Hitam | Bolu Kukus | Bolu
-                                            Gulung
-                                            | Lapis | Bika Ambon | Kue Lumpur | Cente | dll</p>
+                                            Nagasari | Bugis | Dadar Gulung | Pie Buah | Bolu Pisang | Bolu Ketan Hitam |
+                                            Bolu Kukus | Bolu Gulung | Lapis | Bika Ambon | Kue Lumpur | Cente | dll</p>
                                     </div>
                                     <div>
                                         <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
                                             Kue
                                             Asin</h4>
                                         <p class="text-gray-300">Risoles | Pastel | Gorengan | Arem-Arem | Bakso Goreng
-                                            |
-                                            Bakwan Udang | Comro | Cheese Roll | Lemper | Lontong Isi | Sosis Solo | dll
+                                            | Bakwan Udang | Comro | Cheese Roll | Lemper | Lontong Isi | Sosis Solo | dll
                                         </p>
                                     </div>
                                     @if ($menu->jenis_paket == 'Paket C')

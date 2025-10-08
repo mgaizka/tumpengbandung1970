@@ -13,8 +13,8 @@ return [
     ],
     [
         'jenis_paket' => 'Paket B',
-        'card_desc' => 'Liwet Kastrol Paket A (Daging Gepuk + 1 Tumisan + Tempe / Tahu Bacem + 1 Ikan Asin + Jengkol + Lalap & Sambel)',
-        'desc' => 'Liwet Kastrol Paket A (Daging Gepuk + 1 Tumisan + Tempe / Tahu Bacem + 1 Ikan Asin + Jengkol + Lalap & Sambel)',
+        'card_desc' => 'Liwet Kastrol Paket B (Daging Gepuk + 1 Tumisan + Tempe / Tahu Bacem + 1 Ikan Asin + Jengkol + Lalap & Sambel)',
+        'desc' => 'Liwet Kastrol Paket B (Daging Gepuk + 1 Tumisan + Tempe / Tahu Bacem + 1 Ikan Asin + Jengkol + Lalap & Sambel)',
         'harga' => 45000,
         'kategori' => 'liwet-kastrol',
         'image' => 'asset\menupict\lainnyapict\liwet-kastrol-1.webp',
@@ -22,8 +22,10 @@ return [
     ],
     [
         'jenis_paket' => 'Paket C',
-        'card_desc' => 'Daging Gepuk + Ayam Bakar / Goreng + 1 Tumisan + Tempe / Tahu Bacem + 1 Ikan Asin + Jengkol + Lalap & Sambel',
-        'desc' => 'Daging Gepuk + Ayam Bakar / Goreng + 1 Tumisan + Tempe / Tahu Bacem + 1 Ikan Asin + Jengkol + Lalap & Sambel',
+        'card_desc' => 'Liwet Kastrol Paket C
+        (Daging Gepuk + Ayam Bakar / Goreng + 1 Tumisan + Tempe / Tahu Bacem + 1 Ikan Asin + Jengkol + Lalap & Sambel)',
+        'desc' => 'Liwet Kastrol Paket C
+        (Daging Gepuk + Ayam Bakar / Goreng + 1 Tumisan + Tempe / Tahu Bacem + 1 Ikan Asin + Jengkol + Lalap & Sambel)',
         'harga' => 55000,
         'kategori' => 'liwet-kastrol',
         'image' => 'asset\menupict\lainnyapict\liwet-kastrol-1.webp',
@@ -65,7 +67,7 @@ return [
         'card_desc' => '10 - 15 Porsi dengan 6 Macam Buah',
         'desc' => '10 - 15 Porsi dengan 6 Macam Buah',
         'harga' => 300000,
-        'kategori' => 'Rujak',
+        'kategori' => 'rujak',
         'image' => 'asset\menupict\lainnyapict\rujak.webp',
     ],
     [
@@ -73,7 +75,7 @@ return [
         'card_desc' => '20 - 30 Porsi dengan 6 Macam Buah',
         'desc' => '20 - 30 Porsi dengan 6 Macam Buah',
         'harga' => 400000,
-        'kategori' => 'Rujak',
+        'kategori' => 'rujak',
         'image' => 'asset\menupict\lainnyapict\rujak.webp',
     ],
     [
@@ -81,7 +83,7 @@ return [
         'card_desc' => '20 Porsi + Semangka Ukir',
         'desc' => '20 Porsi + Semangka Ukir',
         'harga' => 600000,
-        'kategori' => 'Rujak',
+        'kategori' => 'rujak',
         'image' => 'asset\menupict\lainnyapict\rujak-hias.webp',
     ],
 
@@ -135,17 +137,17 @@ return [
     // Hampers
     [
         'jenis_paket' => 'Gurame Bakar',
-        'card_desc' => 'Ini Hampers',
-        'desc' => 'Ini Hampers',
-        'harga' => 15000,
+        'card_desc' => 'Paket Hampers Gurame Bakar',
+        'desc' => 'Paket Hampers Gurame Bakar',
+        'harga' => 350000,
         'kategori' => 'hampers',
         'image' => 'asset\menupict\lainnyapict\gurame-bakar.webp',
     ],
     [
         'jenis_paket' => 'Ayam Kodok',
-        'card_desc' => 'Ini Hampers',
-        'desc' => 'Ini Hampers',
-        'harga' => 20000,
+        'card_desc' => 'Paket Hampers Ayam Kodok',
+        'desc' => 'Paket Hampers Ayam Kodok',
+        'harga' => 175000,
         'kategori' => 'hampers',
         'image' => 'asset\menupict\lainnyapict\ayam-kodok.webp',
     ],
