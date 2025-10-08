@@ -28,7 +28,7 @@
 
                 <!-- Gambar bawah teks -->
                 <div>
-                    <img src="asset/menupict/lainnyapict/liwet-kastrol-1.webp" alt="Menu 3" class="rounded-lg w-full h-64 sm:h-60 object-cover mt-10 object-[center_75%]">
+                    <img src="asset/menupict/lainnyapict/liwet-kastrol-1.webp" alt="Menu 3" class="rounded-lg w-full h-64 sm:h-60 object-cover mt-10 object-[center_52%]">
                 </div>
             </div>
 

@@ -212,7 +212,7 @@
                         'img' => 'asset/menupict/lainnyapict/liwet-kastrol-1.webp',
                         'alt' => 'Liwet Kastrol',
                         'title' => 'Liwet Kastrol',
-                        'pos' => 'object-[center_74%]',
+                        'pos' => 'object-[center_70%]',
                         'link' => route('menu-lainnya', ['kategori' => 'liwet-kastrol']),
                     ],
                 ];
@@ -320,6 +320,15 @@
                     ['img' => '10.webp', 'alt' => 'TNI'],
                     ['img' => '11.webp', 'alt' => 'UNPAD'],
                     ['img' => '12.webp', 'alt' => 'UI'],
+                    ['img' => '13.webp', 'alt' => 'UI'],
+                    ['img' => '14.webp', 'alt' => 'UI'],
+                    ['img' => '15.webp', 'alt' => 'UI'],
+                    ['img' => '16.webp', 'alt' => 'UI'],
+                    ['img' => '17.webp', 'alt' => 'UI'],
+                    ['img' => '18.webp', 'alt' => 'UI'],
+                    ['img' => '19.webp', 'alt' => 'UI'],
+                    ['img' => '20.webp', 'alt' => 'UI'],
+                      
                 ];
             @endphp
 
@@ -344,7 +353,6 @@
             </iframe>
         </div>
     </div>
-
     <!-- Floating Halal -->
     <div class="fixed bottom-24 right-4 group">
         <a href="{{ asset('Sertif Halal.webp') }}" target="_blank"
