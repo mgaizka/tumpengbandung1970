@@ -352,31 +352,4 @@
             </iframe>
         </div>
     </div>
-
-    <!-- Floating Halal -->
-    <div class="fixed bottom-24 right-4 group">
-        <a href="{{ asset('Sertif Halal.webp') }}" target="_blank"
-            class="relative flex items-center justify-center transition rounded-full shadow-lg w-14 h-14 backdrop-blur-sm hover:scale-110">
-            <img src="{{ asset('halallogo.png') }}" alt="Halal Logo" class="object-contain w-14 h-14">
-        </a>
-        <!-- Tooltip -->
-        <span
-            class="absolute px-2 py-1 text-xs text-white transition -translate-y-1/2 bg-black rounded opacity-0 right-20 top-1/2 group-hover:opacity-100">
-            Halal Certified
-        </span>
-    </div>
-
-    <!-- Floating WhatsApp -->
-    <div class="fixed bottom-5 right-4 group">
-        <a href="https://wa.me/+628112202117" target="_blank"
-            onclick="gtag('event', 'direct_whatsapp', {location: 'Floating Icon', page_title: document.title});"
-            class="relative flex items-center justify-center transition rounded-full shadow-lg w-13 h-13 bg-green-500/90 backdrop-blur-sm hover:bg-green-600/90 hover:scale-110">
-            <i class="text-3xl text-white fab fa-whatsapp"></i>
-            <!-- Tooltip -->
-            <span
-                class="absolute px-2 py-1 text-xs text-white transition -translate-y-1/2 bg-black rounded opacity-0 right-20 top-1/2 group-hover:opacity-100">
-                Pesan Sekarang!
-            </span>
-        </a>
-    </div>
 @endsection

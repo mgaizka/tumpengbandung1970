@@ -33,7 +33,7 @@ return [
     //Tumpeng Mini
     [
         'jenis_paket' => 'Paket A',
-        'card_desc' => 'Praktis & Ekonomis, Pas Untuk Sajian Personal.',
+        'card_desc' => '1 Menu Utama Ayam dan 4 Lauk Tambahan',
         'desc' => '1 Menu Utama Ayam dan 4 Lauk Tambahan',
         'harga' => 38000,
         'kategori' => 'mini',
@@ -42,7 +42,7 @@ return [
     ],
     [
         'jenis_paket' => 'Paket B',
-        'card_desc' => 'Praktis & Ekonomis, Pas Untuk Sajian Personal.',
+        'card_desc' => '1 Menu Utama Daging dan 4 Lauk Tambahan',
         'desc' => '1 Menu Utama Daging dan 4 Lauk Tambahan',
         'harga' => 40000,
         'kategori' => 'mini',
@@ -51,7 +51,7 @@ return [
     ],
     [
         'jenis_paket' => 'Paket C',
-        'card_desc' => 'Praktis & Ekonomis, Pas Untuk Sajian Personal.',
+        'card_desc' => '2 Menu Ayam dan Daging + 4 Lauk Tambahan',
         'desc' => '2 Menu Ayam dan Daging + 4 Lauk Tambahan',
         'harga' => 55000,
         'kategori' => 'mini',
@@ -62,7 +62,7 @@ return [
     //Tumpeng Tampah
     [
         'jenis_paket' => 'Paket A',
-        'card_desc' => 'Praktis & Ekonomis, Pas Untuk Sajian Personal.',
+        'card_desc' => '1 Menu Utama Ayam dan 4 Lauk Tambahan',
         'desc' => '1 Menu Utama Ayam dan 4 Lauk Tambahan',
         'harga' => 38000,
         'kategori' => 'tampah',
@@ -70,7 +70,7 @@ return [
     ],
     [
         'jenis_paket' => 'Paket B',
-        'card_desc' => 'Praktis & Ekonomis, Pas Untuk Sajian Personal.',
+        'card_desc' => '1 Menu Utama Daging dan 4 Lauk Tambahan',
         'desc' => '1 Menu Utama Daging dan 4 Lauk Tambahan',
         'harga' => 40000,
         'kategori' => 'tampah',
@@ -78,7 +78,7 @@ return [
     ],
     [
         'jenis_paket' => 'Paket C',
-        'card_desc' => 'Praktis & Ekonomis, Pas Untuk Sajian Personal.',
+        'card_desc' => '2 Menu Ayam dan Daging + 4 Lauk Tambahan',
         'desc' => '2 Menu Ayam dan Daging + 4 Lauk Tambahan',
         'harga' => 55000,
         'kategori' => 'tampah',

@@ -61,7 +61,9 @@ return [
         'sub_judul' => 'HUT Ke-79 Kodam III - Siliwangi',
         'image' => 'asset\testipict\kodam-3-siliwangi.webp',
         'image_alt' => null,
-        'desc' => '',
+        'desc' => 'Dalam rangka Hari Ulang Tahun ke-79 Kodam III – Siliwangi,
+        Tumpeng Bandung 1970 berkesempatan untuk menghadirkan Tumpeng Premium 40 porsi dengan menu istimewa berupa ayam suwir, gepuk, telur pindang, kering tempe, urab, dan perkedel kentang, lengkap dengan sentuhan artistik semangka ukir bergambar logo perayaan HUT Kodam III – Siliwangi.
+        Kehangatan dan cita rasa autentik yang tersaji di setiap hidangan menjadi pelengkap momen penuh kebersamaan sekaligus penghormatan pada perayaan bersejarah ini.',
     ],
     [
         'judul' => 'BANK BJB',
@@ -122,13 +124,13 @@ return [
         'sub_judul' => 'Dies Natalis Ke-35 Unjani',
         'image' => 'asset\testipict\fkg-unjani.webp',
         'image_alt' => null,
-        'desc' => '',
+        'desc' => 'Pada tanggal 12 September 2025, Tumpeng Bandung berkesempatan melayani pesanan Tumpeng Premium dari Fakultas Kedokteran Gigi Universitas Jenderal Achmad Yani dalam rangka Dies Natalis ke-35. Hidangan istimewa ini terdiri dari ayam bakar, semur daging, telur balado, asin balado, sambel goreng kentang, dan urab, dilengkapi dengan garnish elegan serta hiasan bertema UNJANI. Sebagai penambah kesan spesial, tumpeng juga disertai dengan printing 3D Jenderal Achmad Yani sebagai ikon perayaan.',
     ],
     [
         'judul' => 'FK Hukum Unjani',
         'sub_judul' => 'Dies Natalis Ke-35 Unjani',
         'image' => 'asset\testipict\hukum-unjani.webp',
         'image_alt' => null,
-        'desc' => '',
+        'desc' => 'Pada tanggal 12 September 2025, Tumpeng Bandung dipercaya untuk menyajikan Tumpeng Premium dalam rangka Dies Natalis ke-35 Universitas Jenderal Achmad Yani, yang dipesan oleh Fakultas Hukum UNJANI. Tumpeng istimewa ini menghadirkan menu pilihan berupa ayam goreng serundeng, gepuk, perkedel jagung, sambel goreng kentang, teri kacang, dan urab. Sebagai pelengkap, tumpeng dihias dengan garnish elegan dan semangka ukir berbentuk logo Fakultas Hukum UNJANI, menambah kesan eksklusif pada momen perayaan tersebut.',
     ],
 ];
