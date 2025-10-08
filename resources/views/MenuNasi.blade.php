@@ -1,6 +1,6 @@
 @extends('Layout.app')
 
-@section('title', 'Tumpeng')
+@section('title', 'Menu Nasi')
 
 @section('content')
     <div class="text-white px-4 px-4 md:px-[1cm] lg:px-[2cm] pt-[120px]">
@@ -18,31 +18,37 @@
         <!-- Tab / Filter Kategori -->
         <div class="flex flex-wrap justify-center gap-4 pt-8 mb-10">
             <a href="{{ route('menu-nasi', ['kategori' => 'nasi-bakar']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Nasi Bakar' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'nasi-bakar' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Nasi Bakar
             </a>
             <a href="{{ route('menu-nasi', ['kategori' => 'nasi-besek']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Nasi Besek' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'nasi-besek' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Nasi Besek
             </a>
             <a href="{{ route('menu-nasi', ['kategori' => 'paket-nasi-box']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Paket Nasi Box' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'paket-nasi-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Nasi Box
             </a>
             <a href="{{ route('menu-nasi', ['kategori' => 'lunch-box']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Lunch Box' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'lunch-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Premium Lunch Box
             </a>
             <a href="{{ route('menu-nasi', ['kategori' => 'nasi-bento']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Nasi Bento' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'nasi-bento' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Nasi Bento
             </a>
             <a href="{{ route('menu-nasi', ['kategori' => 'ricebowl']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Ricebowl' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'ricebowl' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Ricebowl
@@ -55,13 +61,16 @@
             @foreach ($menus as $menu)
                 <div x-data="{ open: false }" class="relative">
                     <!-- Kartu Produk -->
-                    <div class="overflow-hidden bg-white shadow rounded-xl">
+                    {{-- <div class="overflow-hidden bg-white shadow rounded-xl"> --}}
+                    <div class="overflow-hidden bg-white shadow rounded-xl menu-card" data-menu="{{ $menu->jenis_paket }}"
+                        data-category="{{ $menu->kategori }}">
                         <img src="{{ asset($menu->image) }}" alt="{{ $menu->jenis_paket }}"
                             class="object-cover w-full h-56">
                         <div class="p-4 text-black">
                             <h3 class="mb-1 text-xl font-bold">{{ $menu->jenis_paket }}</h3>
                             <p class="mb-3 text-sm">{{ $menu->card_desc }}</p>
-                            <button @click="open = true" class="inline-flex items-center font-semibold hover:underline">
+                            <button @click="open = true" class="inline-flex items-center font-semibold hover:underline"
+                                onclick="gtag('event', 'select_menu', { menu_name: '{{ $menu['kategori'] }} - {{ $menu['jenis_paket'] }}' });">
                                 Selengkapnya
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"
                                     viewBox="0 0 24 24">
@@ -125,7 +134,8 @@
                                         <h4 class="font-bold">Pilihan Nasi</h4>
                                         <p class="text-gray-300">
                                             Nasi Bakar Ayam Suwir Kemangi | Nasi Bakar Tongkol Pedas |
-                                            Nasi Bakar Teri | Nasi Bakar Telur Asin | Nasi Bakar Jambal Cabe | Nasi Bakar
+                                            Nasi Bakar Teri | Nasi Bakar Telur Asin | Nasi Bakar Jambal Cabe | Nasi
+                                            Bakar
                                             Sambal Cumi
                                         </p>
                                     </div>
@@ -172,7 +182,8 @@
                                     <div>
                                         <h4 class="font-bold">Pilihan Tumisan</h4>
                                         <p class="text-gray-300">
-                                            Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang |
+                                            Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang
+                                            |
                                             Tumis Tempe | Tumis Jambal + Cabe Gendot | Cumi Balado | Urab | Cah Jagung |
                                             Ase Tahu Cabe | Buncis Jagung | Acar Ketimun dll.
                                         </p>
@@ -229,7 +240,8 @@
                                     <div>
                                         <h4 class="font-bold">Pilihan Tumisan</h4>
                                         <p class="text-gray-300">
-                                            Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang |
+                                            Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang
+                                            |
                                             Tumis Tempe | Tumis Jambal + Cabe Gendot | Cumi Balado | Urab | Cah Jagung |
                                             Ase Tahu Cabe | Buncis Jagung | Acar Ketimun dll.
                                         </p>
@@ -286,7 +298,8 @@
                                     <div>
                                         <h4 class="font-bold">Pilihan Tumisan</h4>
                                         <p class="text-gray-300">
-                                            Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang |
+                                            Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang
+                                            |
                                             Tumis Tempe | Tumis Jambal + Cabe Gendot | Cumi Balado | Urab | Cah Jagung |
                                             Ase Tahu Cabe | Buncis Jagung | Acar Ketimun dll.
                                         </p>
@@ -415,7 +428,8 @@
 
                             <!-- Tombol Pesan -->
                             <button
-                                class="flex items-center justify-center w-full gap-2 py-3 mt-6 font-semibold text-white rounded-lg bg-emerald-600 hover:bg-emerald-700">
+                                class="flex items-center justify-center w-full gap-2 py-3 mt-6 font-semibold text-white rounded-lg bg-emerald-600 hover:bg-emerald-700"
+                                onclick="gtag('event', 'whatsapp_click', { item_name: '{{ $menu['kategori'] }} - {{ $menu['jenis_paket'] }}' });">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M16.7 14.1c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1c-.2.3-.7.9-.8 1.1-.1.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.8-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.4.1-.1.2-.3.3-.4.1-.1.1-.2.2-.4.1-.2 0-.3 0-.4 0-.1-.6-1.4-.8-1.9-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.6 2.4 3.9 3.4 2.3 1 2.3.7 2.7.6.4-.1 1.3-.5 1.5-1 .2-.5.2-.9.2-1-.1-.1-.3-.2-.6-.3z" />
@@ -428,4 +442,35 @@
             @endforeach
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuCards = document.querySelectorAll(".menu-card");
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const card = entry.target;
+                        const menuName = card.dataset.menu;
+                        const category = card.dataset.category;
+
+                        const itemName = `${category} - ${menuName}`;
+
+                        // Kirim event ke GA4 saat card terlihat
+                        gtag('event', 'view_item', {
+                            item_name: itemName,
+                            category: category,
+                            event_label: 'Card viewed'
+                        });
+
+                        observer.unobserve(card);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            }); // minimal 50% dari card kelihatan
+
+            menuCards.forEach(card => observer.observe(card));
+        });
+    </script>
 @endsection

@@ -1,6 +1,6 @@
 @extends('Layout.app')
 
-@section('title', 'Tumpeng')
+@section('title', 'Menu Tumpeng')
 
 @section('content')
 
@@ -19,24 +19,28 @@
         <!-- Tab / Filter Kategori -->
         <div class="flex flex-wrap justify-center gap-4 pt-8 mb-10">
             <a href="{{ route('menu-tumpeng', ['kategori' => 'nasi-box']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Box' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'nasi-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Nasi Tumpeng Box
             </a>
 
             <a href="{{ route('menu-tumpeng', ['kategori' => 'mini']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Mini' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'mini' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Tumpeng Mini
             </a>
 
             <a href="{{ route('menu-tumpeng', ['kategori' => 'tampah']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Tampah' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'tampah' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Tumpeng Tampah
             </a>
 
             <a href="{{ route('menu-tumpeng', ['kategori' => 'premium']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Premium' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'premium' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Tumpeng Premium
@@ -49,13 +53,15 @@
             @foreach ($menus as $menu)
                 <div x-data="{ open: false }" class="relative">
                     <!-- Kartu Produk -->
-                    <div class="bg-white rounded-xl overflow-hidden shadow">
+                    <div class="bg-white rounded-xl overflow-hidden shadow menu-card" data-menu="{{ $menu->jenis_paket }}"
+                        data-category="{{ $menu->kategori }}">
                         <img src="{{ asset($menu->image) }}" alt="{{ $menu->jenis_paket }}"
                             class="w-full h-56 object-cover">
                         <div class="p-4 text-black">
                             <h3 class="text-xl font-bold mb-1">{{ $menu->jenis_paket }}</h3>
                             <p class="mb-3 text-sm">{{ $menu->card_desc }}</p>
-                            <button @click="open = true" class="font-semibold inline-flex items-center hover:underline">
+                            <button @click="open = true" class="font-semibold inline-flex items-center hover:underline"
+                                onclick="gtag('event', 'select_menu', { menu_name: '{{ $menu['kategori'] }} - {{ $menu['jenis_paket'] }}' });">
                                 Selengkapnya
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"
                                     viewBox="0 0 24 24">
@@ -149,6 +155,7 @@
 
                             <!-- Tombol Pesan -->
                             <a href="https://wa.me/+628112202117" target="_blank"
+                                onclick="gtag('event', 'whatsapp_click', { item_name: '{{ $menu['kategori'] }} - {{ $menu['jenis_paket'] }}' });"
                                 class="bg-[#075E54] w-full max-w-sm py-2 rounded-xl flex items-center justify-center gap-2 hover:bg-[#0a6e63] transition mt-4">
                                 <i class="fab fa-whatsapp text-xl text-white"></i>
                                 <span class="text-white font-medium text-lg">Pesan Sekarang</span>
@@ -159,4 +166,37 @@
             @endforeach
         </div>
     </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuCards = document.querySelectorAll(".menu-card");
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const card = entry.target;
+                        const menuName = card.dataset.menu;
+                        const category = card.dataset.category;
+
+                        const itemName = `${category} - ${menuName}`;
+
+                        // Kirim event ke GA4 saat card terlihat
+                        gtag('event', 'view_item', {
+                            item_name: itemName,
+                            category: category,
+                            event_label: 'Card viewed'
+                        });
+
+                        observer.unobserve(card);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            }); // minimal 50% dari card kelihatan
+
+            menuCards.forEach(card => observer.observe(card));
+        });
+    </script>
+
 @endsection

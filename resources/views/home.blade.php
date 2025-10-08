@@ -4,6 +4,7 @@
 
 @section('content')
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Carousel -->
     <div id="default-carousel" class="relative w-full overflow-hidden shadow-b-md" data-carousel="slide">
@@ -90,8 +91,7 @@
                     Visi kami adalah menyajikan hidangan yang berkualitas dengan pelayanan yang ramah
                     dan bersahabat, sehingga setiap pelanggan dapat merasakan pengalaman kuliner yang berkesan.
                 </p>
-                <a href="{{ route('tentang-kami') }}"
-                    onclick="gtag('event', 'home_click', { location: 'home', link_text: 'Tentang Kami'})"
+                <a href="{{ route('tentang-kami') }}" onclick="gtag('event', 'page_click', { page_name: 'Tentang Kami' });"
                     class="inline-block bg-white text-black font-semibold px-6 py-2 rounded-lg shadow hover:bg-gray-200 transition text-[20px]">
                     Selengkapnya
                 </a>
@@ -226,7 +226,7 @@
                     <div class="p-4 mb-8 text-center">
                         <h3 class="mb-2 text-2xl font-semibold">{{ $item['title'] }}</h3>
                         <a href="{{ $item['link'] }}" class="text-xl text-white hover:underline"
-                            onclick="gtag('event', 'home_click', { menu_name: '{{ $item['title'] }}', location: 'home'})">
+                            onclick="gtag('event', 'select_menu', { menu_name: '{{ $item['title'] }}' });">
                             Selengkapnya
                         </a>
                     </div>
@@ -292,8 +292,7 @@
             </div>
         </div>
         <!-- Tombol -->
-        <a href="{{ route('testimoni') }}"
-            onclick="gtag('event', 'home_click', { location: 'navbar', link_text: 'home'})"
+        <a href="{{ route('testimoni') }}" onclick="gtag('event', 'page_click', { page_name: 'Testimoni' });"
             class="inline-block px-5 py-2 text-white transition bg-transparent border border-white rounded-md hover:bg-white hover:text-gray-900">
             Lihat Testimoni
         </a>
@@ -341,14 +340,14 @@
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.860730357939!2d107.61842537592155!3d-6.907251967601307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e73f2dc2d82d%3A0x5471b93bd20ac149!2sTumpeng%20Bandung%201970!5e0!3m2!1sid!2sid!4v1758100843739!5m2!1sid!2sid"
                 class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
+                onclick="gtag('event', 'address_click', { address: '' });" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
     </div>
 
     <!-- Floating Halal -->
     <div class="fixed bottom-24 right-4 group">
-        <a href="#"
+        <a href="{{ asset('Sertif Halal.webp') }}" target="_blank"
             class="relative flex items-center justify-center transition rounded-full shadow-lg w-14 h-14 backdrop-blur-sm hover:scale-110">
             <img src="{{ asset('halallogo.png') }}" alt="Halal Logo" class="object-contain w-14 h-14">
         </a>
@@ -362,6 +361,7 @@
     <!-- Floating WhatsApp -->
     <div class="fixed bottom-5 right-4 group">
         <a href="https://wa.me/+628112202117" target="_blank"
+            onclick="gtag('event', 'direct_whatsapp', {location: 'Floating Icon', page_title: document.title});"
             class="relative flex items-center justify-center transition rounded-full shadow-lg w-13 h-13 bg-green-500/90 backdrop-blur-sm hover:bg-green-600/90 hover:scale-110">
             <i class="text-3xl text-white fab fa-whatsapp"></i>
             <!-- Tooltip -->
@@ -371,7 +371,4 @@
             </span>
         </a>
     </div>
-
-    <!-- Font Awesome (untuk icon WhatsApp) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 @endsection
