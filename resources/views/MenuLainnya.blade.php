@@ -257,11 +257,12 @@
                             </div>
 
                             <!-- Tombol Pesan -->
-                            <a href="https://wa.me/+628112202117" target="_blank"
-                                class="bg-[#075E54] w-full max-w-sm py-2 rounded-xl flex items-center justify-center gap-2 hover:bg-[#0a6e63] transition mt-4">
-                                <i class="text-xl text-white fab fa-whatsapp"></i>
-                                <span class="text-lg font-medium text-white">Pesan Sekarang</span>
-                            </a>
+                        <!-- Tombol Pesan -->
+                        <a id="waButton" href="#"
+                            class="flex items-center justify-center w-full gap-2 py-3 mt-6 font-semibold text-white rounded-lg bg-emerald-600 hover:bg-emerald-700 transition">
+                            <i class="fab fa-whatsapp text-xl text-white"></i>
+                            Pesan Sekarang
+                        </a>
                         </div>
                     </div>
                 </div>
