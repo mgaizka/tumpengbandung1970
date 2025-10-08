@@ -19,6 +19,7 @@
                             <p class="text-gray-600">{{ $event->sub_judul }}</p>
                         </div>
                         <button @click="open = true; selectedEvent = {{ $event->toJson() }}"
+                            onclick="gtag('event', 'select_testimoni', { testimoni_name: '{{ $event['judul'] }}' });"
                             class="py-2 text-start text-black text-md hover:underline transition">
                             Selengkapnya &rarr;
                         </button>

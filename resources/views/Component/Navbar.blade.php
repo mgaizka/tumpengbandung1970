@@ -34,8 +34,7 @@
                 <div class="hidden sm:ml-6 sm:block pt-3">
                     <div class="flex space-x-4">
                         <!-- Beranda -->
-                        <a href="{{ route('home') }}"
-                            onclick="gtag('event', 'navbar_click', { location: 'navbar', link_text: 'Beranda'})"
+                        <a href="{{ route('home') }}" onclick="gtag('event', 'page_click', { page_name: 'Home' });"
                             class="rounded-md px-3 py-2 text-md font-medium {{ request()->routeIs('home') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
                             Beranda
                         </a>
@@ -51,7 +50,8 @@
                                 class="absolute left-0 top-full hidden w-72 bg-[#161616] rounded-lg shadow-lg group-hover:block overflow-hidden border border-white">
                                 <!-- Tumpeng -->
                                 <a href="{{ route('menu-tumpeng') }}"
-                                    onclick="gtag('event', 'navbar_click', { location: 'navbar', link_text: 'Menu Tumpeng'})"
+                                    onclick="gtag('event', 'select_category', {category: 'Menu Tumpeng'})"
+                                    onclick="gtag('event', 'select_category', { category: 'Menu Tumpeng' });"
                                     class="flex items-center gap-3 px-4 py-3 border-b border-white
                                   {{ request()->routeIs('menu-tumpeng') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
                                     <span
@@ -71,7 +71,7 @@
 
                                 <!-- Paket Nasi -->
                                 <a href="{{ route('menu-nasi') }}"
-                                    onclick="gtag('event', 'navbar_click', { location: 'navbar', link_text: 'Paket Nasi'})"
+                                    onclick="gtag('event', 'select_category', { category: 'Paket Nasi' });"
                                     class="flex items-center gap-3 px-4 py-3 border-b border-white
                                       {{ request()->routeIs('menu-nasi') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
 
@@ -92,7 +92,7 @@
 
                                 <!-- Menu Lain -->
                                 <a href="{{ route('menu-lainnya') }}"
-                                    onclick="gtag('event', 'navbar_click', { location: 'navbar', link_text: 'Menu Lainnya'})"
+                                    onclick="gtag('event', 'select_category', { category: 'Menu Lainnya' });"
                                     class="flex items-center gap-3 px-4 py-3 border-b border-white/10
                                       {{ request()->routeIs('menu-lainnya') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
 
@@ -117,19 +117,13 @@
 
                         <!-- Tentang -->
                         <a href="{{ route('tentang-kami') }}"
-                            onclick="gtag('event', 'navbar_click', { location: 'navbar', link_text: 'Tentang Kami'})"
+                            onclick="gtag('event', 'page_click', { page_name: 'Tentang Kami' });"
                             class="rounded-md px-3 py-2 text-md font-medium {{ request()->routeIs('tentang-kami') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
                             Tentang Kami
                         </a>
 
-                        <!-- Testimoni -->
-                        {{-- <a href="{{ route('testimoni') }}"
-                            class="rounded-md px-3 py-2 text-md font-medium {{ request()->routeIs('testimoni') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
-                            Testimoni
-                        </a> --}}
-
                         <a href="{{ route('testimoni') }}"
-                            onclick="gtag('event', 'navbar_click', { location: 'navbar', link_text: 'Testimoni'})"
+                            onclick="gtag('event', 'page_click', { page_name: 'Testimoni' });"
                             class="rounded-md px-3 py-2 text-md font-medium {{ request()->routeIs('testimoni') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
                             Testimoni
                         </a>
@@ -170,14 +164,18 @@
                 </a>
 
                 <!-- Paket Nasi -->
-                <a href="#" class="flex items-start gap-3 px-3 py-3 rounded-md text-white hover:bg-white/10">
+                <a href="{{ route('menu-nasi') }}"
+                    class="flex items-start gap-3 px-3 py-3 rounded-md
+                {{ request()->routeIs('menu-nasi') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
                     <div>
                         <p class="font-medium">Paket Nasi</p>
                     </div>
                 </a>
 
                 <!-- Menu Lain -->
-                <a href="#" class="flex items-start gap-3 px-3 py-3 rounded-md text-white hover:bg-white/10">
+                <a href="{{ route('menu-lainnya') }}"
+                    class="flex items-start gap-3 px-3 py-3 rounded-md
+                {{ request()->routeIs('menu-lainnya') ? 'bg-gray-950/50 text-white' : 'text-white hover:bg-white/10' }}">
                     <div>
                         <p class="font-medium">Menu Lain</p>
                     </div>

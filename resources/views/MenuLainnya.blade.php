@@ -1,6 +1,6 @@
 @extends('Layout.app')
 
-@section('title', 'Tumpeng')
+@section('title', 'Menu Lainnya')
 
 @section('content')
     <div class="text-white px-4 px-4 md:px-[1cm] lg:px-[2cm] pt-[120px]">
@@ -18,31 +18,37 @@
         <!-- Tab / Filter Kategori -->
         <div class="flex flex-wrap justify-center gap-4 pt-8 mb-10">
             <a href="{{ route('menu-lainnya', ['kategori' => 'liwet-kastrol']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Liwet Castrol' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'liwet-kastrol' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Liwet Kastrol
             </a>
             <a href="{{ route('menu-lainnya', ['kategori' => 'prasmanan']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Prasmanan' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'prasmanan' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Prasmanan
             </a>
             <a href="{{ route('menu-lainnya', ['kategori' => 'rujak']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Rujak' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'rujak' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Rujak
             </a>
             <a href="{{ route('menu-lainnya', ['kategori' => 'beubeutian-rebusan']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'beubeutian/Rujak' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'beubeutian-rebusan' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Beubeutian / Rebusan
             </a>
             <a href="{{ route('menu-lainnya', ['kategori' => 'snack-box']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Snack Box' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'snack-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Snack Box
             </a>
             <a href="{{ route('menu-lainnya', ['kategori' => 'hampers']) }}"
+                onclick="gtag('event', 'select_subcategory', { subcategory: 'Hampers' });"
                 class="px-5 py-2 rounded-full font-semibold transition
               {{ $kategori == 'hampers' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                 Hampers
@@ -56,13 +62,16 @@
             @foreach ($menus as $menu)
                 <div x-data="{ open: false }" class="relative">
                     <!-- Kartu Produk -->
-                    <div class="overflow-hidden bg-white shadow rounded-xl">
+                    {{-- <div class="overflow-hidden bg-white shadow rounded-xl"> --}}
+                    <div class="overflow-hidden bg-white shadow rounded-xl menu-card" data-menu="{{ $menu->jenis_paket }}"
+                        data-category="{{ $menu->kategori }}">
                         <img src="{{ asset($menu->image) }}" alt="{{ $menu->jenis_paket }}"
                             class="object-cover w-full h-56">
                         <div class="p-4 text-black">
                             <h3 class="mb-1 text-xl font-bold">{{ $menu->jenis_paket }}</h3>
                             <p class="mb-3 text-sm">{{ $menu->card_desc }}</p>
-                            <button @click="open = true" class="inline-flex items-center font-semibold hover:underline">
+                            <button @click="open = true" class="inline-flex items-center font-semibold hover:underline"
+                                onclick="gtag('event', 'select_menu', { menu_name: '{{ $menu['kategori'] }} - {{ $menu['jenis_paket'] }}' });">
                                 Selengkapnya
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"
                                     viewBox="0 0 24 24">
@@ -151,7 +160,8 @@
                                             <h4
                                                 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
                                                 Pilihan Ayam</h4>
-                                            <p class="text-gray-300">Ayam Lada Hitam | Ayam Kodok | Ayam Asam Manis | Ayam
+                                            <p class="text-gray-300">Ayam Lada Hitam | Ayam Kodok | Ayam Asam Manis |
+                                                Ayam
                                                 Goreng Saus Mentega | Bumbu Rempah</p>
                                         </div>
                                         <div>
@@ -173,7 +183,8 @@
                                             <h4
                                                 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
                                                 Pilihan Ayam</h4>
-                                            <p class="text-gray-300">Ayam Lada Hitam | Ayam Kodok | Ayam Asam Manis | Ayam
+                                            <p class="text-gray-300">Ayam Lada Hitam | Ayam Kodok | Ayam Asam Manis |
+                                                Ayam
                                                 Goreng Saus Mentega | Bumbu Rempah</p>
                                         </div>
                                     @endif
@@ -186,7 +197,8 @@
                                     <div>
                                         <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
                                             Sayuran</h4>
-                                        <p class="text-gray-300">Salad Buah | Selada Bangkok | Rujak Penganten | Rujak Cuka
+                                        <p class="text-gray-300">Salad Buah | Selada Bangkok | Rujak Penganten | Rujak
+                                            Cuka
                                             | Asinan Bogor | Capcay | Cah Brokoli | Cah Jamur | Buncis Jagung</p>
                                     </div>
                                     @if (in_array($menu->jenis_paket, ['Paket B', 'Paket C']))
@@ -211,7 +223,8 @@
                                     <div>
                                         <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
                                             Pilihan Buah</h4>
-                                        <p class="text-gray-300">Nanas | Belimbing | Kedongdong | Bengkuang | Mangga | Jambu
+                                        <p class="text-gray-300">Nanas | Belimbing | Kedongdong | Bengkuang | Mangga |
+                                            Jambu
                                             Air | Pepaya | Jambu Kristal</p>
                                     </div>
                                 @endif
@@ -233,17 +246,23 @@
                                 {{-- Snack Box --}}
                                 @if ($menu->kategori == 'snack-box')
                                     <div>
-                                        <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">Kue
+                                        <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
+                                            Kue
                                             Manis</h4>
-                                        <p class="text-gray-300">Sus Fla Susu | Pisang Bolen | Puding Banana Roll | Nagasari
-                                            | Bugis | Dadar Gulung | Pie Buah | Bolu Ketan Hitam | Bolu Kukus | Bolu Gulung
+                                        <p class="text-gray-300">Sus Fla Susu | Pisang Bolen | Puding Banana Roll |
+                                            Nagasari
+                                            | Bugis | Dadar Gulung | Pie Buah | Bolu Ketan Hitam | Bolu Kukus | Bolu
+                                            Gulung
                                             | Lapis | Bika Ambon | Kue Lumpur | Cente | dll</p>
                                     </div>
                                     <div>
-                                        <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">Kue
+                                        <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
+                                            Kue
                                             Asin</h4>
-                                        <p class="text-gray-300">Risoles | Pastel | Gorengan | Arem-Arem | Bakso Goreng |
-                                            Bakwan Udang | Comro | Cheese Roll | Lemper | Lontong Isi | Sosis Solo | dll</p>
+                                        <p class="text-gray-300">Risoles | Pastel | Gorengan | Arem-Arem | Bakso Goreng
+                                            |
+                                            Bakwan Udang | Comro | Cheese Roll | Lemper | Lontong Isi | Sosis Solo | dll
+                                        </p>
                                     </div>
                                     @if ($menu->jenis_paket == 'Paket C')
                                         <div>
@@ -257,9 +276,9 @@
                             </div>
 
                             <!-- Tombol Pesan -->
-                        <!-- Tombol Pesan -->
                         <a id="waButton" href="#"
                             class="flex items-center justify-center w-full gap-2 py-3 mt-6 font-semibold text-white rounded-lg bg-emerald-600 hover:bg-emerald-700 transition">
+                            onclick="gtag('event', 'whatsapp_click', { item_name: '{{ $menu['kategori'] }} - {{ $menu['jenis_paket'] }}' });"
                             <i class="fab fa-whatsapp text-xl text-white"></i>
                             Pesan Sekarang
                         </a>
@@ -269,4 +288,35 @@
             @endforeach
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuCards = document.querySelectorAll(".menu-card");
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const card = entry.target;
+                        const menuName = card.dataset.menu;
+                        const category = card.dataset.category;
+
+                        const itemName = `${category} - ${menuName}`;
+
+                        // Kirim event ke GA4 saat card terlihat
+                        gtag('event', 'view_item', {
+                            item_name: itemName,
+                            category: category,
+                            event_label: 'Card viewed'
+                        });
+
+                        observer.unobserve(card);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            }); // minimal 50% dari card kelihatan
+
+            menuCards.forEach(card => observer.observe(card));
+        });
+    </script>
 @endsection
