@@ -328,7 +328,6 @@
                     ['img' => '18.webp', 'alt' => 'UI'],
                     ['img' => '19.webp', 'alt' => 'UI'],
                     ['img' => '20.webp', 'alt' => 'UI'],
-                      
                 ];
             @endphp
 
@@ -353,6 +352,7 @@
             </iframe>
         </div>
     </div>
+
     <!-- Floating Halal -->
     <div class="fixed bottom-24 right-4 group">
         <a href="{{ asset('Sertif Halal.webp') }}" target="_blank"
