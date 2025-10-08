@@ -11,24 +11,24 @@
                 Kami menghadirkan tumpeng autentik khas <br> Bandung dengan cita rasa terbaik.
                 Lengkap <br> dengan pilihan paket untuk setiap acara spesial Anda.
             </p>
-        <div class="flex space-x-4 pt-2">
-            <a href="#"
-                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-blue-500 hover:text-white transition">
-                <i class="fab fa-facebook-f text-lg"></i>
-            </a>
-            <a href="#"
-                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-pink-500 hover:text-white transition">
-                <i class="fab fa-instagram text-lg"></i>
-            </a>
-            <a href="#"
-                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-gray-800 hover:text-white transition">
-                <i class="fab fa-tiktok text-lg"></i>
-            </a>
-            <a href="#"
-                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-red-400 hover:text-white transition">
-                <i class="fas fa-envelope text-lg"></i>
-            </a>
-        </div>
+            <div class="flex space-x-4 pt-2">
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-blue-500 hover:text-white transition">
+                    <i class="fab fa-facebook-f text-lg"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-pink-500 hover:text-white transition">
+                    <i class="fab fa-instagram text-lg"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-gray-800 hover:text-white transition">
+                    <i class="fab fa-tiktok text-lg"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-red-400 hover:text-white transition">
+                    <i class="fas fa-envelope text-lg"></i>
+                </a>
+            </div>
 
         </div>
 
@@ -36,9 +36,9 @@
         <div class="pt-8">
             <h3 class="font-bold mb-4">Kategori</h3>
             <ul class="space-y-2">
-                <li><a href="#" class="hover:text-blue-500">Tumpeng</a></li>
-                <li><a href="#" class="hover:text-blue-500">Paket Nasi</a></li>
-                <li><a href="#" class="hover:text-blue-500">Menu Lainnya</a></li>
+                <li><a href="{{ route('menu-tumpeng') }}" class="hover:text-blue-500">Tumpeng</a></li>
+                <li><a href="{{ route('menu-nasi') }}" class="hover:text-blue-500">Paket Nasi</a></li>
+                <li><a href="{{ route('menu-lainnya') }}" class="hover:text-blue-500">Menu Lainnya</a></li>
             </ul>
         </div>
 
@@ -46,9 +46,9 @@
         <div class="pt-8">
             <h3 class="font-bold mb-4">Tentang Kami</h3>
             <ul class="space-y-2">
-                <li><a href="#" class="hover:text-blue-500">Visi & Misi</a></li>
-                <li><a href="#" class="hover:text-blue-500">Sejarah Singkat</a></li>
-                <li><a href="#" class="hover:text-blue-500">Cara Pemesanan</a></li>
+                <li><a href="{{ route('tentang-kami') }}" class="hover:text-blue-500">Visi & Misi</a></li>
+                <li><a href="{{ route('tentang-kami') }}" class="hover:text-blue-500">Sejarah Singkat</a></li>
+                <li><a href="{{ route('tentang-kami') }}" class="hover:text-blue-500">Cara Pemesanan</a></li>
             </ul>
         </div>
 
@@ -77,10 +77,8 @@
         class="border-t border-gray-700 mt-8 py-4 px-[2cm] flex flex-col sm:flex-row justify-between items-center text-gray-400 text-sm">
         <!-- Copyright -->
         <p class="mb-4 sm:mb-0">
-            © 2025 Tumpeng Bandung 1970. All rights reserved. — Created by Fauzan Gaizka & Monalisa
+            © 2025 Tumpeng Bandung 1970. — Developed by Fauzan, Gaizka & Monalisa
         </p>
-
-        <!-- Ikon Sosmed -->
 
     </div>
 </footer>
