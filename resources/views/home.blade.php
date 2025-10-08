@@ -7,24 +7,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Carousel -->
-    <div id="default-carousel" class="relative w-full overflow-hidden shadow-b-md" data-carousel="slide">
+    <div id="default-carousel" class="relative w-full overflow-hidden" data-carousel="slide">
         <!-- Carousel wrapper -->
         <div class="relative h-56 sm:h-72 md:h-[500px] lg:h-screen">
             <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('asset/banner/1.webp') }}" class="absolute inset-0 object-cover w-full h-full"
+            <div class="hidden duration-20000 ease-in-out" data-carousel-item>
+                <img src="{{ asset('asset/banner/lewihmirah.webp') }}" class="absolute inset-0 object-cover w-full h-full"
                     alt="Foto 1">
             </div>
             <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="hidden duration-20000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('asset/banner/2.webp') }}" class="absolute inset-0 object-cover w-full h-full"
                     alt="Foto 2">
             </div>
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="hidden duration-20000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('asset/banner/3.webp') }}" class="absolute inset-0 object-cover w-full h-full"
                     alt="Foto 2">
             </div>
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="hidden duration-20000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('asset/banner/4.webp') }}" class="absolute inset-0 object-cover w-full h-full"
                     alt="Foto 2">
             </div>
@@ -219,7 +219,7 @@
             @endphp
 
             @foreach ($produk as $item)
-                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl">
+                <div class="overflow-hidden rounded-lg shadow-lg">
                     <img loading="lazy" src="{{ asset($item['img']) }}" alt="{{ $item['alt'] }}"
                         class="w-full h-70 object-cover {{ $item['pos'] }} transition-transform duration-300 hover:scale-105">
 
@@ -351,32 +351,5 @@
                 onclick="gtag('event', 'address_click', { address: '' });" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
-    </div>
-
-    <!-- Floating Halal -->
-    <div class="fixed bottom-24 right-4 group">
-        <a href="{{ asset('Sertif Halal.webp') }}" target="_blank"
-            class="relative flex items-center justify-center transition rounded-full shadow-lg w-14 h-14 backdrop-blur-sm hover:scale-110">
-            <img src="{{ asset('halallogo.png') }}" alt="Halal Logo" class="object-contain w-14 h-14">
-        </a>
-        <!-- Tooltip -->
-        <span
-            class="absolute px-2 py-1 text-xs text-white transition -translate-y-1/2 bg-black rounded opacity-0 right-20 top-1/2 group-hover:opacity-100">
-            Halal Certified
-        </span>
-    </div>
-
-    <!-- Floating WhatsApp -->
-    <div class="fixed bottom-5 right-4 group">
-        <a href="https://wa.me/+628112202117" target="_blank"
-            onclick="gtag('event', 'direct_whatsapp', {location: 'Floating Icon', page_title: document.title});"
-            class="relative flex items-center justify-center transition rounded-full shadow-lg w-13 h-13 bg-green-500/90 backdrop-blur-sm hover:bg-green-600/90 hover:scale-110">
-            <i class="text-3xl text-white fab fa-whatsapp"></i>
-            <!-- Tooltip -->
-            <span
-                class="absolute px-2 py-1 text-xs text-white transition -translate-y-1/2 bg-black rounded opacity-0 right-20 top-1/2 group-hover:opacity-100">
-                Pesan Sekarang!
-            </span>
-        </a>
     </div>
 @endsection
