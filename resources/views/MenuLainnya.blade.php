@@ -3,7 +3,7 @@
 @section('title', 'Menu Lainnya')
 
 @section('content')
-    <div class="text-white px-[1cm] pt-[40px] lg:px-[2cm] lg:pt-[90px]">
+    <div class="text-white px-4 pt-[40px] lg:px-[2cm] lg:pt-[90px]">
         <h2 class="text-xl font-bold mb-3 text-center text-gray-100 lg:text-3xl">
             PAKET LAINNYA
         </h2>

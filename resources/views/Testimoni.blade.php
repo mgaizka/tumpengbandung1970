@@ -3,7 +3,7 @@
 @section('title', 'Testimoni')
 
 @section('content')
-    <div class="text-white px-[1cm] pt-[40px] lg:px-[2cm] lg:pt-[90px]" x-data="{ open: false, selectedEvent: null }">
+    <div class="text-white px-4 pt-[40px] lg:px-[2cm] lg:pt-[90px]" x-data="{ open: false, selectedEvent: null }">
         <h2 class="text-2xl font-bold mb-3 text-center text-gray-100 lg:text-3xl">
             Suara Pelanggan, Bukti Kualitas Kami <br>
             <span class="text-gray-200">Untuk Setiap Momen Spesial Anda</span>

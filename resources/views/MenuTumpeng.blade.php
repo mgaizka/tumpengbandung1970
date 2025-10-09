@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="text-white px-[1cm] pt-[40px] lg:px-[2cm] lg:pt-[90px]">
+    <div class="text-white px-4 pt-[40px] lg:px-[2cm] lg:pt-[90px]">
         <!-- Tag kecil di atas -->
         <h2 class="text-xl font-bold mb-3 text-center text-gray-100 lg:text-3xl">
             PAKET TUMPENG

@@ -1,6 +1,6 @@
 {{-- Footer --}}
 <footer class="bg-[#161616] text-white">
-    <div class="px-[1cm] lg:px-[2cm] py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-[18px]">
+    <div class="px-4 lg:px-[2cm] py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 text-[18px]">
         <!-- Kolom 1: Logo (span 2 kolom biar lebar) -->
         <div class="lg:col-span-2 pt-8">
             <div class="flex items-center mb-4">

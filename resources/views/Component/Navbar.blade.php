@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav id="navbar"
     class="sticky top-0 z-50 bg-[#161616] transition-colors duration-300 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
-    <div class="px-[1cm] lg:px-[2cm]">
+    <div class="px-4 lg:px-[2cm]">
         <div class="relative flex h-16 items-center justify-between">
 
             <!-- Mobile menu button -->

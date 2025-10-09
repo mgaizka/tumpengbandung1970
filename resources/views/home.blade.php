@@ -66,7 +66,7 @@
 
 
     <!-- Tentang Kami -->
-    <div class="text-white px-[1cm] pt-[40px] lg:px-[2cm] lg:pt-[90px]">
+    <div class="text-white px-4 pt-[40px] lg:px-[2cm] lg:pt-[90px]">
         <div class="grid items-center grid-cols-1 gap-2 lg:grid-cols-2">
             <!-- Grid Foto -->
             <div data-aos="fade-up" class="grid grid-cols-2 gap-8">
@@ -107,7 +107,7 @@
     </div>
 
     <!-- Yang Membuat Kami Istimewa -->
-    <div class="py-10 px-[1cm] lg:px-[2cm] mt-[60px]">
+    <div class="py-10 px-4 lg:px-[2cm] mt-[60px]">
         <h2 class="text-xl lg:text-2xl font-bold mb-10 text-center text-white">
             Yang Membuat Kami Istimewa
         </h2>
@@ -167,7 +167,7 @@
     </div>
 
     <!-- Rayakan Momen -->
-    <div class="py-14 px-[1cm] lg:px-[2cm] text-white">
+    <div class="py-14 px-4 lg:px-[2cm] text-white">
         <h2 class="text-center text-xl lg:text-2xl font-bold mb-4">
             Rayakan Momen Spesialmu dengan Tumpeng Bandung 1970
         </h2>
@@ -244,7 +244,7 @@
 
 
     <!-- Testimoni -->
-    <div class="bg-gray-200/10 py-14 pb-10 px-[1cm] lg:px-[2cm] text-center ">
+    <div class="bg-gray-200/10 py-14 pb-10 px-4 lg:px-[2cm] text-center ">
         <!-- Judul -->
         <h2 class="text-xl lg:text-2xl font-bold mb-10 text-white">
             Apa Kata Mereka Tentang Tumpeng Bandung 1970
@@ -306,7 +306,7 @@
     </div>
 
     <!-- Logo -->
-    <div class="py-14 pb-[50px] px-[1cm] lg:px-[2cm] text-center mt-[60px]">
+    <div class="py-14 pb-[50px] px-4 lg:px-[2cm] text-center mt-[60px]">
         <h2 class="mb-10 text-xl lg:text-2xl font-bold text-white">
             Mereka yang Pernah Bekerja Sama dengan Kami
         </h2>
@@ -350,7 +350,7 @@
 
 
     <!-- Maps -->
-    <div class="px-[1cm] lg:px-[2cm] pt-[30px] py-10 mt-[60px]">
+    <div class="px-4 lg:px-[2cm] pt-[30px] py-10 mt-[60px]">
         <div class="w-full h-[300px] md:h-[490px] rounded-lg overflow-hidden shadow-lg">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.860730357939!2d107.61842537592155!3d-6.907251967601307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e73f2dc2d82d%3A0x5471b93bd20ac149!2sTumpeng%20Bandung%201970!5e0!3m2!1sid!2sid!4v1758100843739!5m2!1sid!2sid"
