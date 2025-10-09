@@ -3,56 +3,65 @@
 @section('title', 'Menu Lainnya')
 
 @section('content')
-    <div class="text-white px-4 px-4 md:px-[1cm] lg:px-[2cm] pt-[120px]">
-        <!-- Tag kecil di atas -->
-        <span class="block mx-auto text-[18px] font-bold mb-4 text-center">
+    <div class="text-white px-[1cm] pt-[40px] lg:px-[2cm] lg:pt-[90px]">
+        <h2 class="text-xl font-bold mb-3 text-center text-gray-100 lg:text-3xl">
             PAKET LAINNYA
-        </span>
-
-        <!-- Judul -->
-        <h2 class="mb-4 text-xl font-bold text-center sm:text-3xl md:text-4xl">
-            Pilihan Hidangan Lengkap Yang Menjadikan Setiap <br>
-            <span class="text-white-300">Momen Semakin Istimewa</span>
         </h2>
 
+        <h2 class="text-xl font-bold text-center text-gray-100 lg:text-3xl">
+            Pilihan Hidangan Lengkap Yang Menjadikan Setiap
+            <br class="hidden sm:block">
+            <span class="text-gray-200">Momen Semakin Istimewa</span>
+        </h2>
+
+
         <!-- Tab / Filter Kategori -->
-        <div class="flex flex-wrap justify-center gap-4 pt-8 mb-10">
-            <a href="{{ route('menu-lainnya', ['kategori' => 'liwet-kastrol']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Liwet Castrol' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'liwet-kastrol' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Liwet Kastrol
-            </a>
-            <a href="{{ route('menu-lainnya', ['kategori' => 'prasmanan']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Prasmanan' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'prasmanan' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Prasmanan
-            </a>
-            <a href="{{ route('menu-lainnya', ['kategori' => 'rujak']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Rujak' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'rujak' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Rujak
-            </a>
-            <a href="{{ route('menu-lainnya', ['kategori' => 'beubeutian-rebusan']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'beubeutian/Rujak' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'beubeutian-rebusan' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Beubeutian / Rebusan
-            </a>
-            <a href="{{ route('menu-lainnya', ['kategori' => 'snack-box']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Snack Box' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'snack-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Snack Box
-            </a>
-            <a href="{{ route('menu-lainnya', ['kategori' => 'hampers']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Hampers' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'hampers' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Hampers
-            </a>
+        <div class="overflow-x-auto md:overflow-x-auto lg:overflow-visible no-scrollbar">
+            <div
+                class="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center gap-3 sm:gap-4 md:gap-5 pt-5 sm:pt-7 md:pt-8 mb-6 sm:mb-10 snap-x snap-mandatory scroll-smooth px-3 sm:px-4">
+
+                <a href="{{ route('menu-lainnya', ['kategori' => 'liwet-kastrol']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Liwet Kastrol' });"
+                    class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
+            {{ $kategori == 'liwet-kastrol' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Liwet Kastrol
+                </a>
+
+                <a href="{{ route('menu-lainnya', ['kategori' => 'prasmanan']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Prasmanan' });"
+                    class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
+            {{ $kategori == 'prasmanan' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Prasmanan
+                </a>
+
+                <a href="{{ route('menu-lainnya', ['kategori' => 'rujak']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Rujak' });"
+                    class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
+            {{ $kategori == 'rujak' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Rujak
+                </a>
+
+                <a href="{{ route('menu-lainnya', ['kategori' => 'beubeutian-rebusan']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Beubeutian / Rebusan' });"
+                    class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
+            {{ $kategori == 'beubeutian-rebusan' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Beubeutian / Rebusan
+                </a>
+
+                <a href="{{ route('menu-lainnya', ['kategori' => 'snack-box']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Snack Box' });"
+                    class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
+            {{ $kategori == 'snack-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Snack Box
+                </a>
+
+                <a href="{{ route('menu-lainnya', ['kategori' => 'hampers']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Hampers' });"
+                    class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
+            {{ $kategori == 'hampers' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Hampers
+                </a>
+            </div>
         </div>
 
         <!-- Grid produk -->
@@ -62,7 +71,6 @@
             @foreach ($menus as $menu)
                 <div x-data="{ open: false }" class="relative">
                     <!-- Kartu Produk -->
-                    {{-- <div class="overflow-hidden bg-white shadow rounded-xl"> --}}
                     <div class="overflow-hidden bg-white shadow rounded-xl menu-card" data-menu="{{ $menu->jenis_paket }}"
                         data-category="{{ $menu->kategori }}">
                         <img src="{{ asset($menu->image) }}" alt="{{ $menu->jenis_paket }}"
@@ -83,9 +91,10 @@
 
                     <!-- Modal -->
                     <div x-show="open" x-transition
-                        class="fixed inset-0 z-50 flex items-center justify-center bg-gray/60 backdrop-blur-sm"
+                        class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-3 sm:p-6 md:p-8"
                         style="display:none">
-                        <div class="bg-[#111] text-white w-full max-w-md rounded-2xl shadow-lg p-6 relative">
+                        <div
+                            class="bg-[#111] text-white w-full max-w-4xl md:max-w-3xl sm:max-w-md rounded-2xl shadow-2xl p-6 md:p-8 relative overflow-y-auto max-h-[90vh]">
 
                             <!-- Tombol Close -->
                             <button @click="open = false"
@@ -123,13 +132,6 @@
 
                             <!-- Pilihan Menu -->
                             <div class="space-y-5 text-sm">
-
-                                {{-- <div class="flex items-center justify-center my-4 space-x-4">
-                                    <div class="flex-1 border-t border-white"></div>
-                                    <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
-                                    <div class="flex-1 border-t border-white"></div>
-                                </div> --}}
-
                                 @if ($menu->kategori == 'rujak' || $menu->kategori == 'beubeutian-rebusan')
                                     <div class="flex items-center justify-center my-4 space-x-4">
                                         <div class="flex-1 border-t border-white"></div>
@@ -310,4 +312,16 @@
             menuCards.forEach(card => observer.observe(card));
         });
     </script>
+
+
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 @endsection

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Company Profile')</title>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <link rel="icon" type="image/png" href="{{ asset('logo.png') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -63,20 +63,6 @@
         </a>
     </div>
 </body>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const waButton = document.getElementById("waButton");
-        if (waButton) {
-            waButton.addEventListener("click", function(e) {
-                e.preventDefault(); // biar gak reload halaman
-                const pesan = encodeURIComponent(
-                    "Halo, saya tertarik untuk melakukan pemesanan dan ingin tahu informasi lebih lanjut. Apakah bisa dibantu?"
-                );
-                window.open(`https://wa.me/628112202117?text=${pesan}`, "_blank");
-            });
-        }
-    });
-</script>
 
 <style>
     .bg-hero-lazy {
@@ -107,9 +93,8 @@
 
         supportsWebP(function(supported) {
             img.src = supported ?
-                "{{ asset('asset/main/main-bg.webp') }}" // ✅ pakai WebP
-                :
-                "{{ asset('asset/main/main-bg.png') }}"; // 🔙 fallback PNG
+                "{{ asset('asset/main/main-bg.webp') }}" :
+                "{{ asset('asset/main/main-bg.png') }}";
         });
 
         img.onload = () => {
@@ -118,7 +103,19 @@
         };
     });
 
-    // kalau kamu pakai AOS
+    document.addEventListener("DOMContentLoaded", function() {
+        const waButton = document.getElementById("waButton");
+        if (waButton) {
+            waButton.addEventListener("click", function(e) {
+                e.preventDefault(); // biar gak reload halaman
+                const pesan = encodeURIComponent(
+                    "Halo, saya tertarik untuk melakukan pemesanan dan ingin tahu informasi lebih lanjut. Apakah bisa dibantu?"
+                );
+                window.open(`https://wa.me/628112202117?text=${pesan}`, "_blank");
+            });
+        }
+    });
+
     AOS.init();
 </script>
 

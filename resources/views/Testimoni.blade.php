@@ -3,10 +3,10 @@
 @section('title', 'Testimoni')
 
 @section('content')
-    <div class="text-white px-4 md:px-[1cm] lg:px-[2cm] pt-[120px] mb-[1.5cm]" x-data="{ open: false, selectedEvent: null }">
-        <h2 class="text-[32px] font-bold mb-4 text-center">
+    <div class="text-white px-[1cm] pt-[40px] lg:px-[2cm] lg:pt-[90px]" x-data="{ open: false, selectedEvent: null }">
+        <h2 class="text-2xl font-bold mb-3 text-center text-gray-100 lg:text-3xl">
             Suara Pelanggan, Bukti Kualitas Kami <br>
-            <span class="text-white-300">Untuk Setiap Momen Spesial Anda</span>
+            <span class="text-gray-200">Untuk Setiap Momen Spesial Anda</span>
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 justify-between py-8">
@@ -31,9 +31,10 @@
 
         <!-- ✅ Modal DI LUAR LOOP -->
         <div x-show="open" x-transition
-            class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" style="display: none">
+            class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-3 sm:p-6 md:p-8 no-scrollbar"
+            style="display: none">
             <div
-                class="bg-black text-white w-full max-w-3xl rounded-xl shadow-lg p-6 relative overflow-y-auto max-h-[90vh]">
+                class="bg-[#111] text-white w-full max-w-4xl md:max-w-3xl sm:max-w-md rounded-2xl shadow-2xl p-6 md:p-8 relative overflow-y-auto max-h-[85vh] no-scrollbar transform -translate-y-6 sm:-translate-y-10">
                 <button @click="open = false"
                     class="absolute top-3 right-3 text-gray-400 hover:text-white text-2xl font-bold">
                     ✕
@@ -58,6 +59,7 @@
                 </template>
             </div>
         </div>
+
     </div>
 
     <script>
@@ -84,4 +86,17 @@
             menuCards.forEach(card => observer.observe(card));
         });
     </script>
+
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE dan Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    </style>
 @endsection

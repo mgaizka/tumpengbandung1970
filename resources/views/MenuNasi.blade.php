@@ -3,56 +3,73 @@
 @section('title', 'Menu Nasi')
 
 @section('content')
-    <div class="text-white px-4 px-4 md:px-[1cm] lg:px-[2cm] pt-[120px]">
+    <div class="text-white px-[1cm] pt-[40px] lg:px-[2cm] lg:pt-[90px]">
         <!-- Tag kecil di atas -->
-        <span class="block mx-auto text-[18px] font-bold mb-4 text-center">
+        <h2 class="text-xl font-bold mb-3 text-center text-gray-100 lg:text-3xl">
             PAKET NASI
-        </span>
+        </h2>
 
         <!-- Judul -->
-        <h2 class="mb-4 text-xl font-bold text-center sm:text-3xl md:text-4xl">
+        <h2 class="text-xl font-bold mb-3 text-center text-gray-100 lg:text-3xl">
             Hidangan Nasi Kotak Spesial Yang Siap <br>
-            <span class="text-white-300">Membuat Momen Anda Semakin Berkesan</span>
+            <span class="text-gray-200">Membuat Momen Anda Semakin Berkesan</span>
         </h2>
 
         <!-- Tab / Filter Kategori -->
-        <div class="flex flex-wrap justify-center gap-4 pt-8 mb-10">
-            <a href="{{ route('menu-nasi', ['kategori' => 'nasi-bakar']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Nasi Bakar' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'nasi-bakar' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Nasi Bakar
-            </a>
-            <a href="{{ route('menu-nasi', ['kategori' => 'nasi-besek']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Nasi Besek' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'nasi-besek' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Nasi Besek
-            </a>
-            <a href="{{ route('menu-nasi', ['kategori' => 'paket-nasi-box']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Paket Nasi Box' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'paket-nasi-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Nasi Box
-            </a>
-            <a href="{{ route('menu-nasi', ['kategori' => 'lunch-box']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Lunch Box' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'lunch-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Premium Lunch Box
-            </a>
-            <a href="{{ route('menu-nasi', ['kategori' => 'nasi-bento']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Nasi Bento' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'nasi-bento' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Nasi Bento
-            </a>
-            <a href="{{ route('menu-nasi', ['kategori' => 'ricebowl']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Ricebowl' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'ricebowl' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Ricebowl
-            </a>
+        <div class="overflow-x-auto md:overflow-x-auto lg:overflow-visible no-scrollbar">
+            <div
+                class="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center
+                gap-3 sm:gap-4 md:gap-5 pt-5 sm:pt-7 md:pt-8 mb-6 sm:mb-10
+                snap-x snap-mandatory scroll-smooth px-3 sm:px-4">
+
+                <a href="{{ route('menu-nasi', ['kategori' => 'nasi-bakar']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Nasi Bakar' });"
+                    class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full
+                   text-sm sm:text-base md:text-lg font-semibold transition
+                   {{ $kategori == 'nasi-bakar' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Nasi Bakar
+                </a>
+
+                <a href="{{ route('menu-nasi', ['kategori' => 'nasi-besek']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Nasi Besek' });"
+                    class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full
+                   text-sm sm:text-base md:text-lg font-semibold transition
+                   {{ $kategori == 'nasi-besek' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Nasi Besek
+                </a>
+
+                <a href="{{ route('menu-nasi', ['kategori' => 'paket-nasi-box']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Paket Nasi Box' });"
+                    class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full
+                   text-sm sm:text-base md:text-lg font-semibold transition
+                   {{ $kategori == 'paket-nasi-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Nasi Box
+                </a>
+
+                <a href="{{ route('menu-nasi', ['kategori' => 'lunch-box']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Premium Lunch Box' });"
+                    class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full
+                   text-sm sm:text-base md:text-lg font-semibold transition
+                   {{ $kategori == 'lunch-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Premium Lunch Box
+                </a>
+
+                <a href="{{ route('menu-nasi', ['kategori' => 'nasi-bento']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Nasi Bento' });"
+                    class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full
+                   text-sm sm:text-base md:text-lg font-semibold transition
+                   {{ $kategori == 'nasi-bento' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Nasi Bento
+                </a>
+
+                <a href="{{ route('menu-nasi', ['kategori' => 'ricebowl']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Ricebowl' });"
+                    class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full
+                   text-sm sm:text-base md:text-lg font-semibold transition
+                   {{ $kategori == 'ricebowl' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Ricebowl
+                </a>
+            </div>
         </div>
 
         <!-- Grid produk -->
@@ -81,420 +98,158 @@
 
                     <!-- Modal -->
                     <div x-show="open" x-transition
-                        class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+                        class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-3 sm:p-6 md:p-8"
                         style="display:none">
-                        <div class="bg-[#111] text-white w-full max-w-md rounded-2xl shadow-lg p-6 relative">
-                            <!-- Tombol Close -->
+                        <div
+                            class="bg-[#111] text-white w-full max-w-4xl md:max-w-3xl sm:max-w-md rounded-2xl shadow-2xl p-6 md:p-8 relative overflow-y-auto max-h-[90vh]">
                             <button @click="open = false"
-                                class="absolute text-2xl font-bold text-gray-300 top-3 right-3 hover:text-white">
-                                ✕
-                            </button>
+                                class="absolute text-2xl font-bold text-gray-300 top-3 right-3 hover:text-white">✕</button>
 
-                            <!-- Judul dan Harga -->
-                            <h2 class="text-lg font-bold text-center">
-                                {{ $menu->jenis_paket }} – Rp {{ number_format($menu->harga, 0, ',', '.') }}
-                            </h2>
-                            <p class="mb-4 text-sm text-center text-gray-300">
-                                {{ $menu->desc }}
-                            </p>
+                            <h2 class="text-lg font-bold text-center">{{ $menu->jenis_paket }} – Rp
+                                {{ number_format($menu->harga, 0, ',', '.') }}</h2>
+                            <p class="mb-4 text-sm text-center text-gray-300">{{ $menu->desc }}</p>
 
-                            <!-- Gambar -->
-                            <div
-                                class="mb-6 @if ($menu->image_alt) grid grid-cols-2 gap-3 @else grid grid-cols-1 @endif">
+                            <div class="mb-6 {{ $menu->image_alt ? 'grid grid-cols-2 gap-3' : 'grid grid-cols-1' }}">
                                 <img src="{{ asset($menu->image) }}" class="object-cover w-full h-40 rounded-lg"
                                     alt="paket">
-
                                 @if ($menu->image_alt)
                                     <img src="{{ asset($menu->image_alt) }}" class="object-cover w-full h-40 rounded-lg"
                                         alt="paket">
                                 @endif
                             </div>
 
-                            <!-- Pilihan Menu -->
+                            @php
+                                $paket = collect(['A', 'B', 'C'])->first(
+                                    fn($p) => Str::contains($menu->jenis_paket, "Paket $p"),
+                                );
+                                $judulMenu = fn(
+                                    $text,
+                                ) => "<h4 class='font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2'>$text</h4>";
+                                $divider = fn($title = 'Pilihan Menu') => "
+                <div class='flex items-center justify-center space-x-4 my-4'>
+                    <div class='flex-1 border-t border-white'></div>
+                    <h3 class='font-semibold text-white whitespace-nowrap'>$title</h3>
+                    <div class='flex-1 border-t border-white'></div>
+                </div>";
+                                $menuUtama = [
+                                    'A' =>
+                                        'Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy | Ayam Opor Kuning',
+                                    'B' => 'Gepuk | Rendang | Semur Daging',
+                                    'C' =>
+                                        'Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy | Ayam Opor Kuning | Gepuk | Rendang | Semur Daging',
+                                ];
+                                $tumisan =
+                                    'Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang | Tumis Tempe | Tumis Jambal Cabe Gendot | Cumi Balado | Urab | Cah Jagung | Ase Tahu Cabe | Buncis Jagung | Acar Ketimun.';
+                                $keringan =
+                                    'Tahu Goreng | Tempe Goreng | Perkedel Jagung | Pekedel Kentang | Mustofa | Kering Tempe | Asin Balado';
+                                $tambahan = 'Jeruk (Rp 3000) | Pisang (Rp 2000) | Pudding (Rp 4000)';
+                            @endphp
+
                             <div class="space-y-5 text-sm">
-                                {{-- <div>
-                                    <h3 class="pb-1 mb-1 font-semibold border-b border-gray-600">Pilihan Menu</h3>
-                                </div> --}}
-
-                                @php
-                                    $paket = null;
-                                    if (\Illuminate\Support\Str::contains($menu->jenis_paket, 'Paket A')) {
-                                        $paket = 'Paket A';
-                                    } elseif (\Illuminate\Support\Str::contains($menu->jenis_paket, 'Paket B')) {
-                                        $paket = 'Paket B';
-                                    } elseif (\Illuminate\Support\Str::contains($menu->jenis_paket, 'Paket C')) {
-                                        $paket = 'Paket C';
-                                    }
-                                @endphp
-
                                 {{-- Nasi Bakar --}}
                                 @if ($menu->jenis_paket == 'Nasi Bakar')
-                                    <div>
-                                        {{-- <h4 class="pb-1 mb-1 font-semibold border-b border-gray-600">Pilihan Nasi</h4> --}}
-                                        <div class="flex items-center justify-center space-x-4 my-4">
-                                            <div class="flex-1 border-t border-white"></div>
-                                            <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
-                                            <div class="flex-1 border-t border-white"></div>
-                                        </div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Pilihan Nasi
-                                        </h4>
-                                        <p class="text-gray-300">
-                                            Nasi Bakar Ayam Suwir Kemangi | Nasi Bakar Tongkol Pedas |
-                                            Nasi Bakar Teri | Nasi Bakar Telur Asin | Nasi Bakar Jambal Cabe | Nasi
-                                            Bakar
-                                            Sambal Cumi
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Tambahan
-                                        </h4>
-                                        <p class="text-gray-300">
-                                            Tahu Goreng (Rp 2000) | Tempe Goreng (Rp 3000) | Kerupuk (Rp 2000)
-                                        </p>
-                                    </div>
-                                @elseif ($menu->kategori == 'nasi-bakar')
-                                    <div>
-                                        <div class="flex items-center justify-center space-x-4 my-4">
-                                            <div class="flex-1 border-t border-white"></div>
-                                            <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
-                                            <div class="flex-1 border-t border-white"></div>
-                                        </div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Pilihan Nasi
-                                        </h4>
-                                        <p class="text-gray-300">
-                                            Nasi Bakar Ayam Suwir Kemangi | Nasi Bakar Tongkol Pedas |
-                                            Nasi Bakar Teri | Nasi Bakar Telur Asin | Nasi Bakar Jambal Cabe |
-                                            Nasi Bakar Sambal Cumi
-                                        </p>
-                                    </div>
+                                    {!! $divider() !!}
+                                    {!! $judulMenu('Pilihan Nasi') !!}
+                                    <p class="text-gray-300">Nasi Bakar Ayam Suwir Kemangi | Tongkol Pedas | Teri | Telur
+                                        Asin | Jambal Cabe | Sambal Cumi</p>
+                                    {!! $judulMenu('Tambahan') !!}
+                                    <p class="text-gray-300">Tahu Goreng (Rp 2000) | Tempe Goreng (Rp 3000) | Kerupuk (Rp
+                                        2000)</p>
 
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            @if ($paket == 'Paket A')
-                                                Menu Utama
-                                            @elseif ($paket == 'Paket B')
-                                                Menu Daging
-                                            @elseif ($paket == 'Paket C')
-                                                Menu Utama
-                                            @endif
-                                        </h4>
-                                        <p class="text-gray-300">
-                                            @if ($paket == 'Paket A')
-                                                Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy |
-                                                Ayam Opor Kuning
-                                            @elseif ($paket == 'Paket B')
-                                                Gepuk | Rendang | Semur Daging
-                                            @elseif ($paket == 'Paket C')
-                                                Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy |
-                                                Ayam Opor Kuning | Gepuk | Rendang | Semur Daging
-                                            @endif
-                                        </p>
-                                    </div>
+                                    {{-- Nasi Bakar / Besek / Paket Box --}}
+                                @elseif (in_array($menu->kategori, ['nasi-bakar', 'nasi-besek', 'paket-nasi-box']))
+                                    {!! $divider($menu->kategori == 'paket-nasi-box' ? 'Detail Isian' : 'Pilihan Menu') !!}
+                                    {!! $judulMenu('Pilihan Nasi') !!}
+                                    <p class="text-gray-300">
+                                        {{ $menu->kategori == 'nasi-bakar' ? 'Nasi Bakar Ayam Suwir Kemangi | Tongkol Pedas | Teri | Telur Asin | Jambal Cabe | Sambal Cumi' : 'Putih | Merah | Liwet | Tutug Oncom' }}
+                                    </p>
 
-                                    {{-- Tumisan --}}
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Pilihan Tumisan</h4>
-                                        <p class="text-gray-300">
-                                            Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang
-                                            | Tumis Tempe | Tumis Jambal Cabe Gendot | Cumi Balado | Urab | Cah Jagung |
-                                            Ase Tahu Cabe | Buncis Jagung | Acar Ketimun.
-                                        </p>
-                                    </div>
-
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Keringan</h4>
-                                        <p class="text-gray-300">
-                                            Tahu Goreng | Tempe Goreng | Perkedel Jagung | Pekedel Kentang | Mustofa |
-                                            Kering Tempe | Asin Balado
-                                        </p>
-                                    </div>
-
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Tambahan</h4>
-                                        <p class="text-gray-300">
-                                            Jeruk (Rp 3000) | Pisang (Rp 2000) | Pudding (Rp 4000)
-                                        </p>
-                                    </div>
-
-                                    {{-- Tumisan --}}
-                                @elseif ($menu->kategori == 'nasi-besek')
-                                    <div>
-                                        <div class="flex items-center justify-center space-x-4 my-4">
-                                            <div class="flex-1 border-t border-white"></div>
-                                            <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
-                                            <div class="flex-1 border-t border-white"></div>
-                                        </div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Pilihan Nasi</h4>
-                                        <p class="text-gray-300">
-                                            Putih | Merah | Liwet | Tutug Oncom
-                                        </p>
-                                    </div>
-
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            @if ($paket == 'Paket A')
-                                                Menu Utama
-                                            @elseif ($paket == 'Paket B')
-                                                Menu Daging
-                                            @elseif ($paket == 'Paket C')
-                                                Menu Utama
-                                            @endif
-                                        </h4>
-                                        <p class="text-gray-300">
-                                            @if ($paket == 'Paket A')
-                                                Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy |
-                                                Ayam Opor Kuning
-                                            @elseif ($paket == 'Paket B')
-                                                Gepuk | Rendang | Semur Daging
-                                            @elseif ($paket == 'Paket C')
-                                                Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy |
-                                                Ayam Opor Kuning | Gepuk | Rendang | Semur Daging
-                                            @endif
-                                        </p>
-                                    </div>
-
-                                    {{-- Tumisan --}}
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Pilihan Tumisan</h4>
-                                        <p class="text-gray-300">
-                                            Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang
-                                            |
-                                            Tumis Tempe | Tumis Jambal + Cabe Gendot | Cumi Balado | Urab | Cah Jagung |
-                                            Ase Tahu Cabe | Buncis Jagung | Acar Ketimun dll.
-                                        </p>
-                                    </div>
-
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Keringan</h4>
-                                        <p class="text-gray-300">
-                                            Tahu Goreng | Tempe Goreng | Perkedel Jagung | Pekedel Kentang | Mustofa |
-                                            Kering Tempe | Asin Balado
-                                        </p>
-                                    </div>
-
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Tambahan</h4>
-                                        <p class="text-gray-300">
-                                            Jeruk (Rp 3000) | Pisang (Rp 2000) | Pudding (Rp 4000)
-                                        </p>
-                                    </div>
-
-                                    {{-- Nasi Box --}}
-                                @elseif ($menu->kategori == 'paket-nasi-box')
-                                    <div>
-                                        <div class="flex items-center justify-center space-x-4 my-4">
-                                            <div class="flex-1 border-t border-white"></div>
-                                            <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
-                                            <div class="flex-1 border-t border-white"></div>
-                                        </div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Pilihan Nasi</h4>
-                                        <p class="text-gray-300">
-                                            Putih | Merah | Liwet | Tutug Oncom
-                                        </p>
-                                    </div>
-
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            @if ($paket == 'Paket A')
-                                                Menu Utama
-                                            @elseif ($paket == 'Paket B')
-                                                Menu Daging
-                                            @elseif ($paket == 'Paket C')
-                                                Menu Utama
-                                            @endif
-                                        </h4>
-                                        <p class="text-gray-300">
-                                            @if ($paket == 'Paket A')
-                                                Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy |
-                                                Ayam Opor Kuning | Ayam Saus Asam Manis | Ayam Goreng Mentega
-                                            @elseif ($paket == 'Paket B')
+                                    {!! $judulMenu($paket == 'B' ? 'Menu Daging' : 'Menu Utama') !!}
+                                    <p class="text-gray-300">
+                                        @if ($menu->kategori == 'paket-nasi-box')
+                                            @if ($paket == 'A')
+                                                Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy | Ayam Opor
+                                                Kuning | Ayam Saus Asam Manis | Ayam Goreng Mentega
+                                            @elseif ($paket == 'B')
                                                 Gepuk | Rendang | Semur Daging | Sapi Lada Hitam | Daging Teriyaki
-                                            @elseif ($paket == 'Paket C')
-                                                Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy |
-                                                Ayam Opor Kuning | Ayam Saus Asam Manis | Ayam Goreng Mentega | Gepuk |
-                                                Rendang | Semur Daging | Sapi Lada Hitam | Daging Teriyaki
+                                            @else
+                                                Ayam Bakar | Ayam Goreng Serundeng | Ayam Kecap | Ayam Crispy | Ayam Opor
+                                                Kuning | Ayam Saus Asam Manis | Ayam Goreng Mentega | Gepuk | Rendang |
+                                                Semur Daging | Sapi Lada Hitam | Daging Teriyaki
                                             @endif
-                                        </p>
-                                    </div>
+                                        @else
+                                            {{ $menuUtama[$paket] ?? '' }}
+                                        @endif
+                                    </p>
 
-                                    {{-- Tumisan --}}
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Pilihan Tumisan</h4>
-                                        <p class="text-gray-300">
-                                            Soun | Ase Cabe | Capcay | Bihun Goreng | Mie Goreng | Sambal Goreng Kentang
-                                            | Tumis Tempe | Tumis Jambal Cabe Gendot | Cumi Balado | Urab | Cah Jagung |
-                                            Ase Tahu Cabe | Buncis Jagung | Acar Ketimun.
-                                        </p>
-                                    </div>
+                                    {{-- Tambahan bagian tumis, keringan, tambahan untuk nasi-bakar dan besek --}}
+                                    @if (in_array($menu->kategori, ['nasi-bakar', 'nasi-besek']))
+                                        {!! $judulMenu('Pilihan Tumisan') !!}<p class="text-gray-300">{{ $tumisan }}</p>
+                                        {!! $judulMenu('Keringan') !!}<p class="text-gray-300">{{ $keringan }}</p>
+                                        {!! $judulMenu('Tambahan') !!}<p class="text-gray-300">{{ $tambahan }}</p>
+                                    @elseif ($menu->kategori == 'paket-nasi-box')
+                                        {!! $judulMenu('Pilihan Tumisan') !!}<p class="text-gray-300">{{ $tumisan }}</p>
+                                        {!! $judulMenu('Keringan') !!}<p class="text-gray-300">{{ $keringan }}</p>
+                                        {!! $judulMenu('Tambahan') !!}<p class="text-gray-300">{{ $tambahan }}</p>
+                                    @endif
 
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Keringan</h4>
-                                        <p class="text-gray-300">
-                                            Tahu Goreng | Tempe Goreng | Perkedel Jagung | Pekedel Kentang | Mustofa |
-                                            Kering Tempe | Asin Balado
-                                        </p>
-                                    </div>
-
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Tambahan</h4>
-                                        <p class="text-gray-300">
-                                            Jeruk (Rp 3000) | Pisang (Rp 2000) | Pudding (Rp 4000)
-                                        </p>
-                                    </div>
+                                    {{-- Nasi Bento --}}
                                 @elseif ($menu->kategori == 'nasi-bento')
-                                    <div>
-                                        <div class="flex items-center justify-center space-x-4 my-4">
-                                            <div class="flex-1 border-t border-white"></div>
-                                            <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
-                                            <div class="flex-1 border-t border-white"></div>
-                                        </div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Nasi</h4>
-                                        <p class="text-gray-300">
-                                            Putih | Kuning | Uduk
-                                        </p>
-                                    </div>
-
-                                    {{-- Menu Utama / Daging --}}
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            @if ($paket == 'Paket A')
-                                                Menu Utama
-                                            @elseif ($paket == 'Paket B')
-                                                Menu Daging
-                                            @elseif ($paket == 'Paket C')
-                                                Menu Utama
-                                            @endif
-                                        </h4>
-                                        <p class="text-gray-300">
-                                            @if ($paket == 'Paket A')
-                                                Chicken Katsu | Ayam Bakar | Ayam Goreng | Ayam Teriyaki
-                                            @elseif ($paket == 'Paket B')
-                                                Daging Teriyaki | Gepuk | Semur Daging
-                                            @elseif ($paket == 'Paket C')
-                                                Chicken Katsu | Ayam Bakar | Ayam Goreng | Ayam Teriyaki |
-                                                Daging Teriyaki | Gepuk | Semur Daging
-                                            @endif
-                                        </p>
-                                    </div>
-
-                                    {{-- Keringan --}}
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Keringan</h4>
-                                        <p class="text-gray-300">
-                                            Tahu Goreng | Tempe Goreng | Perkedel Jagung | Pekedel Kentang | Mustofa |
-                                            Kering Tempe | Mie Goreng
-                                        </p>
-                                    </div>
+                                    {!! $divider() !!}
+                                    {!! $judulMenu('Nasi') !!}<p class="text-gray-300">Putih | Kuning | Uduk</p>
+                                    {!! $judulMenu($paket == 'B' ? 'Menu Daging' : 'Menu Utama') !!}
+                                    <p class="text-gray-300">
+                                        @if ($paket == 'A')
+                                            Chicken Katsu | Ayam Bakar | Ayam Goreng | Ayam Teriyaki
+                                        @elseif ($paket == 'B')
+                                            Daging Teriyaki | Gepuk | Semur Daging
+                                        @else
+                                            Chicken Katsu | Ayam Bakar | Ayam Goreng | Ayam Teriyaki | Daging Teriyaki |
+                                            Gepuk | Semur Daging
+                                        @endif
+                                    </p>
+                                    {!! $judulMenu('Keringan') !!}<p class="text-gray-300">Tahu Goreng | Tempe Goreng | Perkedel
+                                        Jagung | Pekedel Kentang | Mustofa | Kering Tempe | Mie Goreng</p>
 
                                     {{-- Ricebowl --}}
                                 @elseif ($menu->kategori == 'ricebowl')
-                                    {{-- Menu Utama / Daging --}}
-                                    <div>
-                                        <div class="flex items-center justify-center space-x-4 my-4">
-                                            <div class="flex-1 border-t border-white"></div>
-                                            <h3 class="font-semibold text-white whitespace-nowrap">Pilihan Menu</h3>
-                                            <div class="flex-1 border-t border-white"></div>
-                                        </div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            @if ($paket == 'Paket A')
-                                                Menu Utama
-                                            @elseif ($paket == 'Paket B')
-                                                Menu Daging
-                                            @elseif ($paket == 'Paket C')
-                                                Menu Utama
-                                            @endif
-                                        </h4>
-                                        <p class="text-gray-300">
-                                            @if ($paket == 'Paket A')
-                                                Chicken Karage | Chicken Katsu
-                                            @else
-                                                Dori Karage | Beef
-                                            @endif
-                                        </p>
-                                    </div>
+                                    {!! $divider() !!}
+                                    {!! $judulMenu($paket == 'B' ? 'Menu Daging' : 'Menu Utama') !!}
+                                    <p class="text-gray-300">
+                                        {{ $paket == 'A' ? 'Chicken Karage | Chicken Katsu' : 'Dori Karage | Beef' }}</p>
+                                    {!! $judulMenu('Pilihan Bumbu') !!}<p class="text-gray-300">Lada Hitam | Lada Garam | Chili Oil |
+                                        Sambal Korek | Sambal Matah</p>
+                                    {!! $judulMenu('Tambahan') !!}<p class="text-gray-300">Telur (Rp 5000) | Aneka Sauce (Rp 5000)
+                                    </p>
 
-                                    {{-- Bumbu --}}
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Pilihan Bumbu</h4>
-                                        <p class="text-gray-300">
-                                            Lada Hitam | Lada Garam | Chili Oil | Sambal Korek | Sambal Matah
-                                        </p>
-                                    </div>
+                                    {{-- Paket Spesial --}}
+                                @elseif (in_array($menu->jenis_paket, ['Nasi Berkat', 'Nasi Bali', 'Nasi Nyunda']))
+                                    {!! $divider('Detail Isian') !!}
+                                    <p class="text-gray-300">
+                                        @switch($menu->jenis_paket)
+                                            @case('Nasi Berkat')
+                                                Semur Daging | Ayam Goreng | Telur Pindang | Ase Buncis Cabe | Perkedel Jagung |
+                                                Sambal | Kerupuk | Air Mineral Botol | Buah/Pudding
+                                            @break
 
-                                    {{-- Tambahan --}}
-                                    <div>
-                                        <h4 class="font-bold bg-white text-black rounded-lg px-3 py-1 inline-block mb-2">
-                                            Tambahan</h4>
-                                        <p class="text-gray-300">
-                                            Telur (Rp 5000) | Aneka Sauce (Rp 5000)
-                                        </p>
-                                    </div>
-                                @elseif ($menu->jenis_paket == 'Nasi Berkat')
-                                    <div>
-                                        <div class="flex items-center justify-center space-x-4 my-4">
-                                            <div class="flex-1 border-t border-white"></div>
-                                            <h3 class="font-semibold text-white whitespace-nowrap">Detail Isian</h3>
-                                            <div class="flex-1 border-t border-white"></div>
-                                        </div>
-                                        <p class="text-gray-300">
-                                            Semur Daging | Ayam Goreng | Telur Pindang |
-                                            Ase Buncis Cabe | Perkedel Jagung | Sambal | Kerupuk
-                                            | Air Mineral Botol | Buah/Pudding
-                                        </p>
-                                    </div>
-                                @elseif ($menu->jenis_paket == 'Nasi Bali')
-                                    <div>
-                                        <div class="flex items-center justify-center space-x-4 my-4">
-                                            <div class="flex-1 border-t border-white"></div>
-                                            <h3 class="font-semibold text-white whitespace-nowrap">Detail Isian</h3>
-                                            <div class="flex-1 border-t border-white"></div>
-                                        </div>
-                                        <p class="text-gray-300">
-                                            Sambal Goreng Daging | Sate Lilit | Telur Pindang |
-                                            Buncis Bumbu Bali | Sambal | Kerupuk | Air Mineral
-                                            Botol | Buah/Puding
-                                        </p>
-                                    </div>
-                                @elseif ($menu->jenis_paket == 'Nasi Nyunda')
-                                    <div>
-                                        <div class="flex items-center justify-center space-x-4 my-4">
-                                            <div class="flex-1 border-t border-white"></div>
-                                            <h3 class="font-semibold text-white whitespace-nowrap">Detail Isian</h3>
-                                            <div class="flex-1 border-t border-white"></div>
-                                        </div>
-                                        <p class="text-gray-300">
-                                            Nasi Timbel | Gepuk | Ayam Goreng/Bakar | Tumis
-                                            Jamur | Asin Balado/Jambal | Lalab Sambal | Air
-                                            Mineral Botol | Buah/Puding
-                                        </p>
-                                    </div>
+                                            @case('Nasi Bali')
+                                                Sambal Goreng Daging | Sate Lilit | Telur Pindang | Buncis Bumbu Bali | Sambal |
+                                                Kerupuk | Air Mineral Botol | Buah/Puding
+                                            @break
+
+                                            @case('Nasi Nyunda')
+                                                Nasi Timbel | Gepuk | Ayam Goreng/Bakar | Tumis Jamur | Asin Balado/Jambal | Lalab
+                                                Sambal | Air Mineral Botol | Buah/Puding
+                                            @break
+                                        @endswitch
+                                    </p>
                                 @endif
                             </div>
 
-
-                            <!-- Tombol Pesan -->
                             <a id="waButton" href="#"
                                 class="flex items-center justify-center w-full gap-2 py-3 mt-6 font-semibold text-white rounded-lg bg-emerald-600 hover:bg-emerald-700 transition"
                                 onclick="gtag('event', 'whatsapp_click', { item_name: '{{ $menu['kategori'] }} - {{ $menu['jenis_paket'] }}' });">
-                                <i class="fab fa-whatsapp text-xl text-white"></i>
-                                Pesan Sekarang
+                                <i class="fab fa-whatsapp text-xl text-white"></i> Pesan Sekarang
                             </a>
                         </div>
                     </div>
@@ -533,4 +288,15 @@
             menuCards.forEach(card => observer.observe(card));
         });
     </script>
+
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 @endsection

@@ -4,51 +4,53 @@
 
 @section('content')
 
-    <div class="text-white px-4 px-4 md:px-[1cm] lg:px-[2cm] pt-[120px]">
+    <div class="text-white px-[1cm] pt-[40px] lg:px-[2cm] lg:pt-[90px]">
         <!-- Tag kecil di atas -->
-        <span class="block mx-auto text-[18px] font-bold mb-4 text-center">
+        <h2 class="text-xl font-bold mb-3 text-center text-gray-100 lg:text-3xl">
             PAKET TUMPENG
-        </span>
+        </h2>
 
         <!-- Judul -->
-        <h2 class="text-[18px] sm:text-3xl md:text-4xl font-bold mb-4 text-center">
+        <h2 class="text-xl font-bold mb-3 text-center text-gray-100 lg:text-3xl">
             Rayakan Momen Istimewa Dengan <br>
-            <span class="text-white-300">Tumpeng Bandung 1970</span>
+            <span class="text-gray-200">Tumpeng Bandung 1970</span>
         </h2>
 
         <!-- Tab / Filter Kategori -->
-        <div class="flex flex-wrap justify-center gap-4 pt-8 mb-10">
-            <a href="{{ route('menu-tumpeng', ['kategori' => 'nasi-box']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Box' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'nasi-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Nasi Tumpeng Box
-            </a>
+        <div class="overflow-x-auto md:overflow-x-auto lg:overflow-visible no-scrollbar">
+            <div
+                class="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center gap-3 sm:gap-4 md:gap-5 pt-5 sm:pt-7 md:pt-8 mb-6 sm:mb-10 snap-x snap-mandatory scroll-smooth px-3 sm:px-4">
+                <a href="{{ route('menu-tumpeng', ['kategori' => 'nasi-box']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Box' });"
+                    class="snap-start flex-shrink-0 px-5 py-2 mx-2 rounded-full font-semibold transition
+            {{ $kategori == 'nasi-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Nasi Tumpeng Box
+                </a>
 
-            <a href="{{ route('menu-tumpeng', ['kategori' => 'mini']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Mini' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'mini' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Tumpeng Mini
-            </a>
+                <a href="{{ route('menu-tumpeng', ['kategori' => 'mini']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Mini' });"
+                    class="snap-start flex-shrink-0 px-5 py-2 mx-2 rounded-full font-semibold transition
+            {{ $kategori == 'mini' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Tumpeng Mini
+                </a>
 
-            <a href="{{ route('menu-tumpeng', ['kategori' => 'tampah']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Tampah' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'tampah' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Tumpeng Tampah
-            </a>
+                <a href="{{ route('menu-tumpeng', ['kategori' => 'tampah']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Tampah' });"
+                    class="snap-start flex-shrink-0 px-5 py-2 mx-2 rounded-full font-semibold transition
+            {{ $kategori == 'tampah' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Tumpeng Tampah
+                </a>
 
-            <a href="{{ route('menu-tumpeng', ['kategori' => 'premium']) }}"
-                onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Premium' });"
-                class="px-5 py-2 rounded-full font-semibold transition
-              {{ $kategori == 'premium' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                Tumpeng Premium
-            </a>
+                <a href="{{ route('menu-tumpeng', ['kategori' => 'premium']) }}"
+                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Premium' });"
+                    class="snap-start flex-shrink-0 px-5 py-2 mx-2 rounded-full font-semibold transition
+            {{ $kategori == 'premium' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                    Tumpeng Premium
+                </a>
+            </div>
         </div>
 
         <!-- Grid produk -->
-        {{-- <div class="grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-[100px]"> --}}
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-[100px]">
             <!-- Contoh Kartu Produk -->
             @foreach ($menus as $menu)
@@ -80,9 +82,10 @@
 
                     <!-- Modal -->
                     <div x-show="open" x-transition
-                        class="fixed inset-0 z-50 flex items-center justify-center bg-gray/60 backdrop-blur-sm"
+                        class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-3 sm:p-6 md:p-8"
                         style="display:none">
-                        <div class="bg-[#111] text-white w-full max-w-md rounded-2xl shadow-lg p-6 relative">
+                        <div
+                            class="bg-[#111] text-white w-full max-w-4xl md:max-w-3xl sm:max-w-md rounded-2xl shadow-2xl p-6 md:p-8 relative overflow-y-auto max-h-[90vh] no-scrollbar">
                             <!-- Tombol Close -->
                             <button @click="open = false"
                                 class="absolute top-3 right-3 text-gray-300 hover:text-white text-2xl font-bold">
@@ -216,4 +219,14 @@
         });
     </script>
 
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 @endsection

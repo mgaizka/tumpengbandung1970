@@ -7,26 +7,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Carousel -->
-    <div id="default-carousel" class="relative w-full overflow-hidden" data-carousel="slide">
+    <div id="default-carousel" class="relative w-full overflow-hidden animate-fadeIn" data-carousel="slide">
         <!-- Carousel wrapper -->
-        <div class="relative h-56 sm:h-72 md:h-[500px] lg:h-screen">
+        <div
+            class="relative h-[230px] sm:h-[300px] md:h-[420px] lg:h-[calc(100vh-4rem)] overflow-hidden rounded-b-2xl shadow-lg">
             <!-- Item 1 -->
             <div class="hidden duration-20000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('asset/banner/lewihmirah.webp') }}" class="absolute inset-0 object-cover w-full h-full"
                     alt="Foto 1">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             </div>
             <!-- Item 2 -->
             <div class="hidden duration-20000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('asset/banner/2.webp') }}" class="absolute inset-0 object-cover w-full h-full"
                     alt="Foto 2">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             </div>
+            <!-- Item 3 -->
             <div class="hidden duration-20000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('asset/banner/3.webp') }}" class="absolute inset-0 object-cover w-full h-full"
-                    alt="Foto 2">
+                    alt="Foto 3">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             </div>
+            <!-- Item 4 -->
             <div class="hidden duration-20000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('asset/banner/4.webp') }}" class="absolute inset-0 object-cover w-full h-full"
-                    alt="Foto 2">
+                    alt="Foto 4">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             </div>
         </div>
 
@@ -59,7 +66,7 @@
 
 
     <!-- Tentang Kami -->
-    <div class="text-white px-4 md:px-[1cm] lg:px-[2cm] mt-[80px]">
+    <div class="text-white px-[1cm] pt-[40px] lg:px-[2cm] lg:pt-[90px]">
         <div class="grid items-center grid-cols-1 gap-2 lg:grid-cols-2">
             <!-- Grid Foto -->
             <div data-aos="fade-up" class="grid grid-cols-2 gap-8">
@@ -82,17 +89,17 @@
 
             <!-- Konten -->
             <div data-aos="fade-down">
-                <p class="tracking-wider text-white uppercase text-md">Tentang Kami</p>
-                <h2 class="text-[32px] font-bold mt-2 mb-4 leading-snug">
+                <p class="tracking-wider text-white uppercase text-xl lg:text-2xl">Tentang Kami</p>
+                <h2 class="text-xl font-bold mt-2 mb-4 leading-snug lg:text-2xl">
                     Sajian Tumpeng Autentik Rasa <br class="hidden md:block" /> Nusantara
                 </h2>
-                <h3 class="text-[24px] font-semibold mb-3">Visi Tumpeng Bandung 1970</h3>
-                <p class="text-gray-300 leading-relaxed mb-6 text-[22px] text-justify">
+                <h3 class="text-xl font-semibold mb-3 lg:text-2xl">Visi Tumpeng Bandung 1970</h3>
+                <p class="text-gray-300 leading-relaxed mb-6 text-xl text-justify lg:text-2xl">
                     Visi kami adalah menyajikan hidangan yang berkualitas dengan pelayanan yang ramah
                     dan bersahabat, sehingga setiap pelanggan dapat merasakan pengalaman kuliner yang berkesan.
                 </p>
                 <a href="{{ route('tentang-kami') }}" onclick="gtag('event', 'page_click', { page_name: 'Tentang Kami' });"
-                    class="inline-block bg-white text-black font-semibold px-6 py-2 rounded-lg shadow hover:bg-gray-200 transition text-[20px]">
+                    class="inline-block bg-white text-black font-semibold px-6 py-2 rounded-lg shadow hover:bg-gray-200 transition text-xl lg:text-2xl">
                     Selengkapnya
                 </a>
             </div>
@@ -100,8 +107,8 @@
     </div>
 
     <!-- Yang Membuat Kami Istimewa -->
-    <div class="py-10 px-4 md:px-[1cm] lg:px-[2cm] md:px-16 mt-[60px]">
-        <h2 class="text-[32px] sm:text-3xl font-bold mb-10 text-center text-white">
+    <div class="py-10 px-[1cm] lg:px-[2cm] mt-[60px]">
+        <h2 class="text-xl lg:text-2xl font-bold mb-10 text-center text-white">
             Yang Membuat Kami Istimewa
         </h2>
         <div class="grid justify-center grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -160,11 +167,11 @@
     </div>
 
     <!-- Rayakan Momen -->
-    <div class="py-14 px-4 md:px-[1cm] lg:px-[2cm] text-white">
-        <h2 class="text-center text-[32px] font-bold mb-4">
+    <div class="py-14 px-[1cm] lg:px-[2cm] text-white">
+        <h2 class="text-center text-xl lg:text-2xl font-bold mb-4">
             Rayakan Momen Spesialmu dengan Tumpeng Bandung 1970
         </h2>
-        <p class="text-center text-[24px] mb-10">
+        <p class="text-center text-xl lg:text-2xl mb-10">
             Nikmati cita rasa autentik dengan pilihan paket lengkap untuk setiap perayaan
         </p>
 
@@ -237,9 +244,9 @@
 
 
     <!-- Testimoni -->
-    <div class="bg-gray-200/10 py-14 pb-10 px-4 md:px-[1cm] lg:px-[2cm] text-center ">
+    <div class="bg-gray-200/10 py-14 pb-10 px-[1cm] lg:px-[2cm] text-center ">
         <!-- Judul -->
-        <h2 class="text-[32px] md:text-3xl font-bold mb-10 text-white">
+        <h2 class="text-xl lg:text-2xl font-bold mb-10 text-white">
             Apa Kata Mereka Tentang Tumpeng Bandung 1970
         </h2>
         <!-- Grid Testimoni -->
@@ -299,8 +306,8 @@
     </div>
 
     <!-- Logo -->
-    <div class="py-14 pb-[50px] px-4 md:px-[1cm] lg:px-[2cm] text-center mt-[60px]">
-        <h2 class="mb-10 text-2xl font-bold text-white md:text-3xl">
+    <div class="py-14 pb-[50px] px-[1cm] lg:px-[2cm] text-center mt-[60px]">
+        <h2 class="mb-10 text-xl lg:text-2xl font-bold text-white">
             Mereka yang Pernah Bekerja Sama dengan Kami
         </h2>
 
@@ -343,7 +350,7 @@
 
 
     <!-- Maps -->
-    <div class="px-4 md:px-[1cm] lg:px-[2cm] pt-[30px] py-10 mt-[60px]">
+    <div class="px-[1cm] lg:px-[2cm] pt-[30px] py-10 mt-[60px]">
         <div class="w-full h-[300px] md:h-[490px] rounded-lg overflow-hidden shadow-lg">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.860730357939!2d107.61842537592155!3d-6.907251967601307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e73f2dc2d82d%3A0x5471b93bd20ac149!2sTumpeng%20Bandung%201970!5e0!3m2!1sid!2sid!4v1758100843739!5m2!1sid!2sid"
@@ -352,4 +359,22 @@
             </iframe>
         </div>
     </div>
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
 @endsection
