@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav id="navbar"
     class="sticky top-0 z-50 bg-[#161616] transition-colors duration-300 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
-    <div class="px-4 md:px-[1cm] lg:px-[2cm]">
+    <div class="px-[1cm] lg:px-[2cm]">
         <div class="relative flex h-16 items-center justify-between">
 
             <!-- Mobile menu button -->
@@ -188,7 +188,7 @@
         {{ request()->routeIs('tentang-kami') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
             Tentang Kami
         </a>
-        <a href="#"
+        <a href="{{ route('testimoni') }}"
             class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">
             Testimoni
         </a>
