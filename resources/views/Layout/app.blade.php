@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Company Profile')</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <link rel="icon" type="image/png" href="{{ asset('logo.png') }}">
+    <title>@yield('title', 'Company Profile')</title>
+
+    <link rel="icon" type="image/webp" href="{{ asset('icon-logo.webp') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -27,6 +27,9 @@
 
         gtag('config', 'G-Q2LBQZBZ8R');
     </script>
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 
 <body class="flex flex-col min-h-screen bg-black">
@@ -126,6 +129,23 @@
             });
         });
     });
+
+    const floatingWA = document.getElementById("waButton");
+    if (floatingWA) {
+        floatingWA.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            if (typeof gtag === "function") {
+                gtag('event', 'direct_whatsapp', {
+                    location: 'Floating Icon',
+                    page_title: document.title
+                });
+            }
+
+            const pesan = encodeURIComponent("Halo, saya ingin tahu lebih lanjut mengenai produk Anda.");
+            window.open(`https://wa.me/628112202117?text=${pesan}`, "_blank");
+        });
+    }
 
     AOS.init();
 </script>
