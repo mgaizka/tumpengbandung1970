@@ -98,7 +98,7 @@ return [
     [
         'jenis_paket' => '30 Porsi',
         'card_desc' => 'Ayam & Daging sebagai Menu Utama dengan 4 Lauk Tambahan untuk 30 Porsi',
-        'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 250.000)',
+        'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 300.000)',
         'harga' => 1950000,
         'kategori' => 'premium',
         'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.webp',
@@ -107,7 +107,7 @@ return [
     [
         'jenis_paket' => '40 Porsi',
         'card_desc' => 'Ayam & Daging sebagai Menu Utama dengan 4 Lauk Tambahan untuk 40 Porsi',
-        'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 250.000)',
+        'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 300.000)',
         'harga' => 2600000,
         'kategori' => 'premium',
         'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.webp',
