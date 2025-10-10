@@ -104,16 +104,27 @@
     });
 
     document.addEventListener("DOMContentLoaded", function() {
-        const waButton = document.getElementById("waButton");
-        if (waButton) {
-            waButton.addEventListener("click", function(e) {
-                e.preventDefault(); // biar gak reload halaman
+        const waButtons = document.querySelectorAll(".waButton");
+
+        waButtons.forEach(button => {
+            button.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                const itemName = this.dataset.item || "Menu";
+
+                if (typeof gtag === "function") {
+                    gtag('event', 'whatsapp_click', {
+                        item_name: itemName
+                    });
+                }
+
+                // buka WA
                 const pesan = encodeURIComponent(
-                    "Halo, saya tertarik untuk melakukan pemesanan dan ingin tahu informasi lebih lanjut. Apakah bisa dibantu?"
+                    `Halo, saya tertarik untuk melakukan pemesanan ${itemName} dan ingin tahu informasi lebih lanjut. Apakah bisa dibantu?`
                 );
                 window.open(`https://wa.me/628112202117?text=${pesan}`, "_blank");
             });
-        }
+        });
     });
 
     AOS.init();
