@@ -283,11 +283,10 @@
                             </div>
 
                             <!-- Tombol Pesan -->
-                            <a id="waButton" href="#"
-                                class="flex items-center justify-center w-full gap-2 py-3 mt-6 font-semibold text-white rounded-lg bg-emerald-600 hover:bg-emerald-700 transition"
-                                onclick="gtag('event', 'whatsapp_click', { item_name: '{{ $menu['kategori'] }} - {{ $menu['jenis_paket'] }}' });">
-                                <i class="fab fa-whatsapp text-xl text-white"></i>
-                                Pesan Sekarang
+                            <a href="#"
+                                class="waButton flex items-center justify-center w-full gap-2 py-3 mt-6 font-semibold text-white rounded-lg bg-emerald-600 hover:bg-emerald-700 transition"
+                                data-item="{{ $menu['jenis_paket'] }}">
+                                <i class="fab fa-whatsapp text-xl text-white"></i> Pesan Sekarang
                             </a>
                         </div>
                     </div>
