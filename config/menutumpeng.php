@@ -89,7 +89,7 @@ return [
     [
         'jenis_paket' => '25 Porsi',
         'card_desc' => 'Ayam & Daging sebagai Menu Utama dengan 4 Lauk Tambahan untuk 25 Porsi',
-        'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 250.000)',
+        'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 300.000)',
         'harga' => 1625000,
         'kategori' => 'premium',
         'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.webp',
@@ -116,7 +116,7 @@ return [
     [
         'jenis_paket' => '50 Porsi',
         'card_desc' => 'Ayam & Daging sebagai Menu Utama dengan 4 Lauk Tambahan untuk 50 Porsi',
-        'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 250.000)',
+        'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 300.000)',
         'harga' => 3250000,
         'kategori' => 'premium',
         'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.webp',
@@ -125,7 +125,7 @@ return [
     [
         'jenis_paket' => '75 Porsi',
         'card_desc' => 'Ayam & Daging sebagai Menu Utama dengan 4 Lauk Tambahan untuk 75 Porsi',
-        'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 250.000)',
+        'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 300.000)',
         'harga' => 4875000,
         'kategori' => 'premium',
         'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.webp',
@@ -134,7 +134,7 @@ return [
     [
         'jenis_paket' => '100 Porsi',
         'card_desc' => 'Ayam & Daging sebagai Menu Utama dengan 4 Lauk Tambahan untuk 100 Porsi',
-        'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 250.000)',
+        'desc' => '2 Menu Utama Ayam & Daging + 4 Lauk Tambahan (Semangka Ukir tambahan Rp 300.000)',
         'harga' => 6500000,
         'kategori' => 'premium',
         'image' => 'asset\menupict\tumpengpict\tumpeng-premium-1.webp',
