@@ -12,19 +12,19 @@
                 Lengkap <br> dengan pilihan paket untuk setiap acara spesial Anda.
             </p>
             <div class="flex space-x-4 pt-2">
-                <a href="#"
+                <a href="https://www.facebook.com/profile.php?id=100063784526500"
                     class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-blue-500 hover:text-white transition">
                     <i class="fab fa-facebook-f text-lg"></i>
                 </a>
-                <a href="#"
+                <a href="https://www.instagram.com/tumpengbandung/"
                     class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-pink-500 hover:text-white transition">
                     <i class="fab fa-instagram text-lg"></i>
                 </a>
-                <a href="#"
+                <a href="https://www.tiktok.com/@tumpengbandung1970?_t=ZS-90QVCp1lB0a&_r=1"
                     class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-gray-800 hover:text-white transition">
                     <i class="fab fa-tiktok text-lg"></i>
                 </a>
-                <a href="#"
+                <a href="mailto:tumpengbandung1970@gmail.com"
                     class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-red-400 hover:text-white transition">
                     <i class="fas fa-envelope text-lg"></i>
                 </a>
