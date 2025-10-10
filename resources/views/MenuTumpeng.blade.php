@@ -16,38 +16,56 @@
             <span class="text-gray-200">Tumpeng Bandung 1970</span>
         </h2>
 
-        <!-- Tab / Filter Kategori -->
-        <div class="overflow-x-auto md:overflow-x-auto lg:overflow-visible no-scrollbar">
-            <div
-                class="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center gap-3 sm:gap-4 md:gap-5 pt-5 sm:pt-7 md:pt-8 mb-6 sm:mb-10 snap-x snap-mandatory scroll-smooth px-3 sm:px-4">
-                <a href="{{ route('menu-tumpeng', ['kategori' => 'nasi-box']) }}"
-                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Box' });"
-                    class="snap-start flex-shrink-0 px-5 py-2 mx-2 rounded-full font-semibold transition
-            {{ $kategori == 'nasi-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                    Nasi Tumpeng Box
-                </a>
+        <div class="relative flex items-center justify-center">
 
-                <a href="{{ route('menu-tumpeng', ['kategori' => 'mini']) }}"
-                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Mini' });"
-                    class="snap-start flex-shrink-0 px-5 py-2 mx-2 rounded-full font-semibold transition
-            {{ $kategori == 'mini' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                    Tumpeng Mini
-                </a>
-
-                <a href="{{ route('menu-tumpeng', ['kategori' => 'tampah']) }}"
-                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Tampah' });"
-                    class="snap-start flex-shrink-0 px-5 py-2 mx-2 rounded-full font-semibold transition
-            {{ $kategori == 'tampah' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                    Tumpeng Tampah
-                </a>
-
-                <a href="{{ route('menu-tumpeng', ['kategori' => 'premium']) }}"
-                    onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Premium' });"
-                    class="snap-start flex-shrink-0 px-5 py-2 mx-2 rounded-full font-semibold transition
-            {{ $kategori == 'premium' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
-                    Tumpeng Premium
-                </a>
+            <div class="absolute left-0 z-10 flex items-center justify-center text-white md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
             </div>
+
+            <!-- Tab / Filter Kategori -->
+            <div class="overflow-x-auto md:overflow-x-auto lg:overflow-visible no-scrollbar">
+                <div
+                    class="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center gap-3 sm:gap-4 md:gap-5 pt-5 sm:pt-7 md:pt-8 mb-6 sm:mb-10 snap-x snap-mandatory scroll-smooth px-3 sm:px-4">
+                    <a href="{{ route('menu-tumpeng', ['kategori' => 'nasi-box']) }}"
+                        onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Box' });"
+                        class="snap-start flex-shrink-0 px-5 py-2 mx-2 rounded-full font-semibold transition
+            {{ $kategori == 'nasi-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                        Nasi Tumpeng Box
+                    </a>
+
+                    <a href="{{ route('menu-tumpeng', ['kategori' => 'mini']) }}"
+                        onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Mini' });"
+                        class="snap-start flex-shrink-0 px-5 py-2 mx-2 rounded-full font-semibold transition
+            {{ $kategori == 'mini' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                        Tumpeng Mini
+                    </a>
+
+                    <a href="{{ route('menu-tumpeng', ['kategori' => 'tampah']) }}"
+                        onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Tampah' });"
+                        class="snap-start flex-shrink-0 px-5 py-2 mx-2 rounded-full font-semibold transition
+            {{ $kategori == 'tampah' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                        Tumpeng Tampah
+                    </a>
+
+                    <a href="{{ route('menu-tumpeng', ['kategori' => 'premium']) }}"
+                        onclick="gtag('event', 'select_subcategory', { subcategory: 'Tumpeng Premium' });"
+                        class="snap-start flex-shrink-0 px-5 py-2 mx-2 rounded-full font-semibold transition
+            {{ $kategori == 'premium' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+                        Tumpeng Premium
+                    </a>
+                </div>
+            </div>
+
+            <div class="absolute right-0 z-10 flex items-center justify-center text-white md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </div>
+
         </div>
 
         <!-- Grid produk -->
