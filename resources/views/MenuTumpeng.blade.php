@@ -194,7 +194,7 @@
                             <!-- Tombol Pesan -->
                             <a href="#"
                                 class="waButton flex items-center justify-center w-full gap-2 py-3 mt-6 font-semibold text-white rounded-lg bg-emerald-600 hover:bg-emerald-700 transition"
-                                data-item="{{ $menu['kategori'] }} - {{ $menu['jenis_paket'] }}">
+                                data-category="{{ $kategori }}" data-item="{{ $menu['jenis_paket'] }}">
                                 <i class="fab fa-whatsapp text-xl text-white"></i> Pesan Sekarang
                             </a>
                         </div>
@@ -211,26 +211,50 @@
 
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const card = entry.target;
-                        const menuName = card.dataset.menu;
-                        const category = card.dataset.category;
+                    if (!entry.isIntersecting) return;
 
-                        const itemName = `${category} - ${menuName}`;
+                    const card = entry.target;
+                    const menuName = card.dataset.menu || "";
+                    const category = card.dataset.category || "";
 
-                        // Kirim event ke GA4 saat card terlihat
+                    const tumpengCategories = ["nasi-box", "mini", "tampah", "premium"];
+                    if (!tumpengCategories.includes(category)) {
+                        observer.unobserve(card);
+                        return;
+                    }
+
+                    const formattedCategory = category
+                        .split('-')
+                        .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+                        .join(' ');
+
+                    let displayCategory = "";
+                    if (category === "nasi-box") {
+                        displayCategory = "Tumpeng Box";
+                    } else {
+                        displayCategory = `Tumpeng ${formattedCategory}`;
+                    }
+
+                    // Bentuk nama item untuk GA
+                    const itemName = `${displayCategory} - ${menuName}`;
+
+                    // Kirim ke Google Analytics (hanya untuk kategori Tumpeng)
+                    if (typeof gtag === "function") {
                         gtag('event', 'view_item', {
                             item_name: itemName,
-                            category: category,
+                            category: displayCategory,
                             event_label: 'Card viewed'
                         });
-
-                        observer.unobserve(card);
+                    } else {
+                        console.log("GTAG tidak tersedia — view_item:", itemName);
                     }
+
+                    // Hentikan observasi untuk card ini
+                    observer.unobserve(card);
                 });
             }, {
                 threshold: 0.5
-            }); // minimal 50% dari card kelihatan
+            });
 
             menuCards.forEach(card => observer.observe(card));
         });
