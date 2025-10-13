@@ -289,9 +289,8 @@
 
                         const itemName = `${category} - ${menuName}`;
 
-                        // Kirim event ke GA4 saat card terlihat
                         gtag('event', 'view_item', {
-                            item_name: itemName,
+                            item_name: menuName,
                             category: category,
                             event_label: 'Card viewed'
                         });
