@@ -113,15 +113,50 @@
             button.addEventListener("click", function(e) {
                 e.preventDefault();
 
-                const itemName = this.dataset.item || "Menu";
+                // Ambil kategori & item dari data attribute
+                let category = this.dataset.category || "";
+                const item = this.dataset.item || "Menu";
 
+                // Daftar kategori dengan prefix dan penanganan khusus
+                const categoriesWithPrefix = ["liwet-kastrol", "prasmanan", "snack-box",
+                    "nasi-box", "mini", "tampah", "premium"
+                ];
+
+                // Format kategori (contoh: liwet-kastrol -> Liwet Kastrol)
+                let formattedCategory = "";
+                if (category) {
+                    formattedCategory = category
+                        .split('-')
+                        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                        .join(' ');
+                }
+
+                // Tentukan teks kategori akhir berdasarkan aturan khusus
+                let displayCategory = "";
+                if (category === "nasi-box") {
+                    displayCategory = "Tumpeng Box";
+                } else if (["mini", "tampah", "premium"].includes(category)) {
+                    displayCategory = `Tumpeng ${formattedCategory}`;
+                } else if (categoriesWithPrefix.includes(category)) {
+                    displayCategory = formattedCategory;
+                }
+
+                // Tentukan apakah kategori perlu ditampilkan di depan
+                const showCategory = categoriesWithPrefix.includes(category);
+
+                // Bentuk nama item akhir
+                const itemName = showCategory && displayCategory ?
+                    `${displayCategory} - ${item}` :
+                    item;
+
+                // Kirim ke Google Analytics (kalau ada)
                 if (typeof gtag === "function") {
                     gtag('event', 'whatsapp_click', {
                         item_name: itemName
                     });
                 }
 
-                // buka WA
+                // Buka WhatsApp
                 const pesan = encodeURIComponent(
                     `Halo, saya tertarik untuk melakukan pemesanan ${itemName} dan ingin tahu informasi lebih lanjut. Apakah bisa dibantu?`
                 );

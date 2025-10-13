@@ -69,7 +69,7 @@
     <div class="text-white px-4 pt-[40px] lg:px-[2cm] lg:pt-[90px]">
         <div class="grid items-center grid-cols-1 gap-2 lg:grid-cols-2">
             <!-- Grid Foto -->
-            <div data-aos="fade-up" class="grid grid-cols-2 gap-8">
+            <div data-aos="fade-up" class="grid grid-cols-2 gap-8 py-5">
                 <!-- Foto besar -->
                 <div class="row-span-2">
                     <img src="{{ asset('asset/home/1.webp') }}" alt="Ruangan"

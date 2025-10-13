@@ -285,7 +285,7 @@
                             <!-- Tombol Pesan -->
                             <a href="#"
                                 class="waButton flex items-center justify-center w-full gap-2 py-3 mt-6 font-semibold text-white rounded-lg bg-emerald-600 hover:bg-emerald-700 transition"
-                                data-item="{{ $menu['jenis_paket'] }}">
+                                data-category="{{ $kategori }}" data-item="{{ $menu['jenis_paket'] }}">
                                 <i class="fab fa-whatsapp text-xl text-white"></i> Pesan Sekarang
                             </a>
                         </div>
@@ -302,26 +302,42 @@
 
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const card = entry.target;
-                        const menuName = card.dataset.menu;
-                        const category = card.dataset.category;
+                    if (!entry.isIntersecting) return;
 
-                        const itemName = `${category} - ${menuName}`;
+                    const card = entry.target;
+                    const menuName = card.dataset.menu || "";
+                    const category = card.dataset.category || "";
 
-                        // Kirim event ke GA4 saat card terlihat
+                    // Kategori yang HARUS ditampilkan di depan
+                    const categoriesWithPrefix = ["liwet-kastrol", "prasmanan", "snack-box"];
+
+                    // Format kategori agar huruf depannya kapital (contoh: liwet-kastrol → Liwet Kastrol)
+                    const formattedCategory = category
+                        .split('-')
+                        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                        .join(' ');
+
+                    // Tentukan format nama item berdasarkan kategori
+                    const itemName = categoriesWithPrefix.includes(category) ?
+                        `${formattedCategory} - ${menuName}` :
+                        menuName;
+
+                    // Kirim event ke Google Analytics
+                    if (typeof gtag === "function") {
                         gtag('event', 'view_item', {
                             item_name: itemName,
-                            category: category,
+                            category: formattedCategory,
                             event_label: 'Card viewed'
                         });
-
-                        observer.unobserve(card);
+                    } else {
+                        console.log("GTAG tidak tersedia — view_item:", itemName);
                     }
+
+                    observer.unobserve(card); // Hentikan observasi agar tidak double
                 });
             }, {
                 threshold: 0.5
-            }); // minimal 50% dari card kelihatan
+            });
 
             menuCards.forEach(card => observer.observe(card));
         });
