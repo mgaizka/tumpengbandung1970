@@ -29,7 +29,6 @@
             @endforeach
         </div>
 
-        <!-- ✅ Modal DI LUAR LOOP -->
         <div x-show="open" x-transition
             class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-3 sm:p-6 md:p-8 no-scrollbar"
             style="display: none">

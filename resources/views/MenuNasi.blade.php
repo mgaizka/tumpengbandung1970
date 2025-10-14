@@ -300,7 +300,7 @@
                 });
             }, {
                 threshold: 0.5
-            }); // minimal 50% dari card kelihatan
+            });
 
             menuCards.forEach(card => observer.observe(card));
         });

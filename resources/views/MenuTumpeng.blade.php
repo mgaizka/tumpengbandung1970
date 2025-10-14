@@ -235,10 +235,8 @@
                         displayCategory = `Tumpeng ${formattedCategory}`;
                     }
 
-                    // Bentuk nama item untuk GA
                     const itemName = `${displayCategory} - ${menuName}`;
 
-                    // Kirim ke Google Analytics (hanya untuk kategori Tumpeng)
                     if (typeof gtag === "function") {
                         gtag('event', 'view_item', {
                             item_name: itemName,
@@ -249,7 +247,6 @@
                         console.log("GTAG tidak tersedia — view_item:", itemName);
                     }
 
-                    // Hentikan observasi untuk card ini
                     observer.unobserve(card);
                 });
             }, {
