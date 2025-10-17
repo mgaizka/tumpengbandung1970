@@ -135,8 +135,12 @@
 
                             <!-- Gambar -->
                             <div
-                                class="mb-6 @if ($menu->image_alt) grid grid-cols-2 gap-3 @else grid grid-cols-1 @endif">
-                                <img src="{{ asset($menu->image) }}" class="rounded-lg object-cover w-full h-40"
+                                class="mb-6 @if ($menu->image_alt) grid grid-cols-2 gap-3 @else flex justify-center @endif">
+                                <img src="{{ asset($menu->image) }}"
+                                    class="rounded-lg object-cover
+                                            @if ($menu->image_alt) w-full h-40
+                                            @else
+                                                w-3/4 h-64 @endif"
                                     alt="paket">
 
                                 @if ($menu->image_alt)
@@ -235,10 +239,8 @@
                         displayCategory = `Tumpeng ${formattedCategory}`;
                     }
 
-                    // Bentuk nama item untuk GA
                     const itemName = `${displayCategory} - ${menuName}`;
 
-                    // Kirim ke Google Analytics (hanya untuk kategori Tumpeng)
                     if (typeof gtag === "function") {
                         gtag('event', 'view_item', {
                             item_name: itemName,
@@ -249,7 +251,6 @@
                         console.log("GTAG tidak tersedia — view_item:", itemName);
                     }
 
-                    // Hentikan observasi untuk card ini
                     observer.unobserve(card);
                 });
             }, {

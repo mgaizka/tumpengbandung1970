@@ -113,16 +113,12 @@
             button.addEventListener("click", function(e) {
                 e.preventDefault();
 
-                // Ambil kategori & item dari data attribute
                 let category = this.dataset.category || "";
                 const item = this.dataset.item || "Menu";
-
-                // Daftar kategori dengan prefix dan penanganan khusus
                 const categoriesWithPrefix = ["liwet-kastrol", "prasmanan", "snack-box",
                     "nasi-box", "mini", "tampah", "premium"
                 ];
 
-                // Format kategori (contoh: liwet-kastrol -> Liwet Kastrol)
                 let formattedCategory = "";
                 if (category) {
                     formattedCategory = category
@@ -131,7 +127,6 @@
                         .join(' ');
                 }
 
-                // Tentukan teks kategori akhir berdasarkan aturan khusus
                 let displayCategory = "";
                 if (category === "nasi-box") {
                     displayCategory = "Tumpeng Box";
@@ -141,22 +136,18 @@
                     displayCategory = formattedCategory;
                 }
 
-                // Tentukan apakah kategori perlu ditampilkan di depan
                 const showCategory = categoriesWithPrefix.includes(category);
 
-                // Bentuk nama item akhir
                 const itemName = showCategory && displayCategory ?
                     `${displayCategory} - ${item}` :
                     item;
 
-                // Kirim ke Google Analytics (kalau ada)
                 if (typeof gtag === "function") {
                     gtag('event', 'whatsapp_click', {
                         item_name: itemName
                     });
                 }
 
-                // Buka WhatsApp
                 const pesan = encodeURIComponent(
                     `Halo, saya tertarik untuk melakukan pemesanan ${itemName} dan ingin tahu informasi lebih lanjut. Apakah bisa dibantu?`
                 );

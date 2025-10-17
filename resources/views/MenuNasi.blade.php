@@ -127,11 +127,17 @@
                                 {{ number_format($menu->harga, 0, ',', '.') }}</h2>
                             <p class="mb-4 text-sm text-center text-gray-300">{{ $menu->desc }}</p>
 
-                            <div class="mb-6 {{ $menu->image_alt ? 'grid grid-cols-2 gap-3' : 'grid grid-cols-1' }}">
-                                <img src="{{ asset($menu->image) }}" class="object-cover w-full h-40 rounded-lg"
+                            <div
+                                class="mb-6 @if ($menu->image_alt) grid grid-cols-2 gap-3 @else flex justify-center @endif">
+                                <img src="{{ asset($menu->image) }}"
+                                    class="rounded-lg object-cover
+                                            @if ($menu->image_alt) w-full h-40
+                                            @else
+                                                w-3/4 h-64 @endif"
                                     alt="paket">
+
                                 @if ($menu->image_alt)
-                                    <img src="{{ asset($menu->image_alt) }}" class="object-cover w-full h-40 rounded-lg"
+                                    <img src="{{ asset($menu->image_alt) }}" class="rounded-lg object-cover w-full h-40"
                                         alt="paket">
                                 @endif
                             </div>
@@ -300,7 +306,7 @@
                 });
             }, {
                 threshold: 0.5
-            }); // minimal 50% dari card kelihatan
+            });
 
             menuCards.forEach(card => observer.observe(card));
         });
