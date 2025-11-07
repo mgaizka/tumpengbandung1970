@@ -45,7 +45,7 @@
                         <p class="text-center text-white mb-4" x-text="selectedEvent.sub_judul"></p>
 
                         <div class="mb-6 grid gap-3" :class="selectedEvent.image_alt ? 'grid-cols-2' : 'grid-cols-1'">
-                            <img :src="selectedEvent.image" class="rounded-lg object-cover w-full h-50" alt="paket">
+                            <img :src="selectedEvent.image" class="rounded-lg object-cover w-full h-full" alt="paket">
                             <template x-if="selectedEvent.image_alt">
                                 <img :src="selectedEvent.image_alt" class="rounded-lg object-cover w-full h-full"
                                     alt="paket">

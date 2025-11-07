@@ -4,7 +4,7 @@
         <!-- Kolom 1: Logo (span 2 kolom biar lebar) -->
         <div class="lg:col-span-2 pt-8">
             <div class="flex items-center mb-4">
-                <img src="{{ asset('logo.png') }}" alt="Tumpeng Bandung" class="w-16 h-auto mr-3">
+                <img src="{{ asset('logobaru.webp') }}" alt="Tumpeng Bandung" class="w-16 h-auto mr-3">
                 <h3 class="font-bold text-lg">Tumpeng Bandung 1970</h3>
             </div>
             <p class="text-gray-300 mb-4 text-[18px]">

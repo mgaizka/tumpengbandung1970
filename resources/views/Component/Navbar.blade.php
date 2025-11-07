@@ -1,8 +1,8 @@
 <!-- Navbar -->
 <nav id="navbar"
-    class="sticky top-0 z-50 bg-[#161616] transition-colors duration-300 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+    class="sticky left-0 right-0 top-0 z-50 bg-[#161616] transition-colors duration-300 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
     <div class="px-4 lg:px-[2cm]">
-        <div class="relative flex h-16 items-center justify-between">
+        <div class="relative flex h-16 items-start justify-between">
 
             <!-- Mobile menu button -->
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -27,7 +27,7 @@
             <!-- Logo -->
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div class="flex shrink-0 items-center">
-                    <img src="{{ asset('logo.png') }}" alt="Tumpeng Bandung" class="w-[86px] h-[61px]" />
+                    <img src="{{ asset('logobaru.webp') }}" alt="Tumpeng Bandung" class="w-[86px] h-[61px]" />
                 </div>
 
                 <!-- Desktop menu -->

@@ -32,36 +32,42 @@
                     class="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center gap-3 sm:gap-4 md:gap-5 pt-5 sm:pt-7 md:pt-8 mb-6 sm:mb-10 snap-x snap-mandatory scroll-smooth px-6 sm:px-8">
 
                     <a href="{{ route('menu-lainnya', ['kategori' => 'liwet-kastrol']) }}"
+                        onclick="gtag('event', 'select_subcategory', { subcategory: 'Liwet Kastrol' });"
                         class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
         {{ $kategori == 'liwet-kastrol' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                         Liwet Kastrol
                     </a>
 
                     <a href="{{ route('menu-lainnya', ['kategori' => 'prasmanan']) }}"
+                        onclick="gtag('event', 'select_subcategory', { subcategory: 'Prasmanan' });"
                         class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
         {{ $kategori == 'prasmanan' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                         Prasmanan
                     </a>
 
                     <a href="{{ route('menu-lainnya', ['kategori' => 'rujak']) }}"
+                        onclick="gtag('event', 'select_subcategory', { subcategory: 'Rujak' });"
                         class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
         {{ $kategori == 'rujak' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                         Rujak
                     </a>
 
                     <a href="{{ route('menu-lainnya', ['kategori' => 'beubeutian-rebusan']) }}"
+                        onclick="gtag('event', 'select_subcategory', { subcategory: 'Bebeutian/Rebusan' });"
                         class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
         {{ $kategori == 'beubeutian-rebusan' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                         Beubeutian / Rebusan
                     </a>
 
                     <a href="{{ route('menu-lainnya', ['kategori' => 'snack-box']) }}"
+                        onclick="gtag('event', 'select_subcategory', { subcategory: 'Snack Box' });"
                         class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
         {{ $kategori == 'snack-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                         Snack Box
                     </a>
 
                     <a href="{{ route('menu-lainnya', ['kategori' => 'hampers']) }}"
+                        onclick="gtag('event', 'select_subcategory', { subcategory: 'Hampers' });"
                         class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
         {{ $kategori == 'hampers' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                         Hampers

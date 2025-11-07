@@ -7,12 +7,14 @@
 
     <title>@yield('title', 'Company Profile')</title>
 
-    <link rel="icon" type="image/webp" href="{{ asset('icon-logo.webp') }}">
+    <link rel="icon" type="image/webp" href="{{ asset('logobaru.webp') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preload" as="image" href="{{ asset('asset\main\main-bg.webp') }}">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
@@ -25,10 +27,36 @@
         }
         gtag('js', new Date());
 
-        gtag('config', 'G-Q2LBQZBZ8R');
+        gtag('config', 'G-45BYG8Y26L');
     </script>
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+
+    {{-- === Vite Production / Fallback Handling === --}}
+    @if (file_exists(public_path('build/manifest.json')))
+        @php
+            $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
+        @endphp
+
+        {{-- CSS --}}
+        @if (isset($manifest['resources/css/app.css']))
+            <link rel="stylesheet" href="{{ asset('build/' . $manifest['resources/css/app.css']['file']) }}">
+        @else
+            <link rel="stylesheet" href="{{ asset('build/assets/app-cJ5vwioq.css') }}">
+        @endif
+
+        {{-- JS --}}
+        @if (isset($manifest['resources/js/app.js']))
+            <script type="module" src="{{ asset('build/' . $manifest['resources/js/app.js']['file']) }}"></script>
+        @else
+            <script type="module" src="{{ asset('build/assets/app-cJ5vwioq.js') }}"></script>
+        @endif
+    @else
+        {{-- Fallback jika manifest.json tidak ditemukan --}}
+        <link rel="stylesheet" href="{{ asset('build/assets/app-cJ5vwioq.css') }}">
+        <script type="module" src="{{ asset('build/assets/app-cJ5vwioq.js') }}"></script>
+    @endif
+
 
 </head>
 
@@ -81,20 +109,20 @@
 </style>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         const el = document.querySelector(".bg-hero-lazy");
         const img = new Image();
 
         // Cek apakah browser support WebP
         function supportsWebP(callback) {
             const webP = new Image();
-            webP.onload = webP.onerror = function() {
+            webP.onload = webP.onerror = function () {
                 callback(webP.height === 2);
             };
             webP.src = "data:image/webp;base64,UklGRiIAAABXRUJQVlA4TAYAAAAvAAAAAA...";
         }
 
-        supportsWebP(function(supported) {
+        supportsWebP(function (supported) {
             img.src = supported ?
                 "{{ asset('asset/main/main-bg.webp') }}" :
                 "{{ asset('asset/main/main-bg.png') }}";
@@ -106,11 +134,11 @@
         };
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         const waButtons = document.querySelectorAll(".waButton");
 
         waButtons.forEach(button => {
-            button.addEventListener("click", function(e) {
+            button.addEventListener("click", function (e) {
                 e.preventDefault();
 
                 let category = this.dataset.category || "";
@@ -158,7 +186,7 @@
 
     const floatingWA = document.getElementById("waButton");
     if (floatingWA) {
-        floatingWA.addEventListener("click", function(e) {
+        floatingWA.addEventListener("click", function (e) {
             e.preventDefault();
 
             if (typeof gtag === "function") {
