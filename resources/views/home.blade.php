@@ -9,25 +9,25 @@
         <div
             class="relative h-[230px] sm:h-[300px] md:h-[420px] lg:h-[calc(100vh-4rem)] overflow-hidden rounded-b-2xl shadow-lg">
             <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('asset/banner/lewihmirah.webp') }}" class="absolute inset-0 object-cover w-full h-full"
+            <div class="hidden duration-3000 ease-in-out" data-carousel-item>
+                <img src="{{ asset('asset/banner/banner-min.webp') }}" class="absolute inset-0 object-cover w-full h-full"
                     alt="Foto 1">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             </div>
             <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="hidden duration-3000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('asset/banner/2.webp') }}" class="absolute inset-0 object-cover w-full h-full"
                     alt="Foto 2">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             </div>
             <!-- Item 3 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="hidden duration-3000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('asset/banner/3.webp') }}" class="absolute inset-0 object-cover w-full h-full"
                     alt="Foto 3">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             </div>
             <!-- Item 4 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="hidden duration-3000 ease-in-out" data-carousel-item>
                 <img src="{{ asset('asset/banner/4.webp') }}" class="absolute inset-0 object-cover w-full h-full"
                     alt="Foto 4">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>

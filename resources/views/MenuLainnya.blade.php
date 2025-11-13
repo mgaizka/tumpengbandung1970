@@ -34,42 +34,42 @@
                     <a href="{{ route('menu-lainnya', ['kategori' => 'liwet-kastrol']) }}"
                         onclick="gtag('event', 'select_subcategory', { subcategory: 'Liwet Kastrol' });"
                         class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
-        {{ $kategori == 'liwet-kastrol' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+            {{ $kategori == 'liwet-kastrol' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                         Liwet Kastrol
                     </a>
 
                     <a href="{{ route('menu-lainnya', ['kategori' => 'prasmanan']) }}"
                         onclick="gtag('event', 'select_subcategory', { subcategory: 'Prasmanan' });"
                         class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
-        {{ $kategori == 'prasmanan' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+            {{ $kategori == 'prasmanan' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                         Prasmanan
                     </a>
 
                     <a href="{{ route('menu-lainnya', ['kategori' => 'rujak']) }}"
                         onclick="gtag('event', 'select_subcategory', { subcategory: 'Rujak' });"
                         class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
-        {{ $kategori == 'rujak' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+            {{ $kategori == 'rujak' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                         Rujak
                     </a>
 
                     <a href="{{ route('menu-lainnya', ['kategori' => 'beubeutian-rebusan']) }}"
                         onclick="gtag('event', 'select_subcategory', { subcategory: 'Bebeutian/Rebusan' });"
                         class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
-        {{ $kategori == 'beubeutian-rebusan' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+            {{ $kategori == 'beubeutian-rebusan' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                         Beubeutian / Rebusan
                     </a>
 
                     <a href="{{ route('menu-lainnya', ['kategori' => 'snack-box']) }}"
                         onclick="gtag('event', 'select_subcategory', { subcategory: 'Snack Box' });"
                         class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
-        {{ $kategori == 'snack-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+            {{ $kategori == 'snack-box' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                         Snack Box
                     </a>
 
                     <a href="{{ route('menu-lainnya', ['kategori' => 'hampers']) }}"
                         onclick="gtag('event', 'select_subcategory', { subcategory: 'Hampers' });"
                         class="flex-shrink-0 snap-start px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base md:text-lg font-semibold transition
-        {{ $kategori == 'hampers' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
+            {{ $kategori == 'hampers' ? 'bg-white text-black' : 'border border-white text-white hover:bg-white hover:text-black' }}">
                         Hampers
                     </a>
                 </div>
@@ -94,8 +94,7 @@
                     <!-- Kartu Produk -->
                     <div class="overflow-hidden bg-white shadow rounded-xl menu-card" data-menu="{{ $menu->jenis_paket }}"
                         data-category="{{ $menu->kategori }}">
-                        <img src="{{ asset($menu->image) }}" alt="{{ $menu->jenis_paket }}"
-                            class="object-cover w-full h-56">
+                        <img src="{{ asset($menu->image) }}" alt="{{ $menu->jenis_paket }}" class="object-cover w-full h-56">
                         <div class="p-4 text-black">
                             <h3 class="mb-1 text-xl font-bold">{{ $menu->jenis_paket }}</h3>
                             <p class="mb-3 text-sm">{{ $menu->card_desc }}</p>
@@ -141,14 +140,11 @@
                             </p>
 
                             <!-- Gambar -->
-                            <div
-                                class="mb-6 @if ($menu->image_alt) grid grid-cols-2 gap-3 @else flex justify-center @endif">
-                                <img src="{{ asset($menu->image) }}"
-                                    class="rounded-lg object-cover
-                                            @if ($menu->image_alt) w-full h-40
-                                            @else
-                                                w-3/4 h-64 @endif"
-                                    alt="paket">
+                            <div class="mb-6 @if ($menu->image_alt) grid grid-cols-2 gap-3 @else flex justify-center @endif">
+                                <img src="{{ asset($menu->image) }}" class="rounded-lg object-cover
+                                                    @if ($menu->image_alt) w-full h-40
+                                                    @else
+                                                    w-3/4 h-64 @endif" alt="paket">
 
                                 @if ($menu->image_alt)
                                     <img src="{{ asset($menu->image_alt) }}" class="rounded-lg object-cover w-full h-40"
@@ -193,31 +189,27 @@
                                 @if ($menu->kategori == 'prasmanan')
                                     @if ($menu->jenis_paket == 'Paket A')
                                         <div>
-                                            <h4
-                                                class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
+                                            <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
                                                 Pilihan Ayam</h4>
                                             <p class="text-gray-300">Ayam Lada Hitam | Ayam Kodok | Ayam Asam Manis |
                                                 Ayam
                                                 Goreng Saus Mentega | Bumbu Rempah</p>
                                         </div>
                                         <div>
-                                            <h4
-                                                class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
+                                            <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
                                                 Pilihan Ikan</h4>
                                             <p class="text-gray-300">Ikan Asam Manis | Ikan Pepes | Ikan Pesmol | Ikan
                                                 Goreng Tepung</p>
                                         </div>
                                     @else
                                         <div>
-                                            <h4
-                                                class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
+                                            <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
                                                 Pilihan Daging</h4>
                                             <p class="text-gray-300">Lada Hitam | Rendang | Sambel Goreng
                                                 Daging | Beef Teriyaki | Beef Stroganoff | Rolade </p>
                                         </div>
                                         <div>
-                                            <h4
-                                                class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
+                                            <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
                                                 Pilihan Ayam</h4>
                                             <p class="text-gray-300">Ayam Lada Hitam | Ayam Kodok | Ayam Asam Manis |
                                                 Ayam
@@ -226,8 +218,7 @@
                                     @endif
                                     @if (in_array($menu->jenis_paket, ['Paket B', 'Paket C']))
                                         <div>
-                                            <h4
-                                                class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
+                                            <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
                                                 Menu Pilihan Stal
                                             </h4>
                                             <p class="text-gray-300">Baso Tahu | Mie Kocok | Tom Yam | Sate Lontong |
@@ -284,8 +275,7 @@
                                     </div>
                                     @if ($menu->jenis_paket == 'Paket C')
                                         <div>
-                                            <h4
-                                                class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
+                                            <h4 class="inline-block px-3 py-1 mb-2 font-bold text-black bg-white rounded-lg">
                                                 Minuman</h4>
                                             <p class="text-gray-300">Teh Kotak | Teh Botol | Jus</p>
                                         </div>
@@ -308,7 +298,7 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const menuCards = document.querySelectorAll(".menu-card");
 
             const observer = new IntersectionObserver((entries, observer) => {
