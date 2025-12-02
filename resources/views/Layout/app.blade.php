@@ -31,17 +31,15 @@
         gtag('config', 'G-45BYG8Y26L');
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17718411985">
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17718411985"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        gtag('config', 'AW-17718411985');
-    </script>
-
+  gtag('config', 'AW-17718411985');
+</script>
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 
     {{-- === Vite Production / Fallback Handling === --}}
