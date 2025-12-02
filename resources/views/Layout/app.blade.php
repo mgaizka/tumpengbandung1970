@@ -13,7 +13,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preload" as="image" href="{{ asset('asset\main\main-bg.webp') }}">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -30,22 +29,34 @@
 
         gtag('config', 'G-45BYG8Y26L');
     </script>
+    <!-- Event snippet for Page view conversion page -->
+    <script>
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17718411985/iqWnCK724L0bENGF5oBC',
+            'value': 1.0,
+            'currency': 'IDR'
+        });
+    </script>
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17718411985"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'AW-17718411985');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17718411985"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17718411985"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17718411985');
+    </script>
+
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 
     {{-- === Vite Production / Fallback Handling === --}}
     @if (file_exists(public_path('build/manifest.json')))
         @php
-    $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
+            $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
         @endphp
 
         {{-- CSS --}}
@@ -109,14 +120,12 @@
     .bg-hero-lazy {
         background-color: black;
         min-height: 100vh;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     .bg-hero-loaded {
         background-size: cover;
         background-position: center;
-        /* transition: background-image 0.5s ease-in; */
+        transition: background-image 0.5s ease-in;
     }
 </style>
 
